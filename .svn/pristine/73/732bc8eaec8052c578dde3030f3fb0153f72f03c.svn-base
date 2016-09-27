@@ -1,0 +1,590 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37DBB0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37DB90F8</DocumentID>
+	<Name>ConfigureJackrabbit</Name>
+	<Description>ConfigureJackrabbit</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-28T14:39:58.412</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<script
+					src="/cordys/wcp/admin/behavior/applicationconnector.js"
+				/>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:label
+						appearance="codesnippet"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+						id="text1"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30px">
+						<h3
+							xmlns="">Connectivity Information</h3>
+					</xforms:label>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="input_rmiurl"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37DA10F8"
+							wcpforms:class="v_label">Jackrabbit RMI URL</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="input_username"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37D850F8"
+							wcpforms:class="v_label">Username</xforms:label>
+					</xforms:input>
+					<xforms:secret
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsPassword"
+						id="input_password"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37D690F8"
+							wcpforms:class="v_label">Password</xforms:label>
+					</xforms:secret>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="input_rootfolder"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37D4D0F8"
+							wcpforms:class="v_label">Root Folder</xforms:label>
+					</xforms:input>
+					<xforms:label
+						appearance="codesnippet"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+						id="text2"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30px">
+						<h3
+							xmlns="">Jackrabbit Namespace and Elements</h3>
+					</xforms:label>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="input_prefix"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37D310F8"
+							wcpforms:class="v_label">Prefix</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="input_namespace"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD5-A62C37D150F8"
+							wcpforms:class="v_label">URI</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="folder_nodetype"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD6-05B281B670F8"
+							wcpforms:class="v_label">Folder Custom Nodetype</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="file_nodetype"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.7px">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBD6-05B281B4B0F8"
+							wcpforms:class="v_label">File Custom Nodetype</xforms:label>
+					</xforms:input>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[function createConnectorConfiguration(configurationNode) {
+
+    var NS_JACKRABBIT_CONFIG = "http://c20g.com/jackrabbit";
+    
+    configXmlDocument = configurationNode.ownerDocument;
+    configurationNode.setAttribute("implementation", "com.c20g.cordys.ac.jackrabbit.connector.JackrabbitConnector");
+
+    // We need to create the XML using a namespace so that the XML is read properly.
+    // Also we need to take browser independence into account.
+    var connectionNode = cordys.createElementNS(configXmlDocument, NS_JACKRABBIT_CONFIG, "connection");
+    
+    cordys.appendXMLNode(connectionNode, configurationNode);
+    createElementWithParentNS(connectionNode, "rmi_url", input_rmiurl.value);
+    createElementWithParentNS(connectionNode, "username", input_username.value);
+    createElementWithParentNS(connectionNode, "password", input_password.value);
+    createElementWithParentNS(connectionNode, "rootfolder", input_rootfolder.value);
+    createElementWithParentNS(connectionNode, "nsprefix", input_prefix.value);
+    createElementWithParentNS(connectionNode, "nsqualified", input_namespace.value);
+    createElementWithParentNS(connectionNode, "foldercustomnodetype", folder_nodetype.value);
+    createElementWithParentNS(connectionNode, "filecustomnodetype", file_nodetype.value);
+    return true;
+}
+
+
+function fillInPropertyScreen(configurationNode) {
+
+    alert(cordys.getXML(configurationNode));
+    
+    //Initialize the namespace mapping
+    var NS_JACKRABBIT_CONFIG = "http://c20g.com/jackrabbit";
+    var namespaces = new Array();
+    namespaces["ns"] = NS_JACKRABBIT_CONFIG;
+
+    var connectionNode = cordys.selectXMLNode(configurationNode, "//ns:connection", namespaces);
+    if (connectionNode == null) {
+        return;
+    }
+
+    var rmiUrlNode = cordys.getNodeText(connectionNode, "ns:rmi_url", "", namespaces);
+    if (rmiUrlNode)
+        input_rmiurl.value = rmiUrlNode;
+
+    var usernameNode = cordys.getNodeText(connectionNode, "ns:username", "", namespaces);
+    if (usernameNode)
+        input_username.value = usernameNode;
+
+    var passwordNode = cordys.getNodeText(connectionNode, "ns:password", "", namespaces);
+    if (passwordNode)
+        input_password.value = passwordNode;
+
+    var rootFolderNode = cordys.getNodeText(connectionNode, "ns:rootfolder", "", namespaces);
+    if (rootFolderNode)
+        input_rootfolder.value = rootFolderNode;
+
+    var nsprefixNode = cordys.getNodeText(connectionNode, "ns:nsprefix", "", namespaces);
+    if (nsprefixNode)
+        input_prefix.value = nsprefixNode;
+
+    var nsqualifiedNode = cordys.getNodeText(connectionNode, "ns:nsqualified", "", namespaces);
+    if (nsqualifiedNode)
+        input_namespace.value = nsqualifiedNode;
+
+    var folderCustomNodeTypeNode = cordys.getNodeText(connectionNode, "ns:foldercustomnodetype", "", namespaces);
+    if (folderCustomNodeTypeNode)
+        folder_nodetype.value = folderCustomNodeTypeNode;
+
+    var fileCustomNodeTypeNode = cordys.getNodeText(connectionNode, "ns:filecustomnodetype", "", namespaces);
+    if (fileCustomNodeTypeNode)
+        file_nodetype.value = fileCustomNodeTypeNode;
+}
+
+/**
+ * This method creates a new XML element using the namespace of the parent node.
+ *
+ * @param parent The parent XML node.
+ * @param name The name of the new element.
+ * @param value The value for the text element.
+ *
+ * @return The created element.
+ */
+function createElementWithParentNS(parent, name, value) {
+
+    var returnValue = null;
+
+    if (!(parent == null || typeof(parent.ownerDocument) == "undefined")) {
+        var doc = parent.ownerDocument;
+        var namespace = parent.namespaceURI;
+
+        returnValue = cordys.createElementNS(doc, namespace, name);
+        cordys.appendXMLNode(returnValue, parent);
+
+        if (value != null) {
+            cordys.setTextContent(returnValue, value);
+        }
+    }
+
+    return returnValue;
+}
+
+function Form_InitDone(eventObject) {
+    initialize();
+} 
+
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>ConfigureJackrabbit</taskDescription>
+	<taskName>ConfigureJackrabbit</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B350F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B330F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD6-05B281B330F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD6-05B281B330F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.41</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="525400E2-1DC8-11E4-EBD6-05B281B370F8"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37DAF0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37DAD0F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37DAD0F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37DAD0F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.411</CreationDate>
+			<Notes/>
+			<UIRef>input_rmiurl</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D9F0F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D9D0F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D9D0F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D9D0F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.428</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37DA10F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D8F0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D8D0F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37D8D0F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37D8D0F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.421</CreationDate>
+			<Notes/>
+			<UIRef>input_username</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D830F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D810F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D810F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D810F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.417</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37D850F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D730F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D710F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37D710F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37D710F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.407</CreationDate>
+			<Notes/>
+			<UIRef>input_password</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D670F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D650F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D650F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D650F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.409</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37D690F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D570F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D550F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37D550F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37D550F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.427</CreationDate>
+			<Notes/>
+			<UIRef>input_rootfolder</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D4B0F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D490F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D490F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D490F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.426</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37D4D0F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D3B0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D390F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37D390F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37D390F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.424</CreationDate>
+			<Notes/>
+			<UIRef>input_prefix</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D2F0F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D2D0F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D2D0F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D2D0F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.415</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37D310F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D1F0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D1D0F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD5-A62C37D1D0F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD5-A62C37D1D0F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.416</CreationDate>
+			<Notes/>
+			<UIRef>input_namespace</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D130F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D110F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD5-A62C37D110F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD5-A62C37D110F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.408</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD5-A62C37D150F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B710F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B6F0F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD6-05B281B6F0F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD6-05B281B6F0F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.427</CreationDate>
+			<Notes/>
+			<UIRef>folder_nodetype</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B650F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B630F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD6-05B281B630F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD6-05B281B630F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.426</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD6-05B281B670F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B550F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B530F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBD6-05B281B530F8</Name>
+			<Description>525400E2-1DC8-11E4-EBD6-05B281B530F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.423</CreationDate>
+			<Notes/>
+			<UIRef>file_nodetype</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B490F8">
+					<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B470F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBD6-05B281B470F8</Name>
+					<Description>525400E2-1DC8-11E4-EBD6-05B281B470F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-28T14:39:58.422</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBD6-05B281B4B0F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBD6-05B281B450F8">
+			<DocumentID>525400E2-1DC8-11E4-EBD6-05B281B430F8</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-28T14:39:58.425</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

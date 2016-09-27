@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="9bdee035-3bbc-11e4-ec6e-9419744add0d">
+	<DocumentID>af1269b7-bae4-11e4-ec6e-941974449d0c</DocumentID>
+	<Name>af1269b7-bae4-11e4-ec6e-941974449d0c</Name>
+	<Description>Remove Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.602</CreationDate>
+	<Notes/>
+	<Text>Remove Expense Report</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="972d6c9c-80cf-11e4-ec6e-941974381d0a"
+		/>
+	</TextIdentifier>
+</TranslatedText>

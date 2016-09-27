@@ -1,0 +1,48 @@
+
+<URLBasedForm
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.uiapplication.URLBasedForm"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBBD-86DA16A610F8">
+	<DocumentID>525400E2-1DC8-11E4-EBBD-86DA16A5F0F8</DocumentID>
+	<Name>Jackrabbit Connector Configuration</Name>
+	<Description>Jackrabbit Connector Configuration</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-27T15:18:55.31</CreationDate>
+	<Notes/>
+	<URL>com/c20g/cordys/ac/jackrabbit/JackrabbitConfig.html</URL>
+	<WSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters>
+		<Properties
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</parameters>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Jackrabbit Connector Configuration</taskDescription>
+	<taskName>Jackrabbit Connector Configuration</taskName>
+	<title>true</title>
+	<top></top>
+	<type>URLBasedForm</type>
+	<width></width>
+	<TranslatableName/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</URLBasedForm>

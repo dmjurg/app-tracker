@@ -1,0 +1,102 @@
+.page-content {
+	overflow-x: auto;
+	position: relative;
+	min-height: 600px;
+}
+
+.tab-control-content {
+	margin-top: 10px;
+}
+
+.loading-spinner-text {
+	margin-top: 25px;
+	margin-left: -30px;
+	width: 100px;
+}
+
+.validation-error {
+	color: #d44950;
+}
+
+.empty-row {
+	margin-top: 5px;
+	font-style: italic;
+}
+
+
+/*  Callouts, copied from Bootstrap documentation  */
+.bs-callout {
+	margin: 20px 0;
+	padding: 15px 30px 15px 15px;
+	border-left: 5px solid #eee;
+}
+
+.bs-callout h4 {
+	margin-top: 0;
+}
+
+.bs-callout p:last-child {
+	margin-bottom: 0;
+}
+
+.bs-callout code,
+.bs-callout .highlight {
+	background-color: #fff;
+}
+
+/* Themes for different contexts */
+
+
+.bs-callout-muted {
+	background-color: #f0f0f0;
+	border-color: #aaa;
+}
+
+.bs-callout-muted h4 {
+	color: #aaa;
+}
+
+.bs-callout-primary {
+	background-color: #f6f6f6;
+	border-color: #337ab7;
+}
+
+.bs-callout-primary h4 {
+	color: #337ab7;
+}
+
+.bs-callout-success {
+	background-color: #dff0d8;
+	border-color: darkgreen;
+}
+
+.bs-callout-success h4 {
+	color: darkgreen;
+}
+
+.bs-callout-info {
+	background-color: #f0f7fd;
+	border-color: #1b809e;
+}
+
+.bs-callout-info h4 {
+	color: #3A87AD;
+}
+
+.bs-callout-warning {
+	background-color: #fefbed;
+	border-color: #aa6708;
+}
+
+.bs-callout-warning h4 {
+	color: #aa6708;
+}
+
+.bs-callout-danger {
+	background-color: #fcf2f2;
+	border-color: darkred;
+}
+
+.bs-callout-danger h4 {
+	color: darkred;
+}

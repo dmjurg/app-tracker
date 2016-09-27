@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="5ba71b9f-7f71-11e4-ec72-ed9da72a9dd0">
+	<DocumentID>ebe06107-7986-11e4-ec72-ed9da7209dcf</DocumentID>
+	<Name>ebe06107-7986-11e4-ec72-ed9da7209dcf</Name>
+	<Description>Prepare Updated Line Item Data</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T21:37:07.746</CreationDate>
+	<Notes/>
+	<Text>Prepare Updated Line Item Data</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="4be26240-ff06-11e4-ec72-ed9da70dddcd"
+		/>
+	</TextIdentifier>
+</TranslatedText>

@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="f73d5313-43a4-11e4-f5e7-8a1bd2399dd8">
+	<DocumentID>371f82c7-dda2-11e4-f5e7-8a1bd22f9dd7</DocumentID>
+	<Name>371f82c7-dda2-11e4-f5e7-8a1bd22f9dd7</Name>
+	<Description>DeleteFormsByKey</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-02-08T02:46:37.261</CreationDate>
+	<Notes/>
+	<Text>DeleteFormsByKey</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="83f90005-168a-11e4-f5e7-8a1bd21b9dd5"
+		/>
+	</TextIdentifier>
+</TranslatedText>

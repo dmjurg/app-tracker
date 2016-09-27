@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E915-DBF167269539">
+	<DocumentID>525400E2-1DC8-11E4-E915-DBF167267539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E915-DBF167267539</Name>
+	<Description>testbpm</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-30T14:34:42.341</CreationDate>
+	<Notes/>
+	<Text>testbpm</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E915-DBF167263539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

@@ -1,0 +1,15 @@
+<div id="samplebpmdashboardContent">
+	<br>
+	<div class="panel panel-default" style="display: none;">
+		<div class="panel-heading" role="tab" id="taskInboxPanelHeading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#" href="#taskInboxPanelBody" aria-expanded="true" aria-controls="collapseOne"> Tasks </a>
+			</h4>
+		</div>
+		<div id="taskInboxPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="taskInboxPanelHeading">
+			<div class="panel-body">
+				<div id="tasksGrid"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E901-36C9B72AF539">
+	<DocumentID>525400E2-1DC8-11E4-E901-36C9B72AD539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E901-36C9B72AD539</Name>
+	<Description>End</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-29T19:01:00.141</CreationDate>
+	<Notes/>
+	<Text>End</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E901-36C9B72A9539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

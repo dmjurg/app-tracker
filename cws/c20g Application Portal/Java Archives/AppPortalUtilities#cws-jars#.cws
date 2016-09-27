@@ -1,0 +1,22 @@
+
+<JavaArchiveSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveSource"
+	RuntimeDocumentID="effd9e07-aea9-11e4-ed08-34df80135325">
+	<DocumentID>7fce6475-b793-11e4-ed08-34df80095324</DocumentID>
+	<Name>AppPortalUtilities</Name>
+	<Description>AppPortalUtilities</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-09T18:58:45.651</CreationDate>
+	<Notes/>
+	<JarFileName>AppPortalUtilities</JarFileName>
+	<NamespacePrefix></NamespacePrefix>
+	<Dependencies/>
+	<SourceFolder>
+		<uri
+			id="8bc4389c-bf62-11e4-ed07-def95e931f2d"
+			path="c20g Application Portal/Java Sources"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</JavaArchiveSource>

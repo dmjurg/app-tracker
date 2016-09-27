@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="73ca3551-99bb-11e4-f2bd-f8fa921794f5">
+	<DocumentID>e709660d-6f18-11e4-f2bd-f8fa920d94f4</DocumentID>
+	<Name>e709660d-6f18-11e4-f2bd-f8fa920d94f4</Name>
+	<Description>GetExpenseReportDetails</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-07T01:14:51.408</CreationDate>
+	<Notes/>
+	<Text>GetExpenseReportDetails</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="33477e2a-4943-11e4-f2bd-f8fa91fad4f2"
+		/>
+	</TextIdentifier>
+</TranslatedText>

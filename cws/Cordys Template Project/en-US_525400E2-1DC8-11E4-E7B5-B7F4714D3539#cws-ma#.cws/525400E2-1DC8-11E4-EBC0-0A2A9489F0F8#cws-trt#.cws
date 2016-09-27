@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948A10F8">
+	<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A9489F0F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBC0-0A2A9489F0F8</Name>
+	<Description>Default Organization Role CNs (separate with semicolons)</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-27T17:46:50.514</CreationDate>
+	<Notes/>
+	<Text>Default Organization Role CNs (separate with semicolons)</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBC0-0A2A9489B0F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

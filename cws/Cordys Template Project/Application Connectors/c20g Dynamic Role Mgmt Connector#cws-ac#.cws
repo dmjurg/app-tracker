@@ -1,0 +1,44 @@
+
+<ApplicationConnectorDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.applicationconnector.ApplicationConnectorDesigntime"
+	typeVersion="0014C25C-F38B-71DF-A966-2D0AC4143A56"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBA6-DDDC6F4BB0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBA6-DDDC6F4B90F8</DocumentID>
+	<Name>c20g Dynamic Role Mgmt Connector</Name>
+	<Description>c20g Dynamic Role Mgmt Connector</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-26T17:42:28.661</CreationDate>
+	<Notes/>
+	<ClassPath></ClassPath>
+	<ImplementationClass>com.c20g.cordys.ac.rolemgmt.DynamicRoleMgmtConnector</ImplementationClass>
+	<LoggerCategoryGroups>
+		<loggercategory
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns="">
+			<categorygroup
+				displayname="Role Management">
+				<category
+					inserted="true">com.c20g.cordys.ac.rolemgmt</category>
+			</categorygroup>
+		</loggercategory>
+	</LoggerCategoryGroups>
+	<StartupDependencies>
+		<startupDependency
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</StartupDependencies>
+	<SupportsJVMSharing>true</SupportsJVMSharing>
+	<ConfigurationPage>
+		<uri
+			id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+		/>
+	</ConfigurationPage>
+	<Image/>
+	<MetadataPage/>
+	<PropertyPage/>
+	<TypeImplementationMappings/>
+</ApplicationConnectorDesigntime>

@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0f1d3e5d-c3ce-11e4-ec7a-2f853d265fb7">
+	<DocumentID>77b8be0c-fd11-11e4-ec7a-2f853d201fb6</DocumentID>
+	<Name>77b8be0c-fd11-11e4-ec7a-2f853d201fb6</Name>
+	<Description>Update Status Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-04T03:21:13.022</CreationDate>
+	<Notes/>
+	<Text>Update Status Report</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="bf558cc6-1c8a-11e4-ec7a-2f853d139fb4"
+		/>
+	</TextIdentifier>
+</TranslatedText>

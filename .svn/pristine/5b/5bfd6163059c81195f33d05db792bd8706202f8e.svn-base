@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="ebde7287-d7a1-11e4-f517-eca3ae1cdf05">
+	<DocumentID>c30f501f-f958-11e4-f517-eca3ae12df04</DocumentID>
+	<Name>c30f501f-f958-11e4-f517-eca3ae12df04</Name>
+	<Description>SimpleTaskTracking</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T20:35:21.208</CreationDate>
+	<Notes/>
+	<DefaultText>SimpleTaskTracking</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="2f70bc72-cd18-11e4-f517-eca3ae259f06"
+		/>
+	</Translations>
+</TextIdentifier>

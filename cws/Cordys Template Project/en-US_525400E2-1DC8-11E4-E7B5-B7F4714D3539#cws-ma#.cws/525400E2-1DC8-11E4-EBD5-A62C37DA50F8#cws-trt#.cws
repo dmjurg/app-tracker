@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37DA70F8">
+	<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37DA50F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBD5-A62C37DA50F8</Name>
+	<Description>Jackrabbit RMI URL</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-28T14:39:58.405</CreationDate>
+	<Notes/>
+	<Text>Jackrabbit RMI URL</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBD5-A62C37DA10F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

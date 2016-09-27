@@ -1,0 +1,16 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	RuntimeDocumentID="d3a90c6e-0fa4-11e4-f4e2-bcaed97f1fc2">
+	<DocumentID>032ea220-2381-11e4-f4e2-bcaed973dfc1</DocumentID>
+	<Name>Executive</Name>
+	<Description>Executive</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-28T19:02:37.669</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<type>Functional</type>
+	<Subroles/>
+	<configuredTasks/>
+</RoleDesignTime>

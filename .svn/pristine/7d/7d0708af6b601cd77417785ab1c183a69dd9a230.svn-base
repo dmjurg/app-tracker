@@ -1,0 +1,70 @@
+
+<URLBasedForm
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.uiapplication.URLBasedForm"
+	RuntimeDocumentID="a38a34c5-75e8-11e4-f517-eca3abe55de8">
+	<DocumentID>73a943c9-604f-11e4-f517-eca3abdc9de7</DocumentID>
+	<Name>Complete Simple Task</Name>
+	<Description>Complete Simple Task</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T21:27:05.533</CreationDate>
+	<Notes/>
+	<URL>tasktrac_complete</URL>
+	<WSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters>
+		<Properties
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</parameters>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Complete Simple Task</taskDescription>
+	<taskName>Complete Simple Task</taskName>
+	<title>true</title>
+	<top></top>
+	<type>URLBasedForm</type>
+	<width></width>
+	<TranslatableName/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input>
+		<uri
+			id="07f8611b-29c2-11e4-f519-44b322ac9269"
+		/>
+	</input>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="13a2ca8f-08d3-11e4-f519-44b321fd9257">
+			<DocumentID>c7ac172d-b547-11e4-f519-44b321f39256</DocumentID>
+			<Name>c7ac172d-b547-11e4-f519-44b321f39256</Name>
+			<Description>c7ac172d-b547-11e4-f519-44b321f39256</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2015-01-30T21:54:40.903</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://c20g.com/apps/schema/tasktrac</namespace>
+			<operationName>SimpleTask</operationName>
+		</MessagePart>
+	</messageParts>
+	<output>
+		<uri
+			id="07f8611b-29c2-11e4-f519-44b322ac9269"
+		/>
+	</output>
+	<tagsContainer/>
+	<taskParts/>
+</URLBasedForm>

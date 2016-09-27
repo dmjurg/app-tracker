@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="b7ecca40-6b33-11e4-f2c1-7bdad05ad54e">
+	<DocumentID>63e30fa7-a2c2-11e4-f2c1-7bdad050d54d</DocumentID>
+	<Name>63e30fa7-a2c2-11e4-f2c1-7bdad050d54d</Name>
+	<Description>Get Line Items For Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-07T01:31:17.968</CreationDate>
+	<Notes/>
+	<DefaultText>Get Line Items For Expense Report</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="a38ef32a-33d4-11e4-f2c1-7bdad063954f"
+		/>
+	</Translations>
+</TextIdentifier>

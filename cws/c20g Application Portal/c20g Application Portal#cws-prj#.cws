@@ -1,0 +1,101 @@
+
+<Project
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.project.Project"
+	typeVersion="0019B980-5ADC-71DF-9C5A-1C9DE0779704"
+	RuntimeDocumentID="d70c2f9e-dccc-11e4-ec0e-3acfe3eb5dff">
+	<DocumentID>fbc9f802-1011-11e4-ec0e-3acfe3429dfe</DocumentID>
+	<Name>c20g Application Portal</Name>
+	<Description>c20g Application Portal</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-10-30T20:17:57.513</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<ISVPackageInfo>
+		<ISVPackageInfo
+			type="com.cordys.cws.packaging.isvp.ISVPackageInfo"
+			typeVersion="00215A62-2E6A-11E2-EEB7-903C43CFF084"
+			RuntimeDocumentID="1b38bc32-e003-11e4-ec0e-3ad055371d0b">
+			<DocumentID>d3a26f26-b7f3-11e4-ec0e-3ad02e389d0a</DocumentID>
+			<Name>Counterpoint Consulting c20g Application Portal</Name>
+			<Description>Counterpoint Consulting c20g Application Portal</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2014-10-30T20:17:57.515</CreationDate>
+			<Notes/>
+			<BuildNumber>0</BuildNumber>
+			<ISVPackageFileName>Counterpoint Consulting c20g Application Portal 1.0.0</ISVPackageFileName>
+			<ISVPackageOwner>Counterpoint Consulting</ISVPackageOwner>
+			<PackageForRuntime>true</PackageForRuntime>
+			<PostISVLoaderInformation/>
+			<Product>c20g Application Portal</Product>
+			<SupportedDeploymentSpaces
+				xmlns:cws="http://schemas.cordys.com/cws/1.0"
+				cws:type="collection:string">
+				<cws:item>SHARED</cws:item>
+			</SupportedDeploymentSpaces>
+			<Version>1.0</Version>
+			<LicenseAgreement/>
+			<ThirdPartyAgreement/>
+		</ISVPackageInfo>
+	</ISVPackageInfo>
+	<RuntimeQualifiedName/>
+	<SourceFolder>
+		<uri
+			id="53e8a961-32ff-11e4-ec0e-3ad025be9d08"
+			path="c20g Application Portal"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+	<_AddOns>
+		<TranslationInformation
+			type="com.cordys.translation.TranslationInformation"
+			typeVersion="b81bb9b4-8af7-470f-a5fa-864be49acb9d"
+			RuntimeDocumentID="fb898918-059a-11e4-ec0e-3ad0099d5d01">
+			<DocumentID>d7393207-ed6f-11e4-ec0e-3acfe6e99d00</DocumentID>
+			<Name>TranslationInformation</Name>
+			<Description/>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2014-10-30T20:17:57.517</CreationDate>
+			<Notes/>
+			<LanguagePacks>
+				<LanguagePack
+					type="com.cordys.translation.LanguagePack"
+					typeVersion="11456b87-q895-32f2-584q-58f3tlm2so65"
+					RuntimeDocumentID="fbd11181-8bfd-11e4-ec0e-3ad01f8d9d05">
+					<DocumentID>07219600-960d-11e4-ec0e-3ad00fec5d04</DocumentID>
+					<Name>en-US</Name>
+					<Description/>
+					<CreatedBy>bill</CreatedBy>
+					<CreationDate>2014-10-30T20:17:57.516</CreationDate>
+					<Notes/>
+					<Language>English - United States</Language>
+					<Texts>
+						<uri
+							id="bf9eb1bd-ed61-11e4-ec0e-3ad02097dd06"
+							path="c20g Application Portal/en-US_bf9eb1bd-ed61-11e4-ec0e-3ad02097dd06"
+							type="com.cordys.cws.associations.MergeableAssociation"
+						/>
+					</Texts>
+					<TranslationInformation>
+						<uri
+							id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+						/>
+					</TranslationInformation>
+				</LanguagePack>
+			</LanguagePacks>
+			<ProjectLanguage>
+				<uri
+					id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+				/>
+			</ProjectLanguage>
+			<Texts>
+				<uri
+					id="6b845cbf-862e-11e4-ec0e-3ad00e115d02"
+					path="c20g Application Portal/TranslationInformation_6b845cbf-862e-11e4-ec0e-3ad00e115d02"
+					type="com.cordys.cws.associations.MergeableAssociation"
+				/>
+			</Texts>
+			<TranslationInformation/>
+		</TranslationInformation>
+	</_AddOns>
+</Project>

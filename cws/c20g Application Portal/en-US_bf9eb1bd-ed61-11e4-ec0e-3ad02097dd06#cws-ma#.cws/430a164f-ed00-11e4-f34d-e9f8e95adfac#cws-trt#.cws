@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="bf2d09c4-f85e-11e4-f34d-e9f8e964dfad">
+	<DocumentID>430a164f-ed00-11e4-f34d-e9f8e95adfac</DocumentID>
+	<Name>430a164f-ed00-11e4-f34d-e9f8e95adfac</Name>
+	<Description>Set Status to CANCELLED</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-12T15:55:16.848</CreationDate>
+	<Notes/>
+	<Text>Set Status to CANCELLED</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="a7f5788f-99f3-11e4-f34d-e9f8e9481faa"
+		/>
+	</TextIdentifier>
+</TranslatedText>

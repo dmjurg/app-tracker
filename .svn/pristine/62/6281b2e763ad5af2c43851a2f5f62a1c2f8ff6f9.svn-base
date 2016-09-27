@@ -1,0 +1,61 @@
+<div id="approveExpenseReportFormContent">
+
+	<br/>	
+	<legend>Approve Expense Report</legend>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="expenseReportDetailPanelHeading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#expenseReportDetailPanelBody" aria-expanded="true" aria-controls="collapseOne"> Expense Report Details </a>
+			</h4>
+		</div>
+		<div id="expenseReportDetailPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="expenseReportDetailPanelHeading">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-4">
+						<b>Client</b> <br/> <span id='approveExpenseClientSpan'></span>
+					</div>
+					<div class="col-sm-4">
+						<b>Project</b> <br/> <span id='approveExpenseProjectSpan'></span>
+					</div>
+					<div class="col-sm-4">
+						<b>Submitted Date</b> <br/> <span id='approveExpenseSubmitDateSpan'></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="lineItemsPanelHeading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#lineItemsPanelBody" aria-expanded="true" aria-controls="collapseOne"> Expenses </a>
+			</h4>
+		</div>
+		<div id="lineItemsPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="lineItemsPanelHeading">
+			<div class="panel-body">
+				<div class="expenses-grid-container">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="form-group">
+				<label>Comments</label> <textarea rows="3" class="form-control" name="expenseReviewComments" id="expenseReviewComments"></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-9">
+			<button id="cancelButton" type="submit" name="action" class="btn btn-danger" value="Cancel">Cancel</button>
+			<button id="declineButton" type="submit" name="action" class="btn btn-warn" value="Decline">Decline</button>
+			<button id="approveButton" type="submit" name="action" class="btn btn-primary" value="Approve">Approve</button>
+		</div>
+	</div>
+	<br />
+
+
+</div>

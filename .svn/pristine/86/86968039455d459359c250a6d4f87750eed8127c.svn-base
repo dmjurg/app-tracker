@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="e305400c-2742-11e4-f513-40430adf968c">
+	<DocumentID>7bac8e33-cf27-11e4-f513-40430ad5968b</DocumentID>
+	<Name>7bac8e33-cf27-11e4-f513-40430ad5968b</Name>
+	<Description>Insert Kudo</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T16:13:28.926</CreationDate>
+	<Notes/>
+	<DefaultText>Insert Kudo</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="d3b7f981-5625-11e4-f513-40430ae8568d"
+		/>
+	</Translations>
+</TextIdentifier>

@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBA5-CCFFB37AB0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBA5-CCFFB37A90F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBA5-CCFFB37A90F8</Name>
+	<Description>Application Role Short Name</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-26T17:40:59.67</CreationDate>
+	<Notes/>
+	<DefaultText>Application Role Short Name</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714C7539"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="525400E2-1DC8-11E4-EBA5-CCFFB37AD0F8"
+		/>
+	</Translations>
+</TextIdentifier>

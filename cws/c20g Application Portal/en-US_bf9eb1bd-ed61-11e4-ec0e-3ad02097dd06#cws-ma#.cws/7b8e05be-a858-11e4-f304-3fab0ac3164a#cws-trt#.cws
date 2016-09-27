@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="6f81c387-c061-11e4-f304-3fab0acd164b">
+	<DocumentID>7b8e05be-a858-11e4-f304-3fab0ac3164a</DocumentID>
+	<Name>7b8e05be-a858-11e4-f304-3fab0ac3164a</Name>
+	<Description>While</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-09T17:09:33.403</CreationDate>
+	<Notes/>
+	<Text>While</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="83add028-d06a-11e4-f304-3fab0ab05648"
+		/>
+	</TextIdentifier>
+</TranslatedText>

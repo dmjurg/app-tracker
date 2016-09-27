@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E915-BEA575BC1539">
+	<DocumentID>525400E2-1DC8-11E4-E915-BEA575BBF539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E915-BEA575BBF539</Name>
+	<Description>Upload Documents</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-30T14:34:42.331</CreationDate>
+	<Notes/>
+	<Text>Upload Documents</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E915-BEA575BBB539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

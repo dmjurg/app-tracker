@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="f76984c1-bcaf-11e4-f513-59321744d738">
+	<DocumentID>73c9ee6b-318e-11e4-f513-5932173c1737</DocumentID>
+	<Name>73c9ee6b-318e-11e4-f513-5932173c1737</Name>
+	<Description>For Each</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T16:13:28.929</CreationDate>
+	<Notes/>
+	<Text>For Each</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="975303c1-dd1b-11e4-f513-593217295735"
+		/>
+	</TextIdentifier>
+</TranslatedText>

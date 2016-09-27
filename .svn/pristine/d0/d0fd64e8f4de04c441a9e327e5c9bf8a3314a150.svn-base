@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E901-52E833A2F539">
+	<DocumentID>525400E2-1DC8-11E4-E901-52E833A2D539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E901-52E833A2D539</Name>
+	<Description>Get Temporary Folder</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-29T20:42:02.909</CreationDate>
+	<Notes/>
+	<DefaultText>Get Temporary Folder</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714C7539"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="525400E2-1DC8-11E4-E901-52E833A31539"
+		/>
+	</Translations>
+</TextIdentifier>

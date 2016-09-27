@@ -1,0 +1,54 @@
+<div id="createKudoContent">
+	<br />
+	<legend>Create Kudo</legend>
+
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="newKudoPanelHeading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#newKudoPanelBody" aria-expanded="true" aria-controls="collapseOne"> Kudos Details </a>
+			</h4>
+		</div>
+		<div id="newKudoPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="newKudoPanelHeading">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label>Recipient</label>
+							<div class="input-group">
+								<select class="form-control" id="newKudoRecipient" name="newKudoRecipient">
+									<option value="">--- Select Recipient ---</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label>Category</label>
+							<div class="input-group">
+								<select class="form-control" id="newKudoCategory" name="newKudoCategory">
+									<option value="">--- Select Category ---</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label>Description</label> <textarea rows="3" class="form-control" name="newKudoDescription" id="newKudoDescription"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<button id="cancelKudoButton" class="btn btn-warn" value="Cancel">Cancel</button>
+						<button id="createKudoButton" class="btn btn-primary" value="Create New Kudo">Create New Kudo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

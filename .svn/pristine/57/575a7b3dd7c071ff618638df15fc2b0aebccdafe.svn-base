@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="bf1e79a3-306a-11e4-f513-40430c7fd6b7">
+	<DocumentID>ebfeee2c-bbef-11e4-f513-40430c7716b6</DocumentID>
+	<Name>ebfeee2c-bbef-11e4-f513-40430c7716b6</Name>
+	<Description>SubmitKudo</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T16:07:53.179</CreationDate>
+	<Notes/>
+	<Text>SubmitKudo</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="cbc9bb0d-9789-11e4-f513-40430c6316b4"
+		/>
+	</TextIdentifier>
+</TranslatedText>

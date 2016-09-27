@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="330cea62-9b47-11e4-ecd7-cb5130581f41">
+	<DocumentID>eb462b93-04aa-11e4-ecd7-cb51304cdf40</DocumentID>
+	<Name>eb462b93-04aa-11e4-ecd7-cb51304cdf40</Name>
+	<Description>concat(&quot;Submit Status Report - &quot;, bpm:CreateStatusReportRequest/bpm:projectName/text(), &quot; (&quot;, bpm:CreateStatusReportRequest/bpm:weekOf/text(), &quot;)&quot;)</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-07T21:08:16.339</CreationDate>
+	<Notes/>
+	<DefaultText>concat(&quot;Submit Status Report - &quot;, bpm:CreateStatusReportRequest/bpm:projectName/text(), &quot; (&quot;, bpm:CreateStatusReportRequest/bpm:weekOf/text(), &quot;)&quot;)</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="9321538b-3bc0-11e4-ecd7-cb5130621f42"
+		/>
+	</Translations>
+</TextIdentifier>

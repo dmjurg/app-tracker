@@ -1,0 +1,132 @@
+window.c20g.view.recruiting_applicationform={
+	init: function(viewInfo,formContainer){
+
+		var context=this;
+
+		// window.c20g.ws.recruiting.GetAllJobApplications(function(applications){
+
+		// });
+
+		// formContainer.find("#cancelJobApplicationButton").click(function(e) {
+		// 	window.c20g.ui.unloadUI();
+		// });
+
+		// formContainer.find("#submitJobApplicationButton").click(function(e) {
+
+		// 	window.c20g.ws.recruiting.CreateNewJobApplication function(){
+		// 		window.c20g.ui.unloadUI();
+		// 	});
+		// });
+
+		formContainer.find("#cancelJobApplicationButton").click(function(e) {
+			window.c20g.ui.unloadUI();
+		});
+
+
+		var validation = this.validation = {
+			// need validations for external not internal
+			// fill with necessary variables like name, address, phone number...
+			// "kudoCategoryRequired": new window.c20g.validation.Validator({$el: kudoCategoryField, v: "required", c: true}),
+			// "kudoDescriptionRequired": new window.c20g.validation.Validator({$el: kudoDescriptionField, v: "required", c: true}),
+			// "kudoRecipientRequired": new window.c20g.validation.Validator({$el: kudoRecipientField, v: "required", c: true})
+		};
+
+		window.c20g.validation.util.activate(this.validation);
+
+		formContainer.find("#submitJobApplicationButton").click(function(e) {
+			// variables for database go here
+			// id should be automatically created
+			// automatically assign submission date
+			var status = formContainer.find("#status").val();
+			var first_name = formContainer.find("#first_name").val();
+			var last_name = formContainer.find("#last_name").val();
+			var email = formContainer.find("#email").val();
+			var phone_number = formContainer.find("#phone_number").val();
+			var street_address = formContainer.find("#street_address").val();
+			var city = formContainer.find("#city").val();
+			var state = formContainer.find("#state").val();
+			var zipcode = formContainer.find("#zipcode").val();
+
+			var college_name = formContainer.find("#college_name").val();
+			var college_city = formContainer.find("#college_city").val();
+			var college_state = formContainer.find("#college_state").val();
+			var major1 = formContainer.find("#major1").val();
+			var major2 = formContainer.find("#major2").val();
+			var minor1 = formContainer.find("#minor1").val();
+			var minor2 = formContainer.find("#minor2").val();
+			var gpa_overall = formContainer.find("#gpa_overall").val();
+			var gpa_major = formContainer.find("#gpa_major").val();
+			var awards = formContainer.find("#awards").val();
+			var grad_date = formContainer.find("#grad_date").val();
+
+			var work_auth = formContainer.find("#work_auth").val();
+			var source = formContainer.find("#source").val();
+			var referral = formContainer.find("#referral").val();
+			var referrer = formContainer.find("#referrer").val();
+			var start_date = formContainer.find("#start_date").val();
+
+			// var accommodation (does candidate require special accommodation)
+			// var law (has candidate broken the law)
+
+			var java = formContainer.find("#java").val();
+			var html = formContainer.find("#html").val();
+			var css = formContainer.find("#css").val();
+			var sql_lang = formContainer.find("#sql_lang").val();
+			var other_langs = formContainer.find("#other_langs").val();
+
+			// window.c20g.ws.kudos.CreateEmployeeKudo(categoryID, userCN, recipientCN, description, function(){
+			// 	window.c20g.ui.unloadUI();
+			// });
+		});
+
+
+	window.c20g.ui.loading.hide();
+
+
+	}, //closes out init
+
+	populateForm: function(candidate){
+		$('legend').text(candidate.full_name + " (Submitted on: "+ candidate.submission_date + ")");
+		$('#status').val(candidate.status);
+		$('#first_name').val(candidate.first_name);
+		$('#last_name').val(candidate.last_name);
+		$('#email').val(candidate.email);
+		$('#phone_number').val(candidate.phone_number);
+		$('#street_address').val(candidate.street_address);
+		$('#city').val(candidate.city);
+		$('#state').val(candidate.state);
+		$('#zipcode').val(candidate.zipcode);
+		$('#college_name').val(candidate.college_name);
+		$('#college_city').val(candidate.college_city);
+		$('#college_state').val(candidate.college_state);
+		$('#major1').val(candidate.major1);
+		$('#major2').val(candidate.major2);
+		$('#minor1').val(candidate.minor1);
+		$('#minor2').val(candidate.minor2);
+		$('#gpa_overall').val(candidate.gpa_overall);
+		$('#gpa_major').val(candidate.gpa_major);
+		$('#awards').val(candidate.awards);
+		$('#grad_date').val(candidate.grad_date);
+		$('#work_auth').val(candidate.work_auth);
+		$('#source').val(candidate.source);
+		$('#referral').val(candidate.referral);
+		$('#referrer').val(candidate.referrer);
+		$('#accommodation').val(candidate.accommodation);
+		$('#law').val(candidate.law);
+		$('#start_date').val(candidate.start_date);
+		$('input[name=java][value=' + candidate.java +']').attr("checked", true);
+		$('input[name=html][value=' + candidate.html +']').attr("checked", true);
+		$('input[name=css][value=' + candidate.css +']').attr("checked", true);
+		$('input[name=sql_lang][value=' + candidate.sql_lang +']').attr("checked", true);
+		$('#other_langs').val(candidate.other_langs);	
+
+	},
+
+
+
+	validation: null
+
+
+
+
+}

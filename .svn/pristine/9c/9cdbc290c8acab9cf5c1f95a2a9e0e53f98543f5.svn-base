@@ -1,0 +1,25 @@
+<div id="submitStatusReportFormContent">
+
+	<br/>	
+	<legend></legend>
+	
+	<div class="row">
+		<div class="col-sm-9">
+			<div class="form-group">
+				<label>Google Doc URL</label> <input class="form-control" type="text" name="googleDocURL" id="googleDocURL" />
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="col-sm-9">
+			<button id="cancelButton" type="submit" name="action" class="btn btn-danger" value="Cancel">Cancel</button>
+			<button id="saveDraftButton" type="submit" name="action" class="btn btn-warn" value="SaveAsDraft">Save As Draft</button>
+			<button id="submitButton" type="submit" name="action" class="btn btn-primary" value="Submit">Submit</button>
+		</div>
+	</div>
+	<br />
+
+
+</div>

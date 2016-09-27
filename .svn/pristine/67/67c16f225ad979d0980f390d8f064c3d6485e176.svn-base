@@ -1,0 +1,326 @@
+/**
+ * @namespace Container Util object. Holds convenience methods to cover reusable
+ *            functionality within c20g
+ */
+util = {
+
+	/**
+	 * @function cleanupSOAPJSON
+	 * @description Clones an object (deep) and uses cleanupSingletonArrays to clean up the singleton arrays
+	 */
+	cleanupSOAPJSON: function(o) {
+		var oprime = $.extend(true, {}, o);
+		window.c20g.util.cleanupSingletonArrays(oprime);
+		return oprime;
+	},
+
+	/**
+	 * @function cleanupSingletonArrays (recursive)
+	 * @desription Traverses and object and removes all singleton arrays and assigns the contents of the first object to the parent property
+	 */
+	cleanupSingletonArrays: function(o) {
+	    for (var i in o) {
+	    	// Remove Array
+			if (o[i] instanceof Array) {
+				if(o[i].length === 1) {
+					o[i] = (o[i])[0];
+				}
+			}
+	        if (o[i] !== null && typeof(o[i])=="object") {
+	            window.c20g.util.cleanupSingletonArrays(o[i]);
+	        }
+	    }
+	},
+
+	parseQueryString : function(querystring) {
+		// remove any preceding url and split
+		querystring = querystring.substring(querystring.indexOf('?') + 1)
+				.split('&');
+		var params = {}, pair, d = decodeURIComponent;
+		// march and parse
+		for (var i = querystring.length - 1; i >= 0; i--) {
+			pair = querystring[i].split('=');
+			params[d(pair[0])] = d(pair[1]);
+		}
+
+		return params;
+	},
+
+
+	breakOnFirst: function (str, delimeter) {
+
+		var splitStr = str.split(delimeter);
+		var first = splitStr.shift();
+
+		return [first, splitStr.join(delimeter)];
+
+	},
+
+
+	traverseObject: function(obj, prop, val){
+		var props = prop.split('.');
+		var finalObj = obj;
+	    for(var i = 0; i < props.length; i++) {
+	    	var p = props[i];
+	    	if (window.c20g.util.isUndefinedOrNull(finalObj[p])) {
+	        	return undefined;
+	        }
+	    	else {
+	    		if(i === props.length-1) {
+	    			if(!window.c20g.util.isUndefinedOrNull(val)) {
+	    				finalObj[p] = val;
+	    			}
+	    		}
+	    		finalObj = finalObj[p];
+	    	}
+	    }
+	    return finalObj;
+	},
+
+	isUndefinedOrNull : function(x) {
+		return _.isUndefined(x) || _.isNull(x);
+	},
+
+	isNullOrEmpty : function(x) {
+		return _.isNull(x) || x == "";
+	},
+
+	/**
+	 * @function
+	 * @description Generates a random UID v4.
+	 */
+	generateUIDv4 : function() {
+		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : r & 0x3 | 0x8;
+			return v.toString(16);
+		});
+	},
+
+	/**
+	 * @function
+	 * @description Traverses a javascript object and replaces any null
+	 *              references with empty strings.
+	 * @param {object}
+	 *            obj object that is having all null values cleaned.
+	 */
+	cleanNullObjects : function(obj) {
+		for ( var key in obj) {
+			if (typeof (obj[key]) === "object") {
+				if (obj[key]['@nil'] === "true" || obj[key]['@null'] === "true") {
+					obj[key] = "";
+				} else {
+					window.c20g.Util.cleanNullObjects(obj[key]);
+				}
+			}
+		}
+	},
+
+	/**
+	 * @function
+	 * @description Rounds a number to the nearest specified place. Rounds up on
+	 *              5. Example window.c20g.util.round(10.466890,2) = 10.47
+	 * @param {number}
+	 *            number value of the number that needs to be rounded.
+	 * @param {number}
+	 *            places a postive integer that represents the level at which
+	 *            the number should be rounded.
+	 */
+	round : function(number, places) {
+		return +(Math.round(number + "e+" + places) + "e-" + places);
+	},
+
+	formatMoment : function(m, format) {
+		if (_.isNull(m) || _.isUndefined(m)) {
+			return "";
+		}
+
+		if (!m.isValid()) {
+			return "";
+		}
+
+		if (_.isNull(format) || _.isUndefined(format)) {
+			return m.toISOString();
+		} else {
+			return m.format(format);
+		}
+	},
+	parseMoment : function(s, format) {
+
+		if (_.isNull(s) || _.isUndefined(s)) {
+			return null;
+		}
+
+		var m = null;
+
+		if (_.isNull(format) || _.isUndefined(format)) {
+			m = moment.utc(s, moment.ISO_8601);
+		} else {
+			m = moment.utc(s, format);
+		}
+
+		if (!m.isValid()) {
+			return null;
+		} else {
+			return m;
+		}
+	},
+	replaceTokens : function(str, vals) {
+		var newStr = str;
+		for (var i = 0, l = vals.length; i < l; i++) {
+			newStr = newStr.replace(/{(.*?)}/, vals[i]);
+		}
+		return newStr;
+	},
+
+	cleanAndCompressText : function(text) {
+		var t = text;
+		t = t.trim(); // remove any whitespace before and after;
+		t = t.replace(/\t/g, " "); // replace all tabs with spaces
+		t = t.replace(/\r/g, "\n"); // replace all \r with \n
+		t = t.replace(/[" "]{1,}/g, " "); // replace all repeated spaces with a single space
+		t = t.replace(/ \n/g, "\n"); // replace space \n with just \n
+		t = t.replace(/\n /g, "\n"); // replace \n space with just \n
+		t = t.replace(/[\n]{3,}/g, "\n\n"); // replace 3 or more consecutive \n with 2 \n
+		return t;
+	},
+
+	parseIntNumber : function (sText) {
+
+		if(!this.isUndefinedOrNull(sText)){
+			sText = sText.replace(/[^\d.-]/g, '');
+		}
+
+
+		if (this.isNullOrEmpty(sText) || this.isUndefinedOrNull(sText))
+		{
+			return parseInt("***");
+		}
+		else
+		{
+			return parseInt(sText,10);
+		}
+	},
+
+	parseFloatNumber : function (sText) {
+
+		if(!this.isUndefinedOrNull(sText)){
+			sText = sText.replace(/[^\d.-]/g, '');
+		}
+
+
+		if (this.isNullOrEmpty(sText) || this.isUndefinedOrNull(sText))
+		{
+			return parseFloat("***");
+		}
+		else
+		{
+			return parseFloat(sText,10);
+		}
+	},
+
+	formatNumberWithCommas: function (text, addTrailingZeros) {
+
+
+		if(_.isUndefined(addTrailingZeros)) {
+			addTrailingZeros = false;
+		}
+
+		var val = this.parseFloatNumber(text == null? "" : text.toString());
+		if(isNaN(val))
+		{
+			return "";
+		}
+		else
+		{
+			text = val.toString();
+			if (addTrailingZeros)
+			{
+				text = addTrailingZerosToNumber(text, 2); // TODO: FIND THIS FUNCTION!
+			}
+			var parts = text.toString().split(".");
+			parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			return parts.join(".");
+		}
+	},
+
+	convert24HTo12H: function(h) {
+		var hrs = [12,1,2,3,4,5,6,7,8,9,10,11,12,1,2,3,4,5,6,7,8,9,10,11];
+		return hrs[h];
+	},
+
+	convert12HTo24H: function(h, tod) {
+		if(tod === "AM") {
+			var hrs = [-1,1,2,3,4,5,6,7,8,9,10,11,0];
+			return hrs[h];
+		}
+		else {
+			var hrs = [-1,13,14,15,16,17,18,19,20,21,22,23,12];
+			return hrs[h];
+		}
+	},
+
+	showHideBasedOnTF: function(tfValue, $field) {
+		if(tfValue == true)
+		{
+			window.c20g.ui.show($field);
+		}
+		else
+		{
+			window.c20g.ui.hide($field);
+		}
+	},
+
+	showHideBasedOnField: function(fieldValue, showValue, $field, hideMode) {
+		if(fieldValue == showValue)
+		{
+			if(hideMode) {
+				window.c20g.ui.hide($field);
+			}
+			else
+			{
+				window.c20g.ui.show($field);
+			}
+		}
+		else
+		{
+			if(hideMode) {
+				window.c20g.ui.show($field);
+			}
+			else
+			{
+				window.c20g.ui.hide($field);
+			}
+		}
+	},
+
+	defaultToValue: function(val, defaultVal) {
+		if(this.isNullOrEmpty(val) || this.isUndefinedOrNull(val)) {
+			return defaultVal;
+		}
+		else {
+			return val;
+		}
+	},
+
+	defaultToNull: function(val) {
+		return this.defaultToValue(val, null);
+	},
+
+	buildToken: function(tokenName) {
+		return "{" + tokenName + "}";
+	},
+
+	isPagingCollection: function(collection) {
+		return !this.isUndefinedOrNull(collection.state);
+	},
+
+	replacePeriodsWithSlashes : function(str) {
+		return str.replace(/\./g,"/");
+	},
+
+	replaceSlashesWithPeriods : function(str) {
+		return str.replace(/\//g,".");
+	}
+
+
+};

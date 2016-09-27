@@ -1,0 +1,255 @@
+<div id="viewCandidateContent">
+
+  <legend>Create Application</legend>
+
+    <label> Applicant Status </label>
+    <select id="status">  <!-- dropdown -->
+      <option value="10">External Submission</option>
+      <option value="11" selected="selected">Internal Submission</option>
+      <option value="20">Phone Interview</option>
+      <option value="30">In Person Interview</option>
+      <option value="99">Discard</option>
+    </select> <!-- end dropdown -->
+
+    <h3>Personal Information</h3>
+    <fieldset class="personal_info nobullets" id="personal_info">
+      <ul>
+        <li>
+          <label> First Name: </label>
+          <input type="text" class="form-control" id="first_name" placeholder="First Name"/>
+        </li>
+        <li>
+          <label>Last Name: </label>
+          <input type='text' class="form-control" id='last_name' placeholder="Last Name"/>
+        </li>
+        <li>
+          <label> Email: </label>
+          <input type='text' class="form-control" id="email" placeholder="Email"/>
+        </li>
+        <li>
+          <label> Phone Number: </label>
+          <input type="text" class="form-control" id='phone_number' placeholder="Phone Numbers"/>
+        </li>
+        <li>
+          <label>Street Address</label>
+          <input type='text' class="form-control" id='street_address' placeholder="Street Address"/>
+        </li>
+        <li>
+          <label> City</label>
+          <input type='text' class="form-control" id='city' placeholder="City"/>
+        </li>
+        <li>
+          <label> State </label>
+          <input type="text" class="form-control" id='state' placeholder="State Abbreviation"/>
+        </li>
+        <li>
+          <label> Zip Code</label>
+          <input type='text' class="form-control" id='zipcode' placeholder="Zip Code"/>
+        </li>
+      </ul>
+    </fieldset>
+<br>
+
+  <h3>Education</h3>
+
+
+  <h4> College </h4>
+   <fieldset class="education personal_info nobullets" id="education">
+      <ul>
+        <li>
+          <label> College Name: </label>
+          <input type="text" id='college_name' class="form-control" placeholder="College Name"/>
+        </li>
+        <li>
+          <label> City: </label>
+          <input type='text' id='college_city' class="form-control" placeholder="City"/>
+        </li>
+        <li>
+          <label> State: </label>
+          <input type="text" id="college_state" class="form-control" placeholder="State Abbreviation"/>
+        </li>
+        <li>
+          <label>  First Major: </label>
+          <input type="text" id='major1' class="form-control" placeholder="First Major"/>
+        </li>
+        <li>
+          <label>  Second Major: (if applicable) </label>
+          <input type="text" id='major2' class="form-control" placeholder="Second Major"/>
+        </li>
+        <li>
+          <label> First Minor: (if applicable) </label>
+          <input type="text" id='minor1' class="form-control" placeholder="First Minor"/>
+        </li>
+        <li>
+          <label> Second Minor: (if applicable) </label>
+          <input type="text" id='minor2' class="form-control" placeholder="Second Minor"/>
+        </li>
+        <li>
+          <label> GPA (Overall): </label>
+          <input type='text' id='gpa_overall' class="form-control" placeholder="GPA(Overall)"/>
+        </li>
+        <li>
+          <label> GPA (First Major): </label>
+          <input type='text' id='gpa_major' class="form-control" placeholder="GPA(First Major)"/>
+        </li>
+        <li>
+          <label> Awards and Recognitions: </label>
+          <input type='text' id='awards' class="form-control" placeholder="Awards and Recognitions"/>
+        </li>
+        <li class="input-group date" data-provide="datepicker">
+          <label> Graduation Date : </label>
+          <input type='text' id='grad_date' class="form-control" placeholder="Graduation Date"/>
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+        </li>
+
+      </ul>
+    </fieldset>
+
+
+   <!-- Masters program information, not currently included -->
+    <div class='masters hidden'>
+     <h4> Master's Program (if applicable) </h4>
+     <fieldset class="masters" id="masters">
+      <ul>
+        <li>
+          <label> College Name: </label>
+          <input type="text" id='masters_college_name'/>
+        </li>
+        <li>
+          <label> City: </label>
+          <input type='text' id='masters_college_city'/>
+        </li>
+        <li>
+          <label> State: </label>
+          <input type="text" id="masters_college_state"/>
+        </li>
+        <li>
+          <label>  Program: </label>
+          <input type="text" id='masters_program'/>
+        </li>
+        <li>
+          <label> Concentration:  </label>
+          <input type="text" id='masters_concentration'/>
+        </li>
+          <label> GPA : </label>
+          <input type='text' id='masters_gpa'/>
+        </li>
+        <li>
+          <label> Awards and Recognitions: </label>
+          <input type='text' id='masters_awards'/>
+        </li>
+        <li>
+          <label> Graduation Date : </label>
+          <input type='text' id='masters_grad_date'/>
+        </li>
+
+      </ul>
+
+    </fieldset>
+    </div>
+    <!-- end Masters info -->
+<br>
+
+  <h3> Additional Information</h3>
+  <fieldset class="additional_information nobullets" id="additional_information">
+      <ul>
+        <li>
+            <label> Work Authorization:</label>
+            <select id="work_auth" required="required" aria-required="true" aria-invalid="false" class="valid">
+            <option value>Select work status</option>
+            <option value='1'> I am authorized to work in the US for my current Employer only</option>
+            <option value='2'> My status to work in the US is unknown </option>
+            <option value='3'> I am authorized to work in the US for any employer without sponsorship or restrictions</option>
+            <option value='4'> I currently or in the future will require sponsorship to work in the US</option>
+          </select>
+        </li>
+        <li>
+          <label> How did you hear about us? </label>
+          <select id='source'>
+            <option > Select source</option>
+            <option value='1'> Glassdoor </option>
+            <option value='2'> LinkedIn </option>
+            <option value='3'> Search Engine </option>
+            <option value='4'> College Careers website </option>
+            <option value='5'> College Career fair </option>
+            <option value='6'> Other</option>
+          </select>
+        </li>
+        <br>
+        <li>
+          <label> Are you a referral? </label>
+          <select id='referral'>
+            <option value='1'> No </option>
+            <option value='2'> Yes </option>
+          </select>
+        </li>
+        <li>
+          <div class="referral_employee">
+            <label> Referring Counterpoint Employee </label>
+            <input type='text' id='referrer'/>
+          </div>
+        </li>
+        <li class="input-group date" data-provide="datepicker">
+          <label> When are you available to start? </label>
+          <input type='text' id='start_date' class="form-control" placeholder="Start Date"/>
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+        </li>
+  </fieldset>
+
+
+
+<br>
+<h3>Technical Skills</h3>
+  <h4> Please rate your experience level of the following computer languages </h4>
+    <fieldset class="technical_skilss nobullets" id="technical_skills">
+      <ul>
+        <li>
+          <label>Java</label>
+            <input type="radio" name="java" value="0">None
+            <input type="radio" name="java" value="1">Some
+            <input type="radio" name="java" value="2">Moderate
+            <input type="radio" name="java" value="3">Expert
+        </li>
+        <li>
+          <label>HTML</label>
+            <input type="radio" name="html" value="0">None
+            <input type="radio" name="html" value="1">Some
+            <input type="radio" name="html" value="2">Moderate
+            <input type="radio" name="html" value="3">Expert
+        </li>
+        <li>
+          <label>CSS</label>
+            <input type="radio" name="css" value="0">None
+            <input type="radio" name="css" value="1">Some
+            <input type="radio" name="css" value="2">Moderate
+            <input type="radio" name="css" value="3">Expert
+        </li>
+
+      <li>
+        <label>SQL</label>
+           <input type="radio" name="sql" value="0">None
+           <input type="radio" name="sql" value="1">Some
+           <input type="radio" name="sql" value="2">Moderate
+           <input type="radio" name="sql" value="3">Expert
+      </li>
+      <br>
+      <li>
+        <label> Please list any other programming langauges you have experience with:</label>
+        <input type="input" id='other_langs'>
+
+     </ul>
+    </fieldset>
+<!-- end tech skills -->
+    </div>
+  </body>
+
+  <div class="wrapper">
+   <button id="submitJobApplicationButton" type="submit" class="btn btn-primary">Submit</button>
+   <button id="cancelJobApplicationButton" class="btn btn-warn" value="Cancel">Cancel</button>
+  </div>
+
+</div>

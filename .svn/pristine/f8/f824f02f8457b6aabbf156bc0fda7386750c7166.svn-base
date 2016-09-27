@@ -1,0 +1,238 @@
+window.c20g.view.recruiting_externalform={
+	init: function(viewInfo,formContainer){
+
+		var context=this;
+
+		formContainer.find("#cancelJobApplicationButton").click(function(e) {
+			window.c20g.ui.unloadUI();
+		});
+		var hoy = moment("2015-11-15");
+		console.log(hoy)
+		$('#start_date').datepicker({
+			minDate: hoy,
+			format: "yyyy-mm-dd"
+		});
+		$('#grad_date').datepicker({
+			format: "yyyy-mm-dd"
+		});
+		$('#awards').maxlength({
+			alwaysShow: true,
+			threshold: 400,
+			warningClass: "label label-info",
+			limitReachedClass: "label label-warning"
+		});
+		$('#relevant_ed_details').maxlength({
+			alwaysShow: true,
+			threshold: 100,
+			warningClass: "label label-info",
+			limitReachedClass: "label label-warning"
+		});
+		$('#other_info').maxlength({
+			alwaysShow: true,
+			threshold: 100,
+			warningClass: "label label-info",
+			limitReachedClass: "label label-warning"
+		});
+
+
+		var candidateFirstNameField = formContainer.find("#first_name");
+		var candidateLastNameField = formContainer.find("#last_name");
+		var candidateEmailField = formContainer.find("#email");
+		var candidatePhoneNumberField = formContainer.find("#phone_number");
+		var candidateStreetAddressField = formContainer.find("#street_address");
+		var candidateCityField = formContainer.find("#city");
+		var candidateStateField = formContainer.find("#state");
+		var candidateZipCodeField = formContainer.find("#zipcode");
+
+		var candidateCollegeNameField = formContainer.find("#college_name");
+		var candidatePrimaryStudyField = formContainer.find("#primary_study");
+		var candidateSecondaryStudyField = formContainer.find("#secondary_study");
+		var candidateGPAField = formContainer.find("#gpa");
+		var candidateGradDateField = formContainer.find("#grad_date");
+		var candidateAwardsField = formContainer.find("#awards");
+
+		var candidateOtherEdField = formContainer.find("#relevant_ed");
+		var candidateOtherEdInfoField = formContainer.find("#relevant_ed_details");
+
+		// var candidateSourceField = formContainer.find("#source");
+		var candidateReferrerField = formContainer.find("#referrer");
+		var candidateWorkAuthField = formContainer.find("#work_auth");
+		var candidateStartDateField = formContainer.find("#start_date");
+		var candidateDesiredSalaryField = formContainer.find("#desired_salary");
+		var candidateOtherInfoField = formContainer.find("#other_info");
+
+		var candidateLinkedInField = formContainer.find("#linked_in");
+		var candidateGitHubField = formContainer.find("#github");
+		var candidatePersonalSiteField = formContainer.find("#personal_site");
+		var candidateTwitterField = formContainer.find("#twitter");
+
+		var validation = this.validation = {
+
+			//making all fields mandatory (external app only)
+			"candidateFirstNameRequired": new window.c20g.validation.Validator({$el: candidateFirstNameField, v: "required", c: true}),
+			"candidateLastNameRequired": new window.c20g.validation.Validator({$el:candidateLastNameField, v: "required", c: true}),
+			"candidateEmailRequired": new window.c20g.validation.Validator({$el: candidateEmailField, v: "required", c: true}),
+			"candidatePhoneNumberRequired": new window.c20g.validation.Validator({$el: candidatePhoneNumberField, v: "required", c: true}),
+			
+			"candidateCollegeNameRequired": new window.c20g.validation.Validator({$el: candidateCollegeNameField, v: "required", c: true}),
+			"candidatePrimaryStudyRequired": new window.c20g.validation.Validator({$el: candidatePrimaryStudyField, v: "required", c: true}),
+			"candidateGPARequired": new window.c20g.validation.Validator({$el: candidateGPAField, v: "required", c: true}),
+			"candidateGradDateRequired": new window.c20g.validation.Validator({$el: candidateGradDateField, v: "required", c: true}),
+			
+			// "candidateSourceRequired" : new window.c20g.validation.Validator({$el: candidateSourceField, v: "required", c: true}),
+			"candidateWorkAuthRequired": new window.c20g.validation.Validator({$el: candidateWorkAuthField, v: "required", c: true}),
+			"candidateStartDateRequired": new window.c20g.validation.Validator({$el: candidateStartDateField, v: "required", c: true})
+
+		};
+
+
+		formContainer.find("#submitJobApplicationButton").click(function(e) {
+			if(window.c20g.validation.util.validate(validation).length > 0) {
+				console.log(window.c20g.validation.util.validate(validation))
+				e.preventDefault();
+				return false;
+			};
+			var newCandidate = {};
+			// below 2 attributes are automatically assigned
+			newCandidate.position_id = 2; //assigns position to only Associate Consultant. Make dynamic for multiple positions.
+
+			newCandidate.first_name = candidateFirstNameField.val();
+			newCandidate.last_name = candidateLastNameField.val();
+			newCandidate.email = candidateEmailField.val();
+			newCandidate.phone_number = candidatePhoneNumberField.val();
+			newCandidate.street_address = candidateStreetAddressField.val();
+			newCandidate.city = candidateCityField.val();
+			newCandidate.state = candidateStateField.val();
+			newCandidate.zipcode = candidateZipCodeField.val();
+
+			newCandidate.university_id = parseInt(candidateCollegeNameField.val());
+			newCandidate.primary_study_id = parseInt(candidatePrimaryStudyField); 
+			newCandidate.secondary_study_id = parseInt(candidateSecondaryStudyField); 
+			newCandidate.gpa = parseInt(candidateGPAField.val());
+			newCandidate.grad_date = moment(candidateGradDateField.val());
+			newCandidate.awards = candidateAwardsField.val();
+			
+			newCandidate.other_ed_id = parseInt(candidateOtherEdField.val());
+			newCandidate.other_ed_summary = candidateOtherEdInfoField.val();
+
+			//NEED TO IDENTIFY STRUCTURE FOR MULTIPLE SOURCES BEING PASSED THROUGH!
+			newCandidate.sources = [];
+			$("input:checkbox[name='source']:checked").each(function(){
+    			newCandidate.sources.push(parseInt($(this).val()));
+			});
+			newCandidate.referrer = candidateReferrerField.val();
+			newCandidate.work_auth_id = parseInt(candidateWorkAuthField.val());
+			newCandidate.start_date = moment(candidateStartDateField.val());
+			newCandidate.desired_salary= candidateDesiredSalaryField.val();
+
+			newCandidate.misc_summary = candidateOtherInfoField.val();
+			
+			newCandidate.resume_url = "www.google.com/drive"; //dummy until dynamic
+			newCandidate.cover_letter_url = "www.google.com/drive"; //dummy until dynamic
+
+			newCandidate.github_url = candidateGitHubField.val();
+			newCandidate.personal_url = candidatePersonalSiteField.val();
+			newCandidate.linkedin_url = candidateLinkedInField.val();
+			newCandidate.twitter = candidateTwitterField.val();
+
+			window.c20g.validation.util.activate(this.validation);
+
+			window.c20g.ws.recruiting.CreateCandidateApplication(newCandidate, function(){
+				window.c20g.ui.unloadUI();
+			});
+
+		});
+
+	window.c20g.ui.loading.hide();
+
+	$("#college_state").change(function() {
+		var stateId = $("#college_state").val();
+		$("#college_name").empty();
+		window.c20g.ws.recruiting.GetUniversities(stateId, function(data){
+			var allUniversities = data.allUniversities;
+			$("#college_name").append("<option> Select Institution Name <span class='required'> *</span></option>");
+			for(var i = 0; i < allUniversities.length; i++) {
+				$("#college_name").append(
+					"<option value='" + allUniversities[i].id + "'>" + allUniversities[i].description + "</option>"
+				);
+			}
+		})
+	});
+
+	$("#relevant_ed").change(function() {
+		$("#relevant_ed_info").show();
+	});
+
+	$("#career_fair").change(function() {
+		if ($(this).prop('checked')) {
+			$("#cf_source_list").show();
+        } else {
+            $("#cf_source_list").hide();
+        }
+	});
+
+	}, //closes out init
+
+	addLookUpDataToDropdown: function(lookUpData) { // lookUpData is an array of objects, each object has name and id fields
+
+		var allStates = lookUpData.allStates;
+		var allFieldsOfStudy = lookUpData.allFieldsOfStudy;
+		var allOtherEds = lookUpData.allOtherEds;
+		var allWorkAuths = lookUpData.allWorkAuths;
+		var allSources = lookUpData.allSources;
+
+		for(var i = 0; i < allStates.length; i++) {
+			$("#college_state").append(
+				"<option value='" + allStates[i].id + "'>" + allStates[i].description + "</option>"
+			);
+		};
+
+		for(var i = 0; i < allFieldsOfStudy.length; i++) {
+			$("#primary_study").append(
+				"<option value='" + allFieldsOfStudy[i].id + "'>" + allFieldsOfStudy[i].description + "</option>"
+			);
+			$("#secondary_study").append(
+				"<option value='" + allFieldsOfStudy[i].id + "'>" + allFieldsOfStudy[i].description + "</option>"
+			);
+		};
+
+		for(var i = 0; i < allOtherEds.length; i++) {
+			$("#relevant_ed").append(
+				"<option value='" + allOtherEds[i].id + "'>" + allOtherEds[i].description + "</option>"
+			);
+		};
+
+		for(var i = 0; i < allWorkAuths.length; i++) {
+			$("#work_auth").append(
+				"<option value='" + allWorkAuths[i].id + "'>" + allWorkAuths[i].description + "</option>"
+			);
+		};
+
+		for(var i = 0; i < allSources.length; i++) {
+
+			if(allSources[i].career_fair == "false" && allSources[i].description == "Referral") {
+				$("#main_source_list").append(
+					"<li><input name='source' type='checkbox' value='" + allSources[i].id + "'>" + allSources[i].description + "</li>"
+				);	
+				$("input[name='source'][value=8]").change(function() {
+					if ($(this).prop('checked')) {
+						$(".referral_employee").show();
+        			} else {
+            			$(".referral_employee").hide();
+        			}
+				});					
+			} else if (allSources[i].career_fair == "false") {
+				$("#main_source_list").append(
+					"<li><input type='checkbox' name='source' value='" + allSources[i].id + "'>" + allSources[i].description + "</li>"
+				);
+			} else {
+				$("#cf_source_list").append(
+					"<li><input type='checkbox' name='source' value='" + allSources[i].id + "'>" + allSources[i].description + "</li>"
+				);
+			};
+		};
+	},
+
+	validation: null
+
+} // closes recruiting_externalform

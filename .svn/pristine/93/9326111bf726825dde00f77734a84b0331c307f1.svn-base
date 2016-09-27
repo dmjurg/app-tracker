@@ -1,0 +1,7 @@
+#viewCandidateContent ul, 
+#application_fields ul {
+  list-style-type: none;
+}
+.required {
+	color: red;
+}

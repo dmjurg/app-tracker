@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E903-74F201A8F539">
+	<DocumentID>525400E2-1DC8-11E4-E903-74F201A8D539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E903-74F201A8D539</Name>
+	<Description>TODO: Security Check</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-29T21:10:06.428</CreationDate>
+	<Notes/>
+	<Text>TODO: Security Check</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E903-74F201A89539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

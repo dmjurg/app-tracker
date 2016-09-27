@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="57fe03d5-2d1d-11e4-f34f-2934fe0d5f86">
+	<DocumentID>279e4cc2-b1d7-11e4-f34f-2934fe035f85</DocumentID>
+	<Name>279e4cc2-b1d7-11e4-f34f-2934fe035f85</Name>
+	<Description>SendMail</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-12T17:02:16.502</CreationDate>
+	<Notes/>
+	<Text>SendMail</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="9f237570-08e9-11e4-f34f-2934fdf09f83"
+		/>
+	</TextIdentifier>
+</TranslatedText>

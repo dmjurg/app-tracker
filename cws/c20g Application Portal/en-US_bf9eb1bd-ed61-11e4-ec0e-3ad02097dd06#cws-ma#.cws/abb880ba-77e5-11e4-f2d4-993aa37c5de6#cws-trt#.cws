@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="2f04fae8-e7f2-11e4-f2d4-993aa3865de7">
+	<DocumentID>abb880ba-77e5-11e4-f2d4-993aa37c5de6</DocumentID>
+	<Name>abb880ba-77e5-11e4-f2d4-993aa37c5de6</Name>
+	<Description>Review Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-07T19:41:49.491</CreationDate>
+	<Notes/>
+	<Text>Review Expense Report</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="27eddc26-6164-11e4-f2d4-993aa3699de4"
+		/>
+	</TextIdentifier>
+</TranslatedText>

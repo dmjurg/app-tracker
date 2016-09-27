@@ -1,0 +1,53 @@
+state_name,state_abbreviation,id
+Alaska,AK,1
+Alabama,AL,2
+Arkansas,AR,3
+Arizona,AZ,4
+California,CA,5
+Colorado,CO,6
+Connecticut,CT,7
+District of Columbia,DC,8
+Delaware,DE,9
+Florida,FL,10
+Georgia,GA,11
+Hawaii,HI,12
+Iowa,IA,13
+Idaho,ID,14
+Illinois,IL,15
+Indiana,IN,16
+Kansas,KS,17
+Kentucky,KY,18
+Louisiana,LA,19
+Massachusetts,MA,20
+Maryland,MD,21
+Maine,ME,22
+Michigan,MI,23
+Minnesota,MN,24
+Missouri,MO,25
+Mississippi,MS,26
+Montana,MT,27
+North Carolina,NC,28
+North Dakota,ND,29
+Nebraska,NE,30
+New Hampshire,NH,31
+New Jersey,NJ,32
+New Mexico,NM,33
+Nevada,NV,34
+New York,NY,35
+Ohio,OH,36
+Oklahoma,OK,37
+Oregon,OR,38
+Pennsylvania,PA,39
+Puerto Rico,PR,40
+Rhode Island,RI,41
+South Carolina,SC,42
+South Dakota,SD,43
+Tennessee,TN,44
+Texas,TX,45
+Utah,UT,46
+Virginia,VA,47
+Vermont,VT,48
+Washington,WA,49
+Wisconsin,WI,50
+West Virginia,WV,51
+Wyoming,WY,52

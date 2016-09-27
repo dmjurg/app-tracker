@@ -1,0 +1,513 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948F10F8">
+	<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948EF0F8</DocumentID>
+	<Name>ConfigureDynamicRoleMgmt</Name>
+	<Description>ConfigureDynamicRoleMgmt</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-27T17:46:50.513</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<script
+					src="/cordys/wcp/admin/behavior/applicationconnector.js"
+				/>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtOrganizationDN"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA5-CCFFB37E10F8"
+							wcpforms:class="v_label">Organization DN</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtApplicationPrefix"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA5-CCFFB37C50F8"
+							wcpforms:class="v_label">Application Prefix</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtApplicationRoleShortName"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA5-CCFFB37A90F8"
+							wcpforms:class="v_label">Application Role Short Name</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtDefaultRoles"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBC0-0A2A9489B0F8"
+							wcpforms:class="v_label">Default Organization Role CNs (separate with semicolons)</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtAuthenticatedUsersDN"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA5-CCFFB37710F8"
+							wcpforms:class="v_label">Authenticated Users DN</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtAdministratorUserDN"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA6-DDDC6F4F90F8"
+							wcpforms:class="v_label">Administrator User DN</xforms:label>
+					</xforms:input>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="txtEveryoneInCordysDN"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<xforms:label
+							textIdentifier="525400E2-1DC8-11E4-EBA6-DDDC6F4DD0F8"
+							wcpforms:class="v_label">EveryoneInCordys Role DN</xforms:label>
+					</xforms:input>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[    
+function createConnectorConfiguration(configurationNode)
+{
+    var NS_ROLEMGMT_CONFIG = "http://c20g.com/dynamicrolemgmt";
+    
+     configXmlDocument = configurationNode.ownerDocument;    
+     
+     var settingsNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "settings");     
+     cordys.appendXMLNode(settingsNode, configurationNode);
+     
+     var orgDNNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "organizationDN");
+     cordys.setTextContent(orgDNNode, txtOrganizationDN.value);
+     cordys.appendXMLNode(orgDNNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var appPrefixNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "appPrefix");
+     cordys.setTextContent(appPrefixNode, txtApplicationPrefix.value);
+     cordys.appendXMLNode(appPrefixNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var appRoleShortNameNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "appRoleShortName");
+     cordys.setTextContent(appRoleShortNameNode, txtApplicationRoleShortName.value);
+     cordys.appendXMLNode(appRoleShortNameNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var defaultRolesNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "defaultRoles");
+     cordys.setTextContent(defaultRolesNode, txtDefaultRoles.value)
+     cordys.appendXMLNode(defaultRolesNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var authUsersDNNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "authUsersDN");
+     cordys.setTextContent(authUsersDNNode, txtAuthenticatedUsersDN.value);
+     cordys.appendXMLNode(authUsersDNNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var adminUserDNNode = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "adminUserDN");
+     cordys.setTextContent(adminUserDNNode, txtAdministratorUserDN.value);
+     cordys.appendXMLNode(adminUserDNNode, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+     var everyoneInCordysRoleDN = cordys.createElementNS(configXmlDocument, NS_ROLEMGMT_CONFIG, "everyoneInCordysRoleDN");
+     cordys.setTextContent(everyoneInCordysRoleDN, txtEveryoneInCordysDN.value);
+     cordys.appendXMLNode(everyoneInCordysRoleDN, settingsNode);
+     // alert(cordys.getXML(settingsNode));
+     
+    return true;
+}
+
+
+function fillInPropertyScreen(configurationNode)
+{
+    var namespaces = new Array();
+    var NS_ROLEMGMT_CONFIG = "http://c20g.com/dynamicrolemgmt";
+    namespaces["ns"] = NS_ROLEMGMT_CONFIG;
+    
+    var settingsNode = cordys.selectXMLNode(configurationNode, "//ns:settings", namespaces);
+    if (settingsNode == null) {
+        return;
+    }
+    
+    var organizationDNNode = cordys.getNodeText(settingsNode, "ns:organizationDN", "", namespaces); 
+    txtOrganizationDN.value = organizationDNNode;
+
+    var applicationPrefixNode = cordys.getNodeText(settingsNode, "ns:appPrefix", "", namespaces);
+    txtApplicationPrefix.value = applicationPrefixNode;
+
+    var appRoleShortNameNode = cordys.getNodeText(settingsNode, "ns:appRoleShortName", "", namespaces);
+    txtApplicationRoleShortName.value = appRoleShortNameNode;
+
+    var defaultRolesNode = cordys.getNodeText(settingsNode, "ns:defaultRoles", "", namespaces);
+    txtDefaultRoles.value = defaultRolesNode;
+
+    var authUsersDNNode = cordys.getNodeText(settingsNode, "ns:authUsersDN", "", namespaces);
+    txtAuthenticatedUsersDN.value = authUsersDNNode;
+
+    var adminUserDNNode = cordys.getNodeText(settingsNode, "ns:adminUserDN", "", namespaces);
+    txtAdministratorUserDN.value = adminUserDNNode;
+
+    var everyoneInCordysDNNode = cordys.getNodeText(settingsNode, "ns:everyoneInCordysRoleDN", "", namespaces);
+    txtEveryoneInCordysDN.value = everyoneInCordysDNNode;    
+}
+
+
+function Form_InitDone(eventObject)
+{
+    initialize();
+}
+
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>ConfigureDynamicRoleMgmt</taskDescription>
+	<taskName>ConfigureDynamicRoleMgmt</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7A50F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7A30F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-23B5FB7A30F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-23B5FB7A30F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.519</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="525400E2-1DC8-11E4-EBA6-DDDC6F4C50F8"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948E50F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948E30F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-0A2A948E30F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-0A2A948E30F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.515</CreationDate>
+			<Notes/>
+			<UIRef>txtOrganizationDN</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948E10F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948DF0F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-0A2A948DF0F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-0A2A948DF0F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.514</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA5-CCFFB37E10F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948CD0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948CB0F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-0A2A948CB0F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-0A2A948CB0F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.514</CreationDate>
+			<Notes/>
+			<UIRef>txtApplicationPrefix</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948C90F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948C70F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-0A2A948C70F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-0A2A948C70F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.518</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA5-CCFFB37C50F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948B90F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948B70F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-0A2A948B70F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-0A2A948B70F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.516</CreationDate>
+			<Notes/>
+			<UIRef>txtApplicationRoleShortName</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948B50F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948B30F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-0A2A948B30F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-0A2A948B30F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.513</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA5-CCFFB37A90F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948A50F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948A30F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-0A2A948A30F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-0A2A948A30F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.512</CreationDate>
+			<Notes/>
+			<UIRef>txtDefaultRoles</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948990F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948970F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-0A2A948970F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-0A2A948970F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.519</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBC0-0A2A9489B0F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948890F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948870F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-0A2A948870F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-0A2A948870F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.518</CreationDate>
+			<Notes/>
+			<UIRef>txtAuthenticatedUsersDN</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-0A2A948850F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-0A2A948830F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-0A2A948830F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-0A2A948830F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.517</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA5-CCFFB37710F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7C90F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7C70F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-23B5FB7C70F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-23B5FB7C70F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.516</CreationDate>
+			<Notes/>
+			<UIRef>txtAdministratorUserDN</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7C50F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7C30F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-23B5FB7C30F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-23B5FB7C30F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.516</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA6-DDDC6F4F90F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7B50F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7B30F8</DocumentID>
+			<Name>525400E2-1DC8-11E4-EBC0-23B5FB7B30F8</Name>
+			<Description>525400E2-1DC8-11E4-EBC0-23B5FB7B30F8</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.516</CreationDate>
+			<Notes/>
+			<UIRef>txtEveryoneInCordysDN</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7B10F8">
+					<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7AF0F8</DocumentID>
+					<Name>525400E2-1DC8-11E4-EBC0-23B5FB7AF0F8</Name>
+					<Description>525400E2-1DC8-11E4-EBC0-23B5FB7AF0F8</Description>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-10-27T17:46:50.518</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="525400E2-1DC8-11E4-EBA6-DDDC6F4DD0F8"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="525400E2-1DC8-11E4-EBC0-0A2A948EF0F8"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="525400E2-1DC8-11E4-EBC0-23B5FB7AD0F8">
+			<DocumentID>525400E2-1DC8-11E4-EBC0-23B5FB7AB0F8</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-10-27T17:46:50.515</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

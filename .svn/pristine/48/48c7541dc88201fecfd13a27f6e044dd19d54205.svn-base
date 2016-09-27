@@ -1,0 +1,282 @@
+<div id="viewCandidateContent">
+
+<legend><h3>Create Application</h3></legend>
+
+<div id="application_fields">
+
+    <fieldset class="applicant_info nobullets" id="applicant_info">
+
+      <ul>
+        <row>
+          <li class="col-md-6">
+            <label> Applicant Status </label>
+            <select id="status"></select>  <!-- dropdown -->
+          </li>
+          <li class="col-md-6">
+            <label> Position </label>
+            <select id="position"></select>  <!-- dropdown -->
+          </li>  
+        </row>
+      </ul>    
+
+    </fieldset>
+
+    <h3>Personal Information</h3>
+    <fieldset class="personal_info nobullets" id="personal_info">
+      <ul>
+        <row>
+          <li class="col-md-6"> 
+            <label> First Name </label>
+            <input type="text" class="form-control" id="first_name"/>
+          </li>
+          <li class="col-md-6"> 
+            <label> Last Name </label>
+            <input type='text' class="form-control" id='last_name'/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <label> Email </label>
+            <input type='text' class="form-control" id="email" />
+          </li>
+          <li class="col-md-6">
+            <label> Phone Number </label>
+            <input type="text" class="form-control" id='phone_number' />
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <label> Home Address </label>
+            <input type='text' class="form-control" id='street_address' placeholder="Street Address"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-4">
+            <input type='text' class="form-control" id='city' placeholder="City"/>
+          </li>
+          <li class="col-md-4">
+            <input type="text" class="form-control" id='state' placeholder="State (Abbreviation)"/>
+          </li>
+          <li class="col-md-4">
+            <input type='text' class="form-control" id='zipcode' placeholder="Zip Code"/>
+          </li>
+        </row>
+      </ul>   
+    </fieldset>
+
+  <br>
+
+  <h3>Education</h3>
+
+  <h4> College </h4>
+   <fieldset class="education personal_info nobullets" id="education">
+      <ul>
+        <row>
+          <li class="col-md-6"> 
+            <select id="college_state">
+              <option class="req_dropdown"> Select Institution State </option>
+            </select>
+          </li>  
+          <li class="col-md-6"> 
+            <select id="college_name">
+              <option class="req_dropdown"> Select Institution Name </option>
+            </select>
+          </li>  
+        </row> 
+        <row>
+          <li class="col-md-6">    
+            <select id="primary_study">
+              <option> Primary Field of Study </option>
+            </select>
+          </li>
+          <li class="col-md-6">
+            <select id="secondary_study">
+              <option> Secondary Field of Study </option>
+            </select>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <label> GPA </label>
+            <input type='text' id='gpa' class="form-control"/>
+          </li>
+          <li class="col-md-6">
+            <label> Graduation Date </label>
+            <input type='text' id='grad_date' class="form-control"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <label> Awards and Recognitions </label>
+            <input type='text' id='awards' class="form-control"/>
+          </li>
+        </row>
+      </ul>  
+    </fieldset>
+
+  <h4> Relevant Education </h4>
+    <fieldset class="other_education personal_info nobullets" id="other_education">
+      <ul>
+        <row>
+          <li class="col-md-12"> 
+            <label> Additional classes/programs </label>
+          </li>
+        </row>
+        <row>  
+          <li class="col-md-12">   
+            <select id="relevant_ed">
+              <option> Select Program </option>
+            </select>
+          </li>  
+        </row>
+        <row>
+          <li class="col-md-12"> 
+            <div id="relevant_ed_info">
+              <label> Details </label>
+              <textarea id='relevant_ed_details'></textarea>
+            </div> 
+          </li>
+        </row>
+      </ul>  
+    </fieldset>
+
+<br>
+
+  <h3> Additional Information</h3>
+  <fieldset class="additional_information nobullets" id="additional_information">
+    <ul>
+      <row>
+        <li class="col-md-12" id="marketing_source">
+          <label> How did you hear about us? </label>
+          <row>
+            <form id='source'>
+              <ul id="main_source_list" class="col-md-6">
+                <li id="cf_li"><input type="checkbox" name="career_fair" id="career_fair">Career Fair</li>
+              </ul> 
+              <ul id="cf_source_list" class="col-md-6">
+                <li><label>Select Career Fair:</label></li>
+              </ul> 
+            </form>
+          </row>  
+        </li>
+      </row>
+      <row>
+        <li class="col-md-12">
+          <div class="referral_employee">
+            <label> Referring Counterpoint Employee </label>
+            <input type='text' id='referrer'/>
+          </div>
+        </li>
+      </row>
+      <row>
+        <li class="col-md-12">
+          <label>Employment eligibility</label>
+          <select id="work_auth" required="required" aria-required="true" aria-invalid="false" class="valid">
+            <option value>Select work status</option>
+          </select>
+        </li>
+      </row>
+      <row>
+        <li>
+          <label> Start Date </label>
+          <input type='text' id='start_date' class="form-control"/>
+        </li>
+      </row>
+      <row>
+        <li class="col-md-12"> 
+          <label> Anything else they'd like us to know </label>
+          <textarea id='other_info' placeholder="500 characters"></textarea>
+        </li>
+      </row>
+      <row>
+        <li class="col-md-6">
+          <label>LinkedIn</label>
+          <input type='text' id='linkedin' class='form-control'/>
+        </li>
+        <li class="col-md-6">
+          <label>GitHub</label>
+          <input type='text' id='github' class='form-control'/>
+        </li>
+      </row>
+      <row>
+        <li class="col-md-6">
+          <label>Website/Portfolio</label>
+          <input type='text' id='personal_site' class='form-control'/>
+        </li>
+        <li class="col-md-6">
+          <label>Twitter</label>
+          <input type='text' id='twitter' class='form-control'/>
+        </li>
+      </row>
+    </ul>  
+  </fieldset>
+
+
+
+<br>  
+<!-- <h3>Technical Skills</h3>
+  <h4> Please rate your experience level of the following computer languages </h4> -->
+<!--     <fieldset class="technical_skilss nobullets" id="technical_skills">
+      <ul>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>Java</label>
+            <label class="col-md-2"><input type="radio" name="java" value="1">None</label>
+            <label class="col-md-2"><input type="radio" name="java" value="2">Some</label>
+            <label class="col-md-2"><input type="radio" name="java" value="3">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="java" value="4">Expert</label>
+          </li>
+        </row>  
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>HTML</label>
+            <label class="col-md-2"><input type="radio" name="html" value="1">None</label>
+            <label class="col-md-2"><input type="radio" name="html" value="2">Some</label>
+            <label class="col-md-2"><input type="radio" name="html" value="3">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="html" value="4">Expert</label>
+          </li>
+        </row>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>CSS</label>
+            <label class="col-md-2"><input type="radio" name="css" value="1">None</label>
+            <label class="col-md-2"><input type="radio" name="css" value="2">Some</label>
+            <label class="col-md-2"><input type="radio" name="css" value="3">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="css" value="4">Expert</label>
+          </li>
+        </row>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>SQL</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="1">None</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="2">Some</label> 
+            <label class="col-md-2"><input type="radio" name="sql" value="3">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="sql" value="4">Expert</label>
+          </li>
+        </row> 
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>JavaScript</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="1">None</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="2">Some</label> 
+            <label class="col-md-2"><input type="radio" name="sql" value="3">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="sql" value="4">Expert</label>
+          </li>
+        </row> 
+        <row> 
+          <li class="col-md-12">
+            <label> Please list any other programming langauges you have experience with:</label>
+            <input type="input" id='other_langs' class="form-control">
+          </li>
+        </row>  
+      </ul>
+    </fieldset> -->
+  </div> <!-- closes application_fields div -->
+</div> <!-- closes ViewCandidateContent div -->
+<!-- end tech skills -->
+
+  <div class="wrapper">
+   <button id="submitJobApplicationButton" type="submit" class="btn btn-primary">Submit</button>
+   <button id="cancelJobApplicationButton" class="btn btn-warn" value="Cancel">Cancel</button>
+  </div>
+

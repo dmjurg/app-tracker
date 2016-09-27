@@ -1,0 +1,101 @@
+
+<Project
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.project.Project"
+	typeVersion="0019B980-5ADC-71DF-9C5A-1C9DE0779704"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E7B5-B7F4714C5539">
+	<DocumentID>525400E2-1DC8-11E4-E7B5-B7F4714C3539</DocumentID>
+	<Name>Cordys Template Project</Name>
+	<Description>Cordys Template Project</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-09-16T14:28:47.347</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<ISVPackageInfo>
+		<ISVPackageInfo
+			type="com.cordys.cws.packaging.isvp.ISVPackageInfo"
+			typeVersion="00215A62-2E6A-11E2-EEB7-903C43CFF084"
+			RuntimeDocumentID="525400E2-1DC8-11E4-E7B5-B7F4714DD539">
+			<DocumentID>525400E2-1DC8-11E4-E7B5-B7F4714DB539</DocumentID>
+			<Name>Counterpoint Consulting c20g Cordys Template Project</Name>
+			<Description>Counterpoint Consulting c20g Cordys Template Project</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-09-16T14:28:47.346</CreationDate>
+			<Notes/>
+			<BuildNumber>0</BuildNumber>
+			<ISVPackageFileName>Counterpoint Consulting c20g Cordys Template Project 1.0.0</ISVPackageFileName>
+			<ISVPackageOwner>Counterpoint Consulting</ISVPackageOwner>
+			<PackageForRuntime>true</PackageForRuntime>
+			<PostISVLoaderInformation/>
+			<Product>c20g Cordys Template Project</Product>
+			<SupportedDeploymentSpaces
+				xmlns:cws="http://schemas.cordys.com/cws/1.0"
+				cws:type="collection:string">
+				<cws:item>SHARED</cws:item>
+			</SupportedDeploymentSpaces>
+			<Version>1.0</Version>
+			<LicenseAgreement/>
+			<ThirdPartyAgreement/>
+		</ISVPackageInfo>
+	</ISVPackageInfo>
+	<RuntimeQualifiedName/>
+	<SourceFolder>
+		<uri
+			id="3ba9dd35-5373-11e4-ec0e-44a28bd55771"
+			path="Cordys Template Project"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+	<_AddOns>
+		<TranslationInformation
+			type="com.cordys.translation.TranslationInformation"
+			typeVersion="b81bb9b4-8af7-470f-a5fa-864be49acb9d"
+			RuntimeDocumentID="525400E2-1DC8-11E4-E7B5-B7F4714C9539">
+			<DocumentID>525400E2-1DC8-11E4-E7B5-B7F4714C7539</DocumentID>
+			<Name>TranslationInformation</Name>
+			<Description/>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-09-16T14:28:47.347</CreationDate>
+			<Notes/>
+			<LanguagePacks>
+				<LanguagePack
+					type="com.cordys.translation.LanguagePack"
+					typeVersion="11456b87-q895-32f2-584q-58f3tlm2so65"
+					RuntimeDocumentID="525400E2-1DC8-11E4-E7B5-B7F4714D1539">
+					<DocumentID>525400E2-1DC8-11E4-E7B5-B7F4714CF539</DocumentID>
+					<Name>en-US</Name>
+					<Description/>
+					<CreatedBy>bmarkmann</CreatedBy>
+					<CreationDate>2014-09-16T14:28:47.346</CreationDate>
+					<Notes/>
+					<Language>English - United States</Language>
+					<Texts>
+						<uri
+							id="525400E2-1DC8-11E4-E7B5-B7F4714D3539"
+							path="Cordys Template Project/en-US_525400E2-1DC8-11E4-E7B5-B7F4714D3539"
+							type="com.cordys.cws.associations.MergeableAssociation"
+						/>
+					</Texts>
+					<TranslationInformation>
+						<uri
+							id="525400E2-1DC8-11E4-E7B5-B7F4714C7539"
+						/>
+					</TranslationInformation>
+				</LanguagePack>
+			</LanguagePacks>
+			<ProjectLanguage>
+				<uri
+					id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+				/>
+			</ProjectLanguage>
+			<Texts>
+				<uri
+					id="525400E2-1DC8-11E4-E7B5-B7F4714CB539"
+					path="Cordys Template Project/TranslationInformation_525400E2-1DC8-11E4-E7B5-B7F4714CB539"
+					type="com.cordys.cws.associations.MergeableAssociation"
+				/>
+			</Texts>
+			<TranslationInformation/>
+		</TranslationInformation>
+	</_AddOns>
+</Project>

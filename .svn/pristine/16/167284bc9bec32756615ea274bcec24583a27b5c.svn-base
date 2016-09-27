@@ -1,0 +1,20 @@
+<div id="samplebpmkickoffContent">
+	<br />
+	<legend>Sample BPM Start Form</legend>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Start Info</label> <input class="form-control" type="text" name="startInfo" id="startInfo" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-9">
+			<button id="cancelButton" type="submit" name="action" class="btn btn-danger" value="Cancel">Cancel</button>
+			<button id="submitButton" type="submit" name="action" class="btn btn-primary" value="Submit">Submit</button>
+		</div>
+	</div>
+	<br />
+</div>

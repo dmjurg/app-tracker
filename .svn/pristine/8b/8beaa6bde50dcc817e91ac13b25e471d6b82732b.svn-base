@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="bbe1a619-2498-11e4-ec60-84b7f52ad474">
+	<DocumentID>13e0c176-5fc0-11e4-ec60-84b7f520d473</DocumentID>
+	<Name>13e0c176-5fc0-11e4-ec60-84b7f520d473</Name>
+	<Description>Assign Submit Report Task</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:51:37.896</CreationDate>
+	<Notes/>
+	<DefaultText>Assign Submit Report Task</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="b7dd43f0-f900-11e4-ec60-84b7f534d475"
+		/>
+	</Translations>
+</TextIdentifier>

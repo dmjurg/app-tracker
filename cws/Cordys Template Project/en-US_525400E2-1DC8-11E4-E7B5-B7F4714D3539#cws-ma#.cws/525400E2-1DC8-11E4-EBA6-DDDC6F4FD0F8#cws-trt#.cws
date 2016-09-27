@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBA6-DDDC6F4FF0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBA6-DDDC6F4FD0F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBA6-DDDC6F4FD0F8</Name>
+	<Description>Administrator User DN</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-26T17:40:59.681</CreationDate>
+	<Notes/>
+	<Text>Administrator User DN</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBA6-DDDC6F4F90F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

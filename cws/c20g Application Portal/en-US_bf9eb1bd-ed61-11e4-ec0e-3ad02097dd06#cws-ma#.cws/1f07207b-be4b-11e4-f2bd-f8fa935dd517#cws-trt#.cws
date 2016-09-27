@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="035e6393-58b4-11e4-f2bd-f8fa9367d518">
+	<DocumentID>1f07207b-be4b-11e4-f2bd-f8fa935dd517</DocumentID>
+	<Name>1f07207b-be4b-11e4-f2bd-f8fa935dd517</Name>
+	<Description>Activity</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-07T01:14:51.421</CreationDate>
+	<Notes/>
+	<Text>Activity</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="6fd0f2c5-a4b1-11e4-f2bd-f8fa934b1515"
+		/>
+	</TextIdentifier>
+</TranslatedText>

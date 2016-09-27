@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBA6-DDDC6F4CB0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBA6-DDDC6F4C90F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBA6-DDDC6F4C90F8</Name>
+	<Description>ConfigureDynamicRoleMgmt</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-26T17:40:59.667</CreationDate>
+	<Notes/>
+	<Text>ConfigureDynamicRoleMgmt</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBA6-DDDC6F4C50F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

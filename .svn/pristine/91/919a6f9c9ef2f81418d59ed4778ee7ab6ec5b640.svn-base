@@ -1,0 +1,135 @@
+window.c20g.view.recruiting_externalform={
+
+	init: function(viewInfo,formContainer){
+
+		var context=this;
+
+		formContainer.find("#cancelJobApplicationButton").click(function(e) {
+			window.c20g.ui.unloadUI();
+		});
+
+		var candidateFirstNameField = formContainer.find("#first_name");
+		var candidateLastNameField = formContainer.find("#last_name");
+		var candidateEmailField = formContainer.find("#email");
+		var candidatePhoneNumberField = formContainer.find("#phone_number");
+		var candidateStreetAddressField = formContainer.find("#street_address");
+		var candidateCityField = formContainer.find("#city");
+		var candidateStateField = formContainer.find("#state");
+		var candidateZipCodeField = formContainer.find("#zipcode");
+
+		var candidateCollegeNameField = formContainer.find("#college_name");
+		var candidateCollegeCityField = formContainer.find("#college_city");
+		var candidateCollegeStateField = formContainer.find("#college_state");
+		var candidateFirstMajorField = formContainer.find("#major1");
+		var candidateSecondMajorField = formContainer.find("#major2");
+		var candidateFirstMinorField = formContainer.find("#minor1");
+		var candidateSecondMinorField = formContainer.find("#minor2");
+		var candidateGPAOverallField = formContainer.find("#gpa_overall");
+		var candidateGPAMajorField = formContainer.find("#gpa_major");
+		var candidateAwardsField = formContainer.find("#awards");
+		var candidateGradDateField = formContainer.find("#grad_date");
+
+		var candidateWorkAuthField = formContainer.find("#work_auth");
+		var candidateSourceField = formContainer.find("#source");
+		var candidateReferralField = formContainer.find("#referral");
+		var candidateReferrerField = formContainer.find("#referrer");
+		var candidateStartDateField = formContainer.find("#start_date");
+
+		
+
+		var candidateJavaField = formContainer.find("#java");
+		var candidateHTMLField = formContainer.find("#html");
+		var candidateCSSField = formContainer.find("#css");
+		var candidateSQLLangField = formContainer.find("#sql_lang");
+		var candidateOtherLangsField = formContainer.find("#other_langs");
+
+		var validation = this.validation = {
+
+			//making all fields mandatory (external app only)
+			"candidateFirstNameRequired": new window.c20g.validation.Validator({$el: candidateFirstNameField, v: "required", c: true}),
+			"candidateLastNameRequired": new window.c20g.validation.Validator({$el:candidateLastNameField, v: "required", c: true}),
+			"candidateEmailRequired": new window.c20g.validation.Validator({$el: candidateEmailField, v: "required", c: true}),
+			"candidatePhoneNumberRequired": new window.c20g.validation.Validator({$el: candidatePhoneNumberField, v: "required", c: true}),
+			"candidateStreetAddressRequired": new window.c20g.validation.Validator({$el: candidateStreetAddressField, v: "required", c: true}),
+			"candidateCityRequired": new window.c20g.validation.Validator({$el: candidateCityField, v: "required", c: true}),
+			
+			"candidateCollegeNameRequired": new window.c20g.validation.Validator({$el: candidateCollegeNameField, v: "required", c: true}),
+			"candidateCollegeCityRequired": new window.c20g.validation.Validator({$el: candidateCollegeCityField, v: "required", c: true}),
+			"candidateFirstMajorRequired": new window.c20g.validation.Validator({$el: candidateFirstMajorField, v: "required", c: true}),
+			"candidateGPAOverallRequired": new window.c20g.validation.Validator({$el: candidateGPAOverallField, v: "required", c: true}),
+			"candidateGradDateRequired": new window.c20g.validation.Validator({$el: candidateGradDateField, v: "required", c: true}),
+			
+			"candidateWorkAuthRequired": new window.c20g.validation.Validator({$el: candidateWorkAuthField, v: "required", c: true}),
+			"candidateSourceRequired": new window.c20g.validation.Validator({$el: candidateSourceField, v: "required", c: true}),
+			"candidateStartDateRequired": new window.c20g.validation.Validator({$el: candidateStartDateField, v: "required", c: true})
+
+			// "candidateJavaRequired": new window.c20g.validation.Validator({$el: candidateJavaField, v: "required", c: true}),
+			// "candidateHTMLRequired": new window.c20g.validation.Validator({$el: candidateHTMLField, v: "required", c: true}),
+			// "candidateCSSRequired": new window.c20g.validation.Validator({$el: candidateCSSField, v: "required", c: true}),
+			// "candidateSQLLangRequired": new window.c20g.validation.Validator({$el: candidateSQLLangField, v: "required", c: true})
+		};
+
+
+		formContainer.find("#submitJobApplicationButton").click(function(e) {
+			if(window.c20g.validation.util.validate(validation).length > 0) {
+				console.log(window.c20g.validation.util.validate(validation))
+				e.preventDefault();
+				return false;
+			};
+			var newCandidate = {};
+			// below 2 attributes are automatically assigned
+			newCandidate.submission_date = $.datepicker.formatDate('yy-mm-dd', new Date()); 
+			newCandidate.status = 10;
+
+			newCandidate.first_name = candidateFirstNameField.val();
+			newCandidate.last_name = candidateLastNameField.val();
+			newCandidate.email = candidateEmailField.val();
+			newCandidate.phone_number = candidatePhoneNumberField.val();
+			newCandidate.street_address = candidateStreetAddressField.val();
+			newCandidate.city = candidateCityField.val();
+			newCandidate.state = candidateStateField.val();
+			newCandidate.zipcode = candidateZipCodeField.val();
+
+			newCandidate.college_name = candidateCollegeNameField.val();
+			newCandidate.college_city = candidateCollegeCityField.val();
+			newCandidate.college_state = candidateCollegeStateField.val();
+			newCandidate.major1 = candidateFirstMajorField.val();
+			newCandidate.major2 = candidateSecondMajorField.val();
+			newCandidate.minor1 = candidateFirstMinorField.val();
+			newCandidate.minor2 = candidateSecondMinorField.val();
+			newCandidate.gpa_overall = candidateGPAOverallField.val();
+			newCandidate.gpa_major = candidateGPAMajorField.val();
+			newCandidate.awards = candidateAwardsField.val();
+			newCandidate.grad_date = moment(candidateGradDateField.val(), "MM/DD/YYYY").format("YYYY-MM-DD");
+
+			newCandidate.work_auth = parseInt(candidateWorkAuthField.val());
+			newCandidate.source = parseInt(candidateSourceField.val());
+			newCandidate.referral = parseInt(candidateReferralField.val());
+			newCandidate.referrer = candidateReferrerField.val();
+			newCandidate.start_date = moment(candidateStartDateField.val(), "MM/DD/YYYY").format("YYYY-MM-DD");
+
+			// currently not included: 
+			// does candidate require special accommodation
+			// has candidate broken the law
+
+			// newCandidate.java = parseInt(candidateJavaField.val());
+			// newCandidate.html = parseInt(candidateHTMLField.val());
+			// newCandidate.css = parseInt(candidateCSSField.val());
+			// newCandidate.sql_lang = parseInt(candidateSQLLangField.val());
+			newCandidate.other_langs = candidateOtherLangsField.val();
+
+			window.c20g.validation.util.activate(this.validation);
+
+			window.c20g.ws.recruiting.CreateCandidateApplication(newCandidate, function(){
+				window.c20g.ui.unloadUI();
+			});
+
+		});
+
+	window.c20g.ui.loading.hide();
+
+	}, //closes out init
+
+	validation: null
+
+} // closes recruiting_externalform

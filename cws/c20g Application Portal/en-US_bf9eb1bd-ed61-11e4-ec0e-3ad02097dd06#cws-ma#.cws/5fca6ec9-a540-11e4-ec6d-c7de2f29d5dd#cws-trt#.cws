@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="570a48e6-48bf-11e4-ec6d-c7de2f3015de">
+	<DocumentID>5fca6ec9-a540-11e4-ec6d-c7de2f29d5dd</DocumentID>
+	<Name>5fca6ec9-a540-11e4-ec6d-c7de2f29d5dd</Name>
+	<Description>Write Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.597</CreationDate>
+	<Notes/>
+	<Text>Write Expense Report</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="13c3c8be-06c2-11e4-ec6d-c7de2f1d55db"
+		/>
+	</TextIdentifier>
+</TranslatedText>

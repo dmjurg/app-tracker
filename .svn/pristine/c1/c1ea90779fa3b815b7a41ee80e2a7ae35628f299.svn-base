@@ -1,0 +1,273 @@
+// window.c20g = {};
+// window.c20g.ws = {};
+// window.c20g.session = {
+// 	currentUser : null
+// };
+// window.c20g.constants = {
+// 	DATEFORMAT : "M/D/YYYY",
+// 	DATETIMEFORMAT : "M/D/YYYY h:mm A",
+// 	ui : {
+// 		VALIDATION_ERROR: "validation-error",
+// 		SPINNER_TEXT : "loading-spinner-text",
+// 		SMALL_PRIMARY_BUTTON : "btn btn-primary btn-sm",
+// 		SMALL_INFO_BUTTON : "btn btn-info btn-sm",
+// 		SMALL_DEFAULT_BUTTON : "btn btn-default btn-sm",
+// 		SMALL_LINK_BUTTON : "btn btn-link btn-sm",
+// 		SMALL_SUCCESS_BUTTON : "btn btn-success btn-sm",
+// 		SMALL_WARNING_BUTTON : "btn btn-warning btn-sm",
+// 		SMALL_DANGER_BUTTON : "btn btn-danger btn-sm",
+// 		DEFAULT_BUTTON : "btn btn-default",
+// 		INFO_BUTTON : "btn btn-info",
+// 		WARNING_BUTTON : "btn btn-warning",
+// 		LINK_BUTTON : "btn btn-link",
+// 		MAIN_PAGE_CONTAINER : ".page-content",
+// 		FADE_LENGTH : 200,
+// 		faIcons : {
+// 			EXCLAMATION_CIRCLE_ICON: "fa fa-exclamation-circle",
+// 			MINUS_CIRCLE_ICON: "fa fa-minus-circle",
+// 			USER_ICON : "fa fa-user",
+// 			TASKS_ICON : "fa fa-tasks",
+// 			EDIT_ICON : "fa fa-edit",
+// 			REFRESH_ICON : "fa fa-refresh",
+// 			ARROW_CIRCLE_LEFT_ICON : "fa fa-arrow-circle-left",
+// 			CLOSE_ICON : "fa fa-close",
+// 			ARROW_CIRCLE_RIGHT : "fa fa-arrow-circle-o-right"
+// 		}
+// 	},
+// 	roles: {
+// 		"BasicUser": "Basic User"
+// 	}
+// };
+
+// window.c20g.error = {
+
+// 	loadErrorMessage : function(text, showButton) {
+// 		window.c20g.ui.loading.hide(); // Just in case there were any loading
+// 										// spinners
+// 		var formContainer = window.c20g.ui.templates.buildFormContainer();
+// 		var buttonGroup = window.c20g.ui.templates.buildButtonGroup();
+// 		formContainer.prepend(buttonGroup);
+// 		formContainer.append(window.c20g.ui.templates.buildErrorMessage(text));
+// 		if (_.isUndefined(showButton)) {
+// 			showButton = true;
+// 		}
+// 		if (showButton) {
+// 			buttonGroup.append(window.c20g.ui.templates.buildButton(" Back", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 					window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.ARROW_CIRCLE_LEFT_ICON)).click(function(e) {
+// 				window.c20g.ui.unloadUI();
+// 			}));
+// 		}
+// 		window.c20g.ui.loadUI(formContainer);	
+// 	},
+	
+// 	Error : function(errorCode) {
+// 		this.errorCode = errorCode;
+// 	},
+	
+// 	isError : function(error) {
+// 		return error instanceof window.c20g.error.Error;
+// 	}
+
+// };
+
+// window.c20g.grid = {};
+// window.c20g.grid.Row = Backbone.Model.extend({});
+// window.c20g.grid.RowCollection = Backbone.Collection.extend({
+// 	model : window.c20g.grid.Row
+// });
+// window.c20g.grid.RowPageableCollection = Backbone.PageableCollection.extend({
+// 	model : window.c20g.grid.Row,
+// 	mode: "client",
+// 	state: {
+// 		pageSize: 10
+// 	}
+// });
+
+// window.c20g.form = {
+
+// 	loadTask : function(taskInfo, reload) {
+// 		var formContainer = window.c20g.ui.templates.buildFormContainer();
+// 		var buttonGroup = window.c20g.ui.templates.buildButtonGroup();
+// 		formContainer.prepend(buttonGroup);
+		
+// 		// Back and Refresh Buttons
+// 		buttonGroup.prepend(window.c20g.ui.templates.buildButton(" Back", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 				window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.ARROW_CIRCLE_LEFT_ICON)).click(function(e) {
+// 			window.c20g.ui.unloadUI();
+// 		}));
+// 		buttonGroup.append("  ");
+// 		buttonGroup.append(window.c20g.ui.templates.buildButton(" Reload", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 				window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.REFRESH_ICON)).click(function(e) {
+// 			window.c20g.form.loadTask(taskInfo, true);
+// 		}));		
+
+// 		window.c20g.ui.loading.show();
+
+// 		window.c20g.ws.task.GetTask(taskInfo.taskId, function(task) {
+// 			if(task.url && task.url.indexOf("eforms_") === 0) {
+// 				window.c20g.ws.eforms.GetCurrentFormVersion(task.url.substring(7), function(form) {
+// 					var eformKey = task.url.substring(7);
+// 					$.get(window.c20g.config.url.formFolder + "/eforms_form_container.html", function(data) {						
+// 						formContainer.append(data);
+// 						var loadCompleteCallback = function() {
+// 							window.c20g.form.eforms_form_container.init(task, form, formContainer);
+// 						};
+
+// 						// Determine if loading up a new form, or reloading a current form
+// 						if (!_.isUndefined(reload)) {
+// 							if (reload) {
+// 								window.c20g.ui.reloadUI(formContainer, taskInfo.callback, loadCompleteCallback);
+// 							}
+// 						} 
+// 						else {
+// 							window.c20g.ui.loadUI(formContainer, taskInfo.callback, loadCompleteCallback);
+// 						}
+// 					});
+// 				});
+// 			}
+// 			else {
+// 				// Load Form HTML From URL
+// 				$.get(window.c20g.config.url.formFolder + "/" + window.c20g.util.replacePeriodsWithSlashes(task.url) + ".html", function(data) {
+					
+// 					formContainer.append(data);
+// 					var loadCompleteCallback = function() {
+// 						// Init form
+// 						window.c20g.form[task.url].init(task, formContainer);					
+// 						if(_.isFunction(taskInfo.loadCallback)) {
+// 							taskInfo.loadCallback();
+// 						}					
+// 					};
+
+// 					// Determine if loading up a new form, or reloading a current
+// 					// form
+// 					if (!_.isUndefined(reload)) {
+// 						if (reload) {
+// 							window.c20g.ui.reloadUI(formContainer, taskInfo.callback, loadCompleteCallback);
+// 						}
+// 					} 
+// 					else {
+// 						window.c20g.ui.loadUI(formContainer, taskInfo.callback, loadCompleteCallback);
+// 					}
+// 				});
+// 			}
+// 		});
+// 	}
+// };
+
+// window.c20g.picker = {
+
+// 	loadPicker : function(pickerInfo) {
+// 		var formContainer = window.c20g.ui.templates.buildFormContainer();
+// 		var buttonGroup = window.c20g.ui.templates.buildButtonGroup();
+// 		formContainer.prepend(buttonGroup);		
+		
+// 		// Back Button
+// 		buttonGroup.append(window.c20g.ui.templates.buildButton(" Close", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 				window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.CLOSE_ICON)).click(function(e) {
+// 			window.c20g.ui.unloadUI(false); // do not call the callback
+// 		}));
+
+// 		window.c20g.ui.loading.show();
+// 		// Load Form HTML From URL
+// 		$.get(window.c20g.config.url.pickersFolder + "/" + window.c20g.util.replacePeriodsWithSlashes(pickerInfo.pickerName) + ".html", function(data) {			
+// 			formContainer.append(data);
+
+// 			var loadCallback = function() {
+// 				window.c20g.picker[pickerInfo.pickerName].init(pickerInfo, formContainer);
+// 			};
+
+// 			window.c20g.ui.loadUI(formContainer, null, loadCallback);
+
+// 		});
+
+// 	}
+
+// };
+
+// window.c20g.tab = {
+
+// 	loadActiveTab : function($tabControl) {
+// 		// Clear all other tabs
+// 		$tabControl.find(".tab-content").find(".tab-pane").not(".active").empty();
+// 		var activeTab = $tabControl.find(".tab-content").find(".tab-pane").filter(".active");
+// 		if (activeTab.length > 0) {
+// 			window.c20g.ui.loading.show();
+// 			$.get(window.c20g.config.url.tabsFolder + "/" + activeTab.attr("id") + ".html", function(data) {				
+// 				var $data = $(data).hide();				
+// 				window.c20g.ui.hide(activeTab.children(), function(e) {
+// 					activeTab.empty();
+// 					var buttonGroup = window.c20g.ui.templates.buildButtonGroup();
+// 					$data.prepend(buttonGroup);
+// 					buttonGroup.append(window.c20g.ui.templates.buildButton("Refresh ", window.c20g.constants.ui.DEFAULT_BUTTON).click(function(e) {						
+// 						window.c20g.tab.loadActiveTab($tabControl);						
+// 					}).append(window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.REFRESH_ICON)));
+// 					activeTab.append($data);
+// 					window.c20g.ui.show($data);					
+// 					window.c20g.tab[activeTab.attr("id")].init({
+// 						parentTabControl : $tabControl
+// 					});					
+// 				});
+// 			});
+// 		}
+// 	}
+
+// };
+
+// window.c20g.view = {
+
+// 	load : function(viewURL, viewInfo, reload) {			
+		
+// 		if(_.isUndefined(viewInfo)) {
+// 			viewInfo = {};
+// 		}
+		
+// 		var formContainer = window.c20g.ui.templates.buildFormContainer();
+// 		var buttonGroup = window.c20g.ui.templates.buildButtonGroup();
+// 		formContainer.prepend(buttonGroup);
+
+// 		// Back and Refresh Buttons			
+// 		buttonGroup.append(window.c20g.ui.templates.buildButton(" Back", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 				window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.ARROW_CIRCLE_LEFT_ICON)).click(function(e) {
+// 			window.c20g.ui.unloadUI();
+// 		}));
+// 		buttonGroup.append("  ");			
+// 		buttonGroup.append(window.c20g.ui.templates.buildButton(" Reload", window.c20g.constants.ui.DEFAULT_BUTTON).prepend(
+// 				window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.REFRESH_ICON)).click(function(e) {
+// 			window.c20g.view.load(viewURL, viewInfo, true);
+// 		}));
+
+		
+// 		// Load View HTML From URL
+// 		window.c20g.ui.loading.show();
+// 		$.get(window.c20g.config.url.viewsFolder + "/" + window.c20g.util.replacePeriodsWithSlashes(viewURL) + ".html", function(data) {			
+// 			formContainer.append(data);
+// 			var loadCompleteCallback = function() {
+// 				window.c20g.view[viewURL].init(viewInfo, formContainer);
+// 				if(_.isFunction(viewInfo.loadCallback)) {
+// 					viewInfo.loadCallback();
+// 				}
+// 			};
+
+// 			// Determine if loading up a new view, or reloading a current
+// 			// view
+// 			if (!_.isUndefined(reload)) {
+// 				if (reload) {
+// 					window.c20g.ui.reloadUI(formContainer, viewInfo.callback, loadCompleteCallback);
+// 				}
+// 			} else {
+// 				window.c20g.ui.loadUI(formContainer, viewInfo.callback, loadCompleteCallback);
+// 			}
+
+// 		});
+		
+// 	}
+// };
+
+
+// // Initialize the eforms namespace
+// window.c20g.eforms = {};
+
+// // Make sure we have a string trim() available
+// if (!String.prototype.trim) {
+//    String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+// }

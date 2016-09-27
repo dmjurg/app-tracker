@@ -1,0 +1,46 @@
+#viewCandidateContent ul,
+#application_fields ul {
+  list-style-type: none;
+}
+.required {
+	color: red;
+}
+.referral_employee {
+	display: none;
+}
+.clearfix {
+  	overflow: auto;
+  	zoom: 1;
+}
+#viewCandidateContent li, 
+#application_fields li {
+	padding: .5em .5em .5em 0;
+}
+body {
+	padding-bottom: 20px;
+}
+.wrapper {
+	padding-top: 1em;
+}
+#college_state, #college_name, #major1, #major2 {
+	width: 100%;
+	height: 2.5em;
+	border-radius: 5px;
+}
+#relevant_ed_info {
+	display: none;
+}
+#relevant_ed {
+	width: 50%;
+	height: 2.5em;
+	border-radius: 5px;
+}
+#source, #work_auth {
+	width: 50%;
+	height: 2.5em;
+	border-radius: 5px;
+}
+#referral, #relocate {
+	height: 2.5em;
+	border-radius: 5px;
+}

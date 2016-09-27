@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="436b28d8-c549-11e4-ed0d-ca6c3aa3145b">
+	<DocumentID>23efb186-c89c-11e4-ed0d-ca6c3a99145a</DocumentID>
+	<Name>23efb186-c89c-11e4-ed0d-ca6c3a99145a</Name>
+	<Description>Calculate Next Friday</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-10T00:43:30.26</CreationDate>
+	<Notes/>
+	<Text>Calculate Next Friday</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="7337913e-0d1b-11e4-ed0d-ca6c3a851458"
+		/>
+	</TextIdentifier>
+</TranslatedText>

@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="2fff703c-7d1e-11e4-ec60-886cd57dd507">
+	<DocumentID>631c6fd4-7a70-11e4-ec60-886cd573d506</DocumentID>
+	<Name>631c6fd4-7a70-11e4-ec60-886cd573d506</Name>
+	<Description>InitiateWeeklyReports</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:51:37.91</CreationDate>
+	<Notes/>
+	<DefaultText>InitiateWeeklyReports</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="43e2d3e0-df43-11e4-ec60-886cd587d508"
+		/>
+	</Translations>
+</TextIdentifier>

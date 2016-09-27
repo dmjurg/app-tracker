@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="63019745-0f00-11e4-ec72-49e7dfa55f53">
+	<DocumentID>8b7766bb-15f0-11e4-ec72-49e7df9b5f52</DocumentID>
+	<Name>8b7766bb-15f0-11e4-ec72-49e7df9b5f52</Name>
+	<Description>Set Status to REJECTED</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T19:54:48.61</CreationDate>
+	<Notes/>
+	<Text>Set Status to REJECTED</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="4bc8de5d-a730-11e4-ec72-49e7df875f50"
+		/>
+	</TextIdentifier>
+</TranslatedText>

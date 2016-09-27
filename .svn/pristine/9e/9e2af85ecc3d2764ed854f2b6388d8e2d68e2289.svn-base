@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="a3ef9e75-9930-11e4-ec60-7ffc706d5417">
+	<DocumentID>8fc212c8-6700-11e4-ec60-7ffc70635416</DocumentID>
+	<Name>8fc212c8-6700-11e4-ec60-7ffc70635416</Name>
+	<Description>SubmitStatusReport</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:49:45.063</CreationDate>
+	<Notes/>
+	<DefaultText>SubmitStatusReport</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="6f9300f4-bcb6-11e4-ec60-7ffc70775418"
+		/>
+	</Translations>
+</TextIdentifier>

@@ -1,0 +1,20 @@
+
+<WebSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.websource.WebSource"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBBD-86DA16A4D0F8">
+	<DocumentID>525400E2-1DC8-11E4-EBBD-86DA16A4B0F8</DocumentID>
+	<Name>External UI Library</Name>
+	<Description>External UI Library</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-27T15:19:33.76</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<SourceFolder>
+		<uri
+			id="5ba16a6d-a54d-11e4-ec0e-44f89e0fd629"
+			path="Cordys Template Project/External UIs"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</WebSource>

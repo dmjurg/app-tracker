@@ -1,0 +1,16 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	RuntimeDocumentID="9363dc9c-953e-11e4-f34d-e9f8eabddfd1">
+	<DocumentID>63b7d43a-6006-11e4-f34d-e9f8eab51fd0</DocumentID>
+	<Name>Expense Approver</Name>
+	<Description>Expense Approver</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-12T15:51:54.049</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<type>Functional</type>
+	<Subroles/>
+	<configuredTasks/>
+</RoleDesignTime>

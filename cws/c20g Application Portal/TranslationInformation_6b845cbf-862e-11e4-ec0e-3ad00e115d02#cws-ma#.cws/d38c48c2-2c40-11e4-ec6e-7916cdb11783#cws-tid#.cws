@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="a35dddce-ec63-11e4-ec6e-7916cdbb1784">
+	<DocumentID>d38c48c2-2c40-11e4-ec6e-7916cdb11783</DocumentID>
+	<Name>d38c48c2-2c40-11e4-ec6e-7916cdb11783</Name>
+	<Description>Prepare Report Data</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.581</CreationDate>
+	<Notes/>
+	<DefaultText>Prepare Report Data</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="4bcc8e9c-8ce0-11e4-ec6e-7916cdc51785"
+		/>
+	</Translations>
+</TextIdentifier>

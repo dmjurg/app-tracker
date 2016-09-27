@@ -1,0 +1,70 @@
+
+<URLBasedForm
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.uiapplication.URLBasedForm"
+	RuntimeDocumentID="47f52cc6-d4eb-11e4-f517-eca3ab79dddd">
+	<DocumentID>3f45a3c5-1550-11e4-f517-eca3ab711ddc</DocumentID>
+	<Name>Review Simple Task</Name>
+	<Description>Review Simple Task</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T21:27:33.501</CreationDate>
+	<Notes/>
+	<URL>tasktrac_review</URL>
+	<WSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters>
+		<Properties
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</parameters>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Review Simple Task</taskDescription>
+	<taskName>Review Simple Task</taskName>
+	<title>true</title>
+	<top></top>
+	<type>URLBasedForm</type>
+	<width></width>
+	<TranslatableName/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input>
+		<uri
+			id="07f8611b-29c2-11e4-f519-44b322ac9269"
+		/>
+	</input>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="5b3a65a4-6c83-11e4-f519-44b321c41251">
+			<DocumentID>b3d26e4a-b888-11e4-f519-44b321ba1250</DocumentID>
+			<Name>b3d26e4a-b888-11e4-f519-44b321ba1250</Name>
+			<Description>b3d26e4a-b888-11e4-f519-44b321ba1250</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2015-01-30T21:54:56.301</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://c20g.com/apps/schema/tasktrac</namespace>
+			<operationName>SimpleTask</operationName>
+		</MessagePart>
+	</messageParts>
+	<output>
+		<uri
+			id="07f8611b-29c2-11e4-f519-44b322ac9269"
+		/>
+	</output>
+	<tagsContainer/>
+	<taskParts/>
+</URLBasedForm>

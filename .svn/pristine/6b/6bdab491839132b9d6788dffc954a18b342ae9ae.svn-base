@@ -1,0 +1,67 @@
+#viewCandidateContent ul,
+#application_fields ul {
+  list-style-type: none;
+}
+.required {
+	color: red;
+}
+.referral_employee {
+	display: none;
+}
+#referrer {
+	height: 2.45em;
+	border-radius: 5px;
+}
+.clearfix {
+  	overflow: auto;
+  	zoom: 1;
+}
+#viewCandidateContent li, 
+#application_fields li {
+	padding: .5em .5em .5em 0;
+}
+body {
+	padding-bottom: 20px;
+}
+.wrapper {
+	padding-top: 1em;
+}
+#status, #position, #college_state, #work_auth, #college_name, #primary_study, #secondary_study {
+	width: 100%;
+	height: 2.45em;
+	border-radius: 5px;
+}
+#relevant_ed_info {
+	display: none;
+}
+#relevant_ed {
+	width: 50%;
+	height: 2.45em;
+	border-radius: 5px;
+}
+#source {
+	width: 50%;
+	height: 2.45em;
+	border-radius: 5px;
+}
+#referral, #relocate {
+	height: 2.45em;
+	border-radius: 5px;
+}
+textarea {
+	width: 100%;
+	border-radius: 5px;
+	height: 6em;
+}
+#marketing_options {
+	height: 20em;
+}
+#cf_source_list {
+	display: none;
+}
+.applicant_info {
+	margin-top: 1.5em;
+}
+legend {
+	margin: 1em 0;
+}

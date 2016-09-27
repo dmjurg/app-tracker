@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="33f4ac54-1dce-11e4-ec6e-99d025201dd2">
+	<DocumentID>2fcab2fe-91ed-11e4-ec6e-99d025161dd1</DocumentID>
+	<Name>2fcab2fe-91ed-11e4-ec6e-99d025161dd1</Name>
+	<Description>For Each Remove Line Item</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.588</CreationDate>
+	<Notes/>
+	<Text>For Each Remove Line Item</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="5f93fe89-62a4-11e4-ec6e-99d024fa9dcf"
+		/>
+	</TextIdentifier>
+</TranslatedText>

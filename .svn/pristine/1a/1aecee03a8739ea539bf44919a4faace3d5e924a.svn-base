@@ -1,0 +1,19 @@
+<div id="expensesTabContent" class="tab-control-content">
+	<br/>
+	<div class="panel panel-default" style="display:none;">
+		<div class="panel-heading" role="tab" id="myExpensesPanelHeading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#myExpensesPanelBody" aria-expanded="true" aria-controls="collapseOne"> My Expense Reports </a>
+			</h4>
+		</div>
+		<div id="myExpensesPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="myExpensesPanelHeading">
+			<div class="panel-body">
+				<div class="my-expenses-grid-container">
+				</div>
+				<div id="expense-detail-container" style="display:none;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

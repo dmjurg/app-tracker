@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="fb73a00e-857d-11e4-ec60-886cd6c91527">
+	<DocumentID>cba01658-db96-11e4-ec60-886cd6bf1526</DocumentID>
+	<Name>cba01658-db96-11e4-ec60-886cd6bf1526</Name>
+	<Description>For Each Project</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:51:37.896</CreationDate>
+	<Notes/>
+	<DefaultText>For Each Project</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="dbf5b64b-dc5a-11e4-ec60-886cd6d31528"
+		/>
+	</Translations>
+</TextIdentifier>

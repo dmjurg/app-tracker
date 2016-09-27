@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E915-B616CB2A5539">
+	<DocumentID>525400E2-1DC8-11E4-E915-B616CB2A3539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E915-B616CB2A3539</Name>
+	<Description>Store Details in Response</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-30T14:34:42.348</CreationDate>
+	<Notes/>
+	<Text>Store Details in Response</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E915-B616CB29F539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

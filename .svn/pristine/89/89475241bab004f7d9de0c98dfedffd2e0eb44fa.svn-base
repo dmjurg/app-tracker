@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="5b24cb69-22b7-11e4-ec57-81482d0996b0">
+	<DocumentID>170f9c33-9f29-11e4-ec57-81482d0356af</DocumentID>
+	<Name>170f9c33-9f29-11e4-ec57-81482d0356af</Name>
+	<Description>Review</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:48:58.947</CreationDate>
+	<Notes/>
+	<DefaultText>Review</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="83113850-9d1e-11e4-ec57-81482d0fd6b1"
+		/>
+	</Translations>
+</TextIdentifier>

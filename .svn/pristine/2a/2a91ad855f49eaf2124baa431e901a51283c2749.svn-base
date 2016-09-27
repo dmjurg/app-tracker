@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="eb286eea-368f-11e4-ec60-7a7e5a95d799">
+	<DocumentID>3fbfdc80-fda3-11e4-ec60-7a7e5a8bd798</DocumentID>
+	<Name>3fbfdc80-fda3-11e4-ec60-7a7e5a8bd798</Name>
+	<Description>SubmitExpenseReport</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T02:48:58.969</CreationDate>
+	<Notes/>
+	<DefaultText>SubmitExpenseReport</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="1f4151cd-bc49-11e4-ec60-7a7e5a9fd79a"
+		/>
+	</Translations>
+</TextIdentifier>

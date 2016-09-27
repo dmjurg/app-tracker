@@ -1,0 +1,84 @@
+<div id="sampleFormContent">
+
+	<br/>	
+	<legend>Sample Form</legend>
+	
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Sample Field 1</label> <input class="form-control" type="text" name="sampleField1" id="sampleField1" />
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Sample Field 2</label> <input class="form-control" type="text" name="sampleField2" id="sampleField2" />
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Date 1</label>
+				<div class="input-group date" data-provide="datepicker">
+					<input class="form-control" type="text" name="date1" id="date1" /> <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Date 2</label>
+				<div class="input-group date" data-provide="datepicker">
+					<input class="form-control" type="text" name="date2" id="date2" /> <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label>Sample Text Area</label> <textarea class="form-control" name="sampleTextArea" id="sampleTextArea" />
+			</div>
+		</div>		
+	</div>	
+	
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Sample File Upload 1</label> <input type="file" name="sampleFile1" id="sampleFile1" />
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Sample File Upload 2</label> <input type="file" name="sampleFile2" id="sampleFile2" />
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Sample Picker</label> 
+				<div class="input-group" id="samplePicker">
+					<input type="hidden" name="samplePickerValue" id="samplePickerValue" />
+					<input class="form-control" type="text" name="samplePickerDisplay" id="samplePickerDisplay" />					 
+					<span class="input-group-btn"><button class="btn btn-default" type="button">Select</button></span>					
+				</div>
+			</div>
+		</div>		
+	</div>
+	
+	
+	<div class="row">
+		<div class="col-sm-9">
+			<button id="cancelButton" type="submit" name="action" class="btn btn-danger" value="Cancel">Cancel</button>
+			<button id="submitButton" type="submit" name="action" class="btn btn-primary" value="Submit">Submit</button>
+		</div>
+	</div>
+	<br />
+
+
+</div>

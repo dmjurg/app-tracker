@@ -1,0 +1,97 @@
+window.c20g.tab.recruitingTab = {
+	init: function(params) {
+		context = this;
+		context.parentTabControl = params.parentTabControl;
+
+		var buttonGroup = $("#recruitingTabContent").find(".button-group");
+
+		buttonGroup.append("  ");
+		buttonGroup.append(window.c20g.ui.templates.buildButton("Create Application", window.c20g.constants.ui.DEFAULT_BUTTON).click(function(e) {
+			window.c20g.view.load("kudos_createkudo", { //change this to populate create application modal
+				callback : function() {
+					window.c20g.tab.loadActiveTab(context.parentTabControl);
+				},
+				loadCallback : function() {
+					window.c20g.ui.getPreviousUI().$el.find("#recruitingTabContent").empty();
+				}
+			});
+		}));
+
+		window.c20g.ws.recruiting.GetCandidates(function(){
+			debugger;
+			for(var i = 0; i < candidates.length; i++) {
+				employees[i].showKudosButton = window.c20g.ui.templates.buildButton(" View Kudos", window.c20g.constants.ui.SMALL_PRIMARY_BUTTON)
+					.prepend(window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.TASKS_ICON))
+					.bind("click", { employee : employees[i] }, function(e){
+						var employee = e.data.employee.cn;
+						$("#kudosTabContent").find("#kudosPanelHeader").text("Kudos for " + employee);
+						context.loadEmployeeKudos(employee);
+					});
+			}
+
+			var columns = [];
+			columns.push({
+				name : 'cn',
+				label : 'Candidate',
+				cell : 'string',
+				editable : false,
+				width: 70,
+				headerCell: "custom"
+			});
+			columns.push({
+				name : 'applicationDate',
+				label : 'Application Date',
+				cell : 'string',
+				editable : false,
+				width: 10,
+				headerCell: "custom"
+			});
+			columns.push({
+				name : 'status',
+				label : 'Status',
+				cell : 'string',
+				editable : false,
+				width: 10,
+				headerCell: "custom"
+			});
+			columns.push({
+				name : 'showApplicationButton',
+				label : '',
+				cell : 'jq-custom',
+				editable : false,
+				width: 10,
+				headerCell: "custom"
+			});
+
+			context.employeesGrid = new Backgrid.Grid({
+				columns : columns,
+				collection : new window.c20g.grid.RowCollection(employees),
+				emptyText: "No Employees With Kudos Found"
+			});
+
+			var $employeesGrid = context.employeesGrid.render().$el;
+			var $employeesGridContainer = $("#recruitingTabContent").find(".candidate-grid-container");
+			$employeesGridContainer.empty().append($employeesGrid);
+
+			var $kudosGrid = context.kudosGrid.render().$el;
+			var $kudosGridContainer = $("#recruitingTabContent").find(".kudos-grid-container");
+			$kudosGridContainer.empty().append($kudosGrid);
+			window.c20g.ui.show($kudosGrid);
+
+			window.c20g.ui.loading.hide();
+		});
+
+	},
+
+	// loadEmployeeKudos : function(employeeCN) {
+	// 	context.kudosGrid.collection.reset();
+	// 	window.c20g.ws.kudos.GetEmployeeKudos(employeeCN, function(kudos){
+	// 		for(var i = 0; i < kudos.length; i++) {
+	// 			context.kudosGrid.collection.add(kudos[i]);
+	// 		}
+	// 	});
+	// },
+
+	employeesGrid : null,
+	kudosGrid : null
+};

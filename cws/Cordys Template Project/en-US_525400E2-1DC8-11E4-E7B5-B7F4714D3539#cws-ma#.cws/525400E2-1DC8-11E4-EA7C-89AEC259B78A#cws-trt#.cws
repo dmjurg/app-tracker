@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EA7C-89AEC259D78A">
+	<DocumentID>525400E2-1DC8-11E4-EA7C-89AEC259B78A</DocumentID>
+	<Name>525400E2-1DC8-11E4-EA7C-89AEC259B78A</Name>
+	<Description>Sample Task</Description>
+	<CreatedBy>tshah</CreatedBy>
+	<CreationDate>2014-10-14T20:55:09.477</CreationDate>
+	<Notes/>
+	<Text>Sample Task</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EA7C-89AEC259778A"
+		/>
+	</TextIdentifier>
+</TranslatedText>

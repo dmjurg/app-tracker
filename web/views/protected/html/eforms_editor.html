@@ -1,0 +1,958 @@
+<div id="formEditorViewContent">
+	<br/>
+
+	<div class='row' id='form-configurator-row'>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="formStructureTreePanelHeading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#formStructureTreePanelBody" aria-expanded="true" aria-controls="collapseOne"> Structure </a>
+					</h4>
+				</div>
+				<div id="formStructureTreePanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="formStructureTreePanelHeading">
+					<div class="panel-body">
+						<div id="formStructureTree"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="formElementPropertiesPanelHeading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#formElementPropertiesPanelBody" aria-expanded="true" aria-controls="collapseOne"> Current Element </a>
+					</h4>
+				</div>
+				<div id="formElementPropertiesPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="formElementPropertiesPanelHeading">
+					<div class="panel-body">
+						<p>Select a form element</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='formEditorPreview'>
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="formEditorPreviewPanelHeading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" href="#formEditorPreviewPanelBody" id="formEditorPreviewPanelHeader" aria-expanded="true" aria-controls="collapseOne"> Form Preview </a>
+				</h4>
+			</div>
+			<div id="formEditorPreviewPanelBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="formEditorPreviewPanelHeading">
+				<div id="formPreviewBody" class="panel-body">
+					<form></form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='formEditorButtons'>
+		<button class="btn btn-warning btn-close-form-editor">Close Without Saving</button>
+		<button class="btn btn-primary btn-save-form-editor">Save Form Changes</button>
+	</div>
+
+
+	<!-- TEMPLATES -->
+	<div id="formElementTemplates" style="display:none;">
+
+		<div id="formLegendTemplate">
+			<legend></legend>
+		</div>
+
+		<div id="textInputTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<input type="text" class="form-control" placeholder=""/>
+			</div>
+		</div>
+
+		<div id="textAreaTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<textarea class="form-control" rows="3" placeholder=""></textarea>
+			</div>
+		</div>
+
+		<div id="passwordInputTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<input type="password" class="form-control" placeholder=""/>
+			</div>
+		</div>
+
+		<div id="selectTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<select class="form-control"></select>
+			</div>
+		</div>
+
+		<div id="selectOptionTemplate">
+			<select>
+				<option value="0"></option>
+			</select>
+		</div>
+
+		<div id="radiosTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+			</div>
+		</div>
+
+		<div id="radioOptionTemplate">
+			<div class="radio radioOption">
+				<label>
+					<input type="radio">
+					<span class="radioOptionText"></span>
+				</label>
+			</div>
+		</div>
+
+		<div id="checkboxesTemplate">
+			<div class="form-group"></div>
+		</div>
+
+		<div id="checkboxOptionTemplate">
+			<div class="checkbox checkboxOption">
+				<label>
+					<input type="checkbox">
+					<span class="checkboxOptionText"></span>
+				</label>
+			</div>
+		</div>
+
+		<div id="buttonsetTemplate">
+			<div class="buttonset"></div>
+		</div>
+
+		<div id="buttonTemplate">
+			<button class="btn btn-default" style="margin:5px;" value=""></button>
+		</div>
+
+		<div id="dateInputTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<input type="date" class="form-control"/>
+			</div>
+		</div>
+
+		<div id="timeInputTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<input type="time" class="form-control" />
+			</div>
+		</div>
+
+		<div id="staticFieldTemplate">
+			<div class="form-group">
+				<label class="control-label">Label</label>
+				<p class="form-control-static"></p>
+			</div>
+		</div>
+
+		<div id="calloutTemplate">
+			<div class="bs-callout">
+				<h4></h4>
+				<p></p>
+			</div>
+		</div>
+
+		<div id="containerTemplate">
+			<div class="row">
+
+			</div>
+		</div>
+
+		<div id="containerColumnTemplate">
+			<div class="formContainerColumn"></div>
+		</div>
+
+		<div id="helpTextTemplate">
+			<span class="help-block"></span>
+		</div>
+
+
+	</div>
+
+	<div id="elementEditorTemplates" style="display:none;">
+
+		<div id="formPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control form-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Form ID</label>
+							<input type="text" class="form-control form-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<label class="control-label">Form Key</label>
+							<input type="text" class="form-control form-properties-key"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Version</label>
+							<input type="text" class="form-control form-properties-version" disabled="true" />
+						</div>
+					</div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-add-form-child" style="margin-bottom:5px;">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control form-properties-description" rows="3"></textarea>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-form-props" type="button">Update Form</button>
+			</div>
+		</div>
+
+		<div id="textPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control text-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control text-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Placeholder</label>
+							<input type="text" class="form-control text-properties-placeholder"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control text-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-text-props" type="button">Update Field</button>
+			</div>
+		</div>	
+
+		<div id="selectPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control select-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control select-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<label class="control-label">Choices</label>
+							<div class="select-options-grid-wrapper">
+								<div class="select-options-grid-options">
+									<i class="fa fa-minus-circle"></i>
+									<i class="fa fa-plus-circle"></i>
+								</div>
+								<div class="select-options-grid"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control select-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-select-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="passwordPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control password-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control password-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Placeholder</label>
+							<input type="text" class="form-control password-properties-placeholder"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control password-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-password-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="textareaPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control textarea-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control textarea-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Placeholder</label>
+							<input type="text" class="form-control textarea-properties-placeholder"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control textarea-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-textarea-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="radioPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control radio-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control radio-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<label class="control-label">Choices</label>
+							<div class="radio-options-grid-wrapper">
+								<div class="radio-options-grid-options">
+									<i class="fa fa-minus-circle"></i>
+									<i class="fa fa-plus-circle"></i>
+								</div>
+								<div class="radio-options-grid"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control radio-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-radio-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="checkboxPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control checkbox-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control checkbox-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<label class="control-label">Choices</label>
+							<div class="check-options-grid-wrapper">
+								<div class="check-options-grid-options">
+									<i class="fa fa-minus-circle"></i>
+									<i class="fa fa-plus-circle"></i>
+								</div>
+								<div class="check-options-grid"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control checkbox-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> --> 
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-checkbox-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="buttonsetPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control buttonset-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control buttonset-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<label class="control-label">Buttons</label>
+							<div class="button-options-grid-wrapper">
+								<div class="button-options-grid-options">
+									<i class="fa fa-minus-circle"></i>
+									<i class="fa fa-plus-circle"></i>
+								</div>
+								<div class="button-options-grid"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control buttonset-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-buttonset-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="datePropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control date-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control date-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control date-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-date-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="timePropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control time-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control time-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control time-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-time-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="staticPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control static-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control static-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Value</label>
+							<input type="text" class="form-control static-properties-value"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Instructions</label>
+							<textarea class="form-control static-properties-instructions" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-static-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="headingPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control heading-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control heading-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Style</label>
+							<select class="form-control heading-properties-style">
+								<option value="h1">h1</option>
+								<option value="h2">h2</option>
+								<option value="h3">h3</option>
+								<option value="h4" selected>h4</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-heading-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="calloutPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control callout-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control callout-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Style</label>
+							<select class="form-control callout-properties-style">
+								<option value="muted">Muted</option>
+								<option value="primary">Primary</option>
+								<option value="success">Success</option>
+								<option value="info">Info</option>
+								<option value="warning">Warning</option>
+								<option value="danger">Danger</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Content</label>
+							<textarea class="form-control callout-properties-content" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<!-- <label>Actions</label> -->
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-callout-props" type="button">Update Field</button>
+			</div>
+		</div>
+
+		<div id="containerPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+							<input type="text" class="form-control container-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control container-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="add-column-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-add-column" style="margin-bottom:5px;">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+							<div class="move-element-up-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-up" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-up"></i>
+								</button>
+							</div>
+							<div class="move-element-down-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-element-down" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-down"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-container-props" type="button">Update Container</button>
+			</div>
+		</div>
+
+		<div id="containerColumnPropertiesEditor">
+			<div class="elementPropertyEditorForm">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Title</label>
+								<input type="text" class="form-control column-properties-title"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Element ID</label>
+							<input type="text" class="form-control column-properties-elementid"/>
+						</div>
+					</div>
+					<div class="col-md-7"></div>
+					<div class="col-md-1 pull-right">
+						<div class="form-group">
+							<div class="delete-element-button-wrap">
+								<button type="button" class="btn btn-default btn-danger btn-delete-element" style="margin-bottom:5px;">
+									<i class="fa fa-remove"></i>
+								</button>
+							</div>
+							<div class="add-column-child-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-add-column-child" style="margin-bottom:5px;">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+							<div class="move-column-left-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-column-left" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-left"></i>
+								</button>
+							</div>
+							<div class="move-column-right-button-wrap">
+								<button type="button" class="btn btn-default btn-default btn-move-column-right" style="margin-bottom:5px;">
+									<i class="fa fa-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary btn-update-column-props" type="button">Update Column</button>
+			</div>
+		</div>
+
+
+		<div id="formChildSelect">
+			<ul class="addFormChildElementList" style="list-style:none;padding:5px;">
+				<button class="btn btn-default btn-add-text-child" type="button" style="width:200px;padding:5px;display:block;">Text Input</button>
+				<button class="btn btn-default btn-add-password-child" type="button" style="width:200px;padding:5px;display:block;">Password Input</button>
+				<button class="btn btn-default btn-add-date-child" type="button" style="width:200px;padding:5px;display:block;">Date Input</button>
+				<button class="btn btn-default btn-add-time-child" type="button" style="width:200px;padding:5px;display:block;">Time Input</button>
+				<button class="btn btn-default btn-add-textarea-child" type="button" style="width:200px;padding:5px;display:block;">Textarea</button>
+				<button class="btn btn-default btn-add-select-child" type="button" style="width:200px;padding:5px;display:block;">Select / Dropdown</button>
+				<button class="btn btn-default btn-add-radio-child" type="button" style="width:200px;padding:5px;display:block;">Radio Buttons</button>
+				<button class="btn btn-default btn-add-checkbox-child" type="button" style="width:200px;padding:5px;display:block;">Check Boxes</button>
+				<button class="btn btn-default btn-add-static-child" type="button" style="width:200px;padding:5px;display:block;">Static Field</button>
+				<button class="btn btn-default btn-add-buttonset-child" type="button" style="width:200px;padding:5px;display:block;">Button Set</button>
+				<button class="btn btn-default btn-add-heading-child" type="button" style="width:200px;padding:5px;display:block;">Heading</button>
+				<button class="btn btn-default btn-add-callout-child" type="button" style="width:200px;padding:5px;display:block;">Callout</button>
+				<button class="btn btn-default btn-add-container-child" type="button" style="width:200px;padding:5px;display:block;">Container</button>
+			</ul>
+		</div>
+
+		<div id="columnChildSelect">
+			<ul class="addColumnChildElementList" style="list-style:none;padding:5px;">
+				<button class="btn btn-default btn-add-text-child" type="button" style="width:200px;padding:5px;display:block;">Text Input</button>
+				<button class="btn btn-default btn-add-password-child" type="button" style="width:200px;padding:5px;display:block;">Password Input</button>
+				<button class="btn btn-default btn-add-date-child" type="button" style="width:200px;padding:5px;display:block;">Date Input</button>
+				<button class="btn btn-default btn-add-time-child" type="button" style="width:200px;padding:5px;display:block;">Time Input</button>
+				<button class="btn btn-default btn-add-textarea-child" type="button" style="width:200px;padding:5px;display:block;">Textarea</button>
+				<button class="btn btn-default btn-add-select-child" type="button" style="width:200px;padding:5px;display:block;">Select / Dropdown</button>
+				<button class="btn btn-default btn-add-radio-child" type="button" style="width:200px;padding:5px;display:block;">Radio Buttons</button>
+				<button class="btn btn-default btn-add-checkbox-child" type="button" style="width:200px;padding:5px;display:block;">Check Boxes</button>
+				<button class="btn btn-default btn-add-static-child" type="button" style="width:200px;padding:5px;display:block;">Static Field</button>
+				<button class="btn btn-default btn-add-buttonset-child" type="button" style="width:200px;padding:5px;display:block;">Button Set</button>
+				<button class="btn btn-default btn-add-heading-child" type="button" style="width:200px;padding:5px;display:block;">Heading</button>
+				<button class="btn btn-default btn-add-callout-child" type="button" style="width:200px;padding:5px;display:block;">Callout</button>
+			</ul>
+		</div>		
+
+	</div>
+
+</div>

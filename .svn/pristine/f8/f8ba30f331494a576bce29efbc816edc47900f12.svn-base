@@ -1,0 +1,351 @@
+<div id="viewExternalApplicationForm">
+    <br />
+   <h1>Associate BPM Consultant Job Application</h1>
+    <br />
+    <h3> Job Description and Qualifications </h3>
+      <div class="description"> 
+      <p>Counterpoint Consulting, Inc. is a leading provider of process-focused enterprise software solutions. Our cloud and mobile-based business automation systems enable customers to optimize efficiency, agility, and organizational performance.</p>
+      <p>We have been providing enterprise architecture, software development, systems integration and administration, as well as post-production support and training to commercial and Federal customers on several leading commercial and open source Business Process Management (BPM) platforms since 2006.</p>
+      <p>As a Consultant at Counterpoint, you will:
+        <ul class='bullets'>
+          <li>Work with customers to identify and model business processes using commercial and oss BPM software</li>
+          <li>Work directly with our customers to translate business needs into technical solutions</li>
+          <li>Design, develop and test software</li>
+          <li>Work independently or cooperatively within software development teams</li>
+          <li>Provide follow up support and training to our customers</li>
+          <li>Participate in internal software development projects </li>
+        </ul>
+      </p>
+      <p> Location: Vienna, VA</p>
+      <p> Travel: Must be willing to travel to customer sites (generally in the D.C. metro area) </p>
+      <p>Required Qualifications</p>
+      <p>We are looking for intelligent, responsible and committed individuals who possess:
+        <ul class="bullets">
+          <li>BA/BS from an accredited university</li>
+          <li>Demonstrated record of excellence inside and outside of the classroom</li>
+          <li>Software development experience or interest in pursuing a career in technology</li>
+        </ul>
+      </p>
+      <p>Preferred Qualifications
+        <ul class="bullets">
+          <li>BA/BS specifically in computer science or engineering</li>
+          <li>Knowledge of Web Development Technologies and Libraries (HTML, JS, CSS, jQuery)</li>
+          <li>Knowledge of Relational Databases & SQL</li>
+          <li>Software development experience (Java, Java Web Frameworks and / or .NET)</li>
+          <li>BPM development experience with Appian, Cordys, Metastorm, Micropact, Pegasystems, Opentext, Fuijitsu or other commercial or open source BPMS</li>
+        </ul>
+      </p>
+      <p>Company Perks and Benefits
+        <ul class="bullets">
+          <li>Generous Paid Time Off</li>
+          <li>FREE medical insurance for employees</li>
+          <li>Flexible Spending Accounts (FSAs)</li>
+          <li>Short and Long Term Disability Insurance</li>
+          <li>401k with match</li>
+          <li>On site fitness center</li>
+          <li>Frequent company happy hours and social events</li>
+          <li>Casual dress code</li>
+          <li>A well-stocked kitchen with a large variety of beverages and snacks</li>
+          <li>A fun, open workspace, complete with a foosball table</li>
+      </div>
+
+<div id="application_fields">
+  <legend>Create Application</legend>
+
+    <h3>Personal Information</h3>
+    <fieldset class="personal_info nobullets" id="personal_info">
+      <ul>
+        <row>
+          <li class="col-md-6"> 
+            <span class="required">* </span><label> First Name: </label>
+            <input type="text" class="form-control" id="first_name" placeholder="First Name"/>
+          </li>
+          <li class="col-md-6"> 
+            <span class="required">* </span><label>Last Name: </label>
+            <input type='text' class="form-control" id='last_name' placeholder="Last Name"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <span class="required">* </span><label> Email: </label>
+            <input type='text' class="form-control" id="email" placeholder="Email"/>
+          </li>
+          <li class="col-md-6">
+            <span class="required">* </span><label> Phone Number: </label>
+            <input type="text" class="form-control" id='phone_number' placeholder="###-###-####"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <span class="required">* </span><label>Street Address</label>
+            <input type='text' class="form-control" id='street_address' placeholder="Street Address"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-4">
+            <span class="required">* </span><label> City</label>
+            <input type='text' class="form-control" id='city' placeholder="City"/>
+          </li>
+          <li class="col-md-4">
+            <label> State </label>
+            <input type="text" class="form-control" id='state' placeholder="State Abbreviation"/>
+          </li>
+          <li class="col-md-4">
+            <label> Zip Code</label>
+            <input type='text' class="form-control" id='zipcode' placeholder="Zip Code"/>
+          </li>
+        </row>
+      </ul>   
+    </fieldset>
+<br>
+
+  <h3>Education</h3>
+
+  <h4> College </h4>
+   <fieldset class="education personal_info nobullets" id="education">
+      <ul>
+        <row>
+          <li class="col-md-12"> 
+            <span class="required">* </span><label> College Name: </label>
+            <input type="text" id='college_name' class="form-control" placeholder="College Name"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <span class="required">* </span><label> City: </label>
+            <input type='text' id='college_city' class="form-control" placeholder="City"/>
+          </li>
+          <li class="col-md-6">
+            <label> State: </label>
+            <input type="text" id="college_state" class="form-control" placeholder="State Abbreviation"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <span class="required">* </span><label>  First Major: </label>
+            <input type="text" id='major1' class="form-control" placeholder="First Major"/>
+          </li>
+          <li class="col-md-6">
+            <label>  Second Major: (if applicable) </label>
+            <input type="text" id='major2' class="form-control" placeholder="Second Major"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <label> First Minor: (if applicable) </label>
+            <input type="text" id='minor1' class="form-control" placeholder="First Minor"/>
+          </li>
+          <li class="col-md-6">
+            <label> Second Minor: (if applicable) </label>
+            <input type="text" id='minor2' class="form-control" placeholder="Second Minor"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-6">
+            <span class="required">* </span><label> GPA (Overall): </label>
+            <input type='text' id='gpa_overall' class="form-control" placeholder="GPA(Overall)"/>
+          </li>
+          <li class="col-md-6">
+            <label> GPA (First Major): </label>
+            <input type='text' id='gpa_major' class="form-control" placeholder="GPA(First Major)"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <label> Awards and Recognitions: </label>
+            <input type='text' id='awards' class="form-control" placeholder="Awards and Recognitions"/>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12 input-group date" data-provide="datepicker"> 
+            <span class="required">* </span><label> Graduation Date : </label> 
+            <input type='text' id='grad_date' class="form-control" placeholder="Graduation Date"/>
+            <div class="input-group-addon">
+              <span class="glyphicon glyphicon-th"></span>
+            </div>
+          </li>   
+        </row>
+      </ul>  
+
+    </fieldset>
+
+   
+   <!-- Masters program information, not currently included -->
+    <div class='masters hidden'>
+     <h4> Master's Program (if applicable) </h4> 
+     <fieldset class="masters" id="masters">
+      <ul>
+        <li> 
+          <label> College Name: </label>
+          <input type="text" id='masters_college_name'/>
+        </li>
+        <li>
+          <label> City: </label>
+          <input type='text' id='masters_college_city'/>
+        </li>
+        <li>
+          <label> State: </label>
+          <input type="text" id="masters_college_state"/>
+        </li>
+        <li>
+          <label>  Program: </label>
+          <input type="text" id='masters_program'/>
+        </li>
+        <li>
+          <label> Concentration:  </label>
+          <input type="text" id='masters_concentration'/>
+        </li>
+          <label> GPA : </label>
+          <input type='text' id='masters_gpa'/>
+        </li>
+        <li>
+          <label> Awards and Recognitions: </label>
+          <input type='text' id='masters_awards'/>
+        </li>
+        <li> 
+          <label> Graduation Date : </label> 
+          <input type='text' id='masters_grad_date'/>
+        </li>
+
+      </ul>  
+  
+    </fieldset>
+    </div>
+    <!-- end Masters info -->
+<br>
+
+  <h3> Additional Information</h3>
+  <fieldset class="additional_information nobullets" id="additional_information">
+      <ul>
+        <row>
+<!--           <li class="col-md-12">
+            <span class="required">* </span><label> Work Authorization:</label> -->
+<!--             <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select Work Status
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><input type="radio" value='1'>I am authorized to work in the US for any employer without sponsorship or restrictions</li>
+                <li><input type="radio" value='2'>I am authorized to work in the US for my current Employer only</li>
+                <li><input type="radio" value='3'>I currently or in the future will require sponsorship to work in the US</li>
+                <li><input type="radio" value='4'>My status to work in the US is unknown</li>
+              </ul>
+            </div> -->
+
+<!--           </li> -->
+     <li class="col-md-12">
+            <span class="required">* </span><label> Work Authorization:</label>
+            <select id="work_auth" required="required" aria-required="true" aria-invalid="false" class="valid">
+              <option value>Select work status</option>
+              <option value='1'> I am authorized to work in the US for my current Employer only</option>
+              <option value='2'> My status to work in the US is unknown </option>
+              <option value='3'> I am authorized to work in the US for any employer without sponsorship or restrictions</option>
+              <option value='4'> I currently or in the future will require sponsorship to work in the US</option>
+            </select>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <span class="required">* </span><label> How did you hear about us? </label>
+            <select id='source'>
+              <option > Select source</option>
+              <option value='1'> Glassdoor </option>
+              <option value='2'> LinkedIn </option>
+              <option value='3'> Search Engine </option>
+              <option value='4'> College Careers website </option>
+              <option value='5'> College Career fair </option>
+              <option value='6'> Other</option>
+            </select>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <span class="required">* </span><label> Are you a referral? </label>
+            <select id='referral'>
+              <option value='1'> No </option>
+              <option value='2'> Yes </option>
+            </select>
+          </li>
+        </row>
+        <row>
+          <li class="col-md-12">
+            <div class="referral_employee">
+              <label> Referring Counterpoint Employee </label>
+              <input type='text' id='referrer'/>
+            </div>
+          </li>
+        </row>
+        <row>
+        <li class="input-group date" data-provide="datepicker"> 
+          <label> When are you available to start? </label> 
+          <input type='text' id='start_date' class="form-control" placeholder="Start Date"/>
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+        </li> 
+      </row>
+  </fieldset>
+
+
+
+<br>  
+<h3>Technical Skills</h3>
+  <h4> Please rate your experience level of the following computer languages </h4>
+    <fieldset class="technical_skilss nobullets" id="technical_skills">
+      <ul>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>Java</label>
+            <label class="col-md-2"><input type="radio" name="java" value="0">None</label>
+            <label class="col-md-2"><input type="radio" name="java" value="1">Some</label>
+            <label class="col-md-2"><input type="radio" name="java" value="2">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="java" value="3">Expert</label>
+          </li>
+        </row>  
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>HTML</label>
+            <label class="col-md-2"><input type="radio" name="html" value="0">None</label>
+            <label class="col-md-2"><input type="radio" name="html" value="1">Some</label>
+            <label class="col-md-2"><input type="radio" name="html" value="2">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="html" value="3">Expert</label>
+          </li>
+        </row>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>CSS</label>
+            <label class="col-md-2"><input type="radio" name="css" value="0">None</label>
+            <label class="col-md-2"><input type="radio" name="css" value="1">Some</label>
+            <label class="col-md-2"><input type="radio" name="css" value="2">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="css" value="3">Expert</label>
+          </li>
+        </row>
+        <row>
+          <li>
+            <label class="col-md-2"><span class="required">* </span>SQL</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="0">None</label>
+            <label class="col-md-2"><input type="radio" name="sql" value="1">Some</label> 
+            <label class="col-md-2"><input type="radio" name="sql" value="2">Moderate</label>
+            <label class="col-md-4"><input type="radio" name="sql" value="3">Expert</label>
+          </li>
+        </row> 
+        <row> 
+          <li>
+            <label> Please list any other programming langauges you have experience with:</label>
+            <input type="input" id='other_langs'>
+          </li>
+        </row>  
+      </ul>
+    </fieldset>
+  </div> <!-- closes application_fields div -->
+  </div> <!-- closes ViewExternalApplicationForm div -->
+<!-- end tech skills -->
+
+  </body>
+
+  <div class="wrapper">
+   <button id="submitJobApplicationButton" type="submit" class="btn btn-primary">Submit</button>
+   <button id="cancelJobApplicationButton" class="btn btn-warn" value="Cancel">Cancel</button>
+  </div>
+
+</div>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>c20g Application Portal</title>
+
+<!-- Stylesheets -->
+<link href="common/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="common/lib/datepicker/css/datepicker.css" rel="stylesheet">
+<link href="common/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="common/css/main.css" rel="stylesheet">
+<link href="common/css/backgrid-custom.css" rel="stylesheet">
+<link href="common/css/jqtree.css" rel="stylesheet">
+<link href="common/css/at-recruiting.css" rel="stylesheet">
+<!-- <link href="common/lib/bootstrap/plugins/popover-extra-placements.css" rel="stylesheet"> -->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="temp-content">
+	</div>
+	<div class="container">
+
+		<!-- Navbar -->
+		<nav id="navigationBar" class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">c20g Application Portal <i class="fa fa-ioxhost"></i></a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="main-navbar-collapse">
+					<p style="display: none;" id="userLoginStatus" class="navbar-text navbar-right">You are not currently signed in</p>
+				</div>
+				<!-- /.navbar-collapse -->
+
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<!-- Page Content -->
+		<div id="mainPage">
+			<div class="page-content container-fluid row"></div>
+		</div>
+
+		<!-- Home Screen -->
+		<div id="mainTabs" style="display: none;" class="tabbed-navigation">
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a href="#inboxTab" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i> My Inbox</a></li>
+				<!-- <li><a href="#expensesTab" role="tab" data-toggle="tab"><i class="fa fa-usd"></i> Expenses</a></li> -->
+				<li><a href="#projTracTab" role="tab" data-toggle="tab"><i class="fa fa-check"></i> ProjTrac</a></li>
+				<li><a href="#kudosTab" role="tab" data-toggle="tab"><i class="fa fa-thumbs-up"></i> Kudos</a></li>
+				<li><a href="#formLibraryTab" role="tab" data-toggle="tab"><i class="fa fa-gear"></i> Form Library</a></li>
+				<li><a href="#recruitingTab" role="tab" data-toggle="tab"><i class="fa fa-gear"></i> Recruiting</a></li>
+				<!-- <li><a href="#formEditorTab" role="tab" data-toggle="tab"><i class="fa fa-gear"></i> Form Editor</a></li> -->
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="inboxTab"></div>
+				<!-- <div class="tab-pane fade in" id="expensesTab"></div> -->
+				<div class="tab-pane fade in" id="projTracTab"></div>
+				<div class="tab-pane fade in" id="kudosTab"></div>
+				<div class="tab-pane fade in" id="formLibraryTab"></div>
+				<div class="tab-pane fade in" id="recruitingTab"></div>
+
+
+				<!-- <div class="tab-pane fade in" id="formEditorTab"></div> -->
+			</div>
+		</div>
+
+		<!-- UI Templates -->
+		<div class="ui-templates" style="display: none;">
+			<div class="file-download-form">
+				<iframe id="" name="" src="javascript:false" style="display: none"></iframe>
+				<form id="" target="" action="" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="soapMessage" id="soapMessage" value="">
+					<input type="hidden" name="contentType" id="contentType" value="application/octet-stream">
+					<input type="hidden" name="searchPath" id="searchPath" value="/documentContents">
+					<input type="hidden" name="organizationalContext" id="organizationalContext" value="">
+					<input type="hidden" name="decode" id="decode" value="true">
+					<input type="hidden" name="timeout" id="timeout" value="">
+					<input type="hidden" name="fileName" id="fileName" value="">
+					<input type="hidden" name="openInNewWindow" id="openInNewWindow" value="false">
+					<input type="hidden" name="resultHtml" id="resultHtml" value="">
+					<input type="hidden" name="dispositionType" id="dispositionType" value="attachment">
+				</form>
+			</div>
+			<div class="file-upload-form">
+				<iframe id="" name="" src="javascript:false" style="display: none"></iframe>
+				<form id="" target="" action="" enctype="multipart/form-data" method="post">
+					<input type="hidden" name="xmlcontent" value="true" />
+					<input type="hidden" name="encode" value="true" />
+					<input type="hidden" name="contentType" value="application/octet-stream" />
+					<input type="hidden" name="organizationalcontext" value="" />
+					<input type="hidden" name="timeout" value="" />
+					<input type="hidden" name="methodXML" value="" />
+				</form>
+			</div>
+
+			<div class="form-container"></div>
+			<div class="error-message-general">
+				<br />
+				<div class="alert alert-warning">
+					<i class="fa fa-warning"></i> Sorry an error has occured.
+				</div>
+			</div>
+			<div class="info-message">
+				<br />
+				<div class="alert alert-info">
+				</div>
+			</div>
+			<div class="font-awesome-icon">
+				<i></i>
+			</div>
+			<div class="buttonLink">
+				<button></button>
+			</div>
+			<div class="loading-text">
+				<p class="loading-spinner-text">Please wait...</p>
+			</div>
+			<div class="cented-text-container">
+				<div class="text-center"></div>
+			</div>
+			<div class="validation-error"></div>
+			<div class="empty-row">
+				<div class="well well-sm"></div>
+			</div>
+			<div class="button-group">
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+
+	<!-- Javascript -->
+	<script src="common/lib/jquery/js/jquery-1.11.1.min.js"></script>
+	<script src="common/lib/jquery/plugins/jquery-ui.min.js"></script>
+	<script src="common/lib/jquery/plugins/jquery.soap.js"></script>
+	<script src="common/lib/jquery/plugins/jquery.xml2json.js"></script>
+	<script src="common/lib/jquery/plugins/jquery.fileupload.js"></script>
+	<script src="common/lib/jquery/plugins/jqSOAPClient.js"></script>
+	<script src="common/lib/jquery/plugins/jqXMLUtils.js"></script>
+	<script src="common/lib/jquery/plugins/tree.jquery.js"></script>
+
+	<script src="common/lib/underscore/underscore.js"></script>
+	<script src="common/lib/backbone/backbone.js"></script>
+	<script src="common/lib/backbone/backbone-pageable.min.js"></script>
+	<script src="common/lib/backbone/backbone.paginator.min.js"></script>
+	<script src="common/lib/backbone/backgrid.min.js"></script>
+	<script src="common/lib/backbone/backgrid-paginator.js"></script>
+	<script src="common/lib/backbone/backgrid-custom.js"></script>
+
+	<script src="common/lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- <script src="common/lib/bootstrap/plugins/popover-extra-placements.js"></script> -->
+	<script src="common/lib/countdown/js/countdown.min.js"></script>
+	<script src="common/lib/datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="common/lib/moment/js/moment.min.js"></script>
+	<script src="common/lib/patches/ie10-viewport-bug-workaround.js"></script>
+	<script src="common/lib/spin/js/spin.min.js"></script>
+	<script src="common/lib/cordys/cordys.html5sdk.debug.js"></script>
+	<script src="common/lib/maxlength/bootstrap-maxlength.js"></script>
+
+	<script src="common/js/main.js"></script>
+	<script src="common/js/config.js"></script>
+	<script src="common/js/dms.js"></script>
+	<script src="common/js/soap.js"></script>
+	<script src="common/js/ui.js"></script>
+	<script src="common/js/util.js"></script>
+	<script src="common/js/validation.js"></script>
+	<script src="common/js/eforms.js"></script>
+
+	<script src="ws/protected/task.js"></script>
+	<script src="ws/protected/user.js"></script>
+	<script src="ws/protected/process.js"></script>
+	<script src="ws/protected/template.js"></script>
+	<script src="ws/protected/projtrac.js"></script>
+	<script src="ws/protected/expenses.js"></script>
+	<script src="ws/protected/kudos.js"></script>
+	<script src="ws/protected/eforms.js"></script>
+	<script src="ws/protected/common.js"></script>
+	<script src="ws/protected/recruiting.js"></script>
+
+	<script src="tabs/js/inboxTab.js"></script>
+	<script src="tabs/js/reportsTab.js"></script>
+	<script src="tabs/js/expensesTab.js"></script>
+	<script src="tabs/js/projTracTab.js"></script>
+	<script src="tabs/js/kudosTab.js"></script>
+	<script src="tabs/js/formLibraryTab.js"></script>
+	<script src="tabs/js/recruitingTab.js"></script>
+
+
+	<script src="forms/protected/js/sampletask.js"></script>
+	<script src="forms/protected/js/projtrac_submit.js"></script>
+	<script src="forms/protected/js/expenses_approve.js"></script>
+	<script src="forms/protected/js/expenses_revise.js"></script>
+	<script src="forms/protected/js/eforms_form_container.js"></script>
+
+	<script src="forms/protected/js/eforms/test01.js"></script>
+	<script src="forms/protected/js/eforms/test02.js"></script>
+
+	<script src="pickers/js/samplepicker.js"></script>
+
+	<script src="views/protected/js/samplebpmdsahboard.js"></script>
+	<script src="views/protected/js/samplebpmkickoff.js"></script>
+	<script src="views/protected/js/expenses_createreport.js"></script>
+	<script src="views/protected/js/expenses_viewreport_ro.js"></script>
+	<script src="views/protected/js/kudos_createkudo.js"></script>
+	<script src="views/protected/js/eforms_editor.js"></script>
+	<script src="views/protected/js/eforms_formversions.js"></script>
+	<script src="views/protected/js/eforms_scratchpad.js"></script>
+	<script src="views/protected/js/recruiting_applicationform.js"></script>
+	<script src="views/protected/js/recruiting_externalform.js"></script>
+
+ 
+	<script type="text/javascript">
+		$(document).ready(
+				function(e) {
+					window.c20g.ui.loading.show();
+					window.c20g.ws.user.GetUserInformation(function(user) {
+						if (window.c20g.error.isError(user)) {
+							window.c20g.error.loadErrorMessage(null, false);
+						} else {
+							window.c20g.session.currentUser = user;
+							// Init UI
+							if (!_.isNull(window.c20g.session.currentUser)) {
+								window.c20g.ui.show($("#userLoginStatus").empty().append(window.c20g.ui.templates.buildIcon(window.c20g.constants.ui.faIcons.USER_ICON)).append(
+										" Welcome, " + window.c20g.session.currentUser.description));
+								// Tabbed Navigation Loading
+								var mainTabs = $("#mainTabs").detach();
+								window.c20g.ui.loadUI(mainTabs);
+								window.c20g.ui.show(mainTabs.find('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+									window.c20g.tab.loadActiveTab(mainTabs);
+								}));
+								window.c20g.tab.loadActiveTab(mainTabs);
+							}
+						}
+					});
+				});
+	</script>
+
+</body>
+</html>

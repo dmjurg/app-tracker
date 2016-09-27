@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="df488833-ce80-11e4-f34d-e9f8e879df94">
+	<DocumentID>ff6c134d-5449-11e4-f34d-e9f8e86fdf93</DocumentID>
+	<Name>ff6c134d-5449-11e4-f34d-e9f8e86fdf93</Name>
+	<Description>concat(&quot;Review Expense Report - &quot;, substring-after(substring-before(instance:instanceProperties/instance:startedBy/text(), &quot;,&quot;), &quot;=&quot;))</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-12T15:59:47.205</CreationDate>
+	<Notes/>
+	<Text>concat(&quot;Review Expense Report - &quot;, substring-after(substring-before(instance:instanceProperties/instance:startedBy/text(), &quot;,&quot;), &quot;=&quot;))</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="1378c39a-eb7e-11e4-f34d-e9f8e85bdf91"
+		/>
+	</TextIdentifier>
+</TranslatedText>

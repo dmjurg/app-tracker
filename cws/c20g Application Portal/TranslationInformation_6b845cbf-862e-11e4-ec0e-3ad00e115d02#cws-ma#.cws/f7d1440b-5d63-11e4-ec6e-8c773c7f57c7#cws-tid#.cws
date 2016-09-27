@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="df257176-c059-11e4-ec6e-8c773c8957c8">
+	<DocumentID>f7d1440b-5d63-11e4-ec6e-8c773c7f57c7</DocumentID>
+	<Name>f7d1440b-5d63-11e4-ec6e-8c773c7f57c7</Name>
+	<Description>Finalize Approval</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.599</CreationDate>
+	<Notes/>
+	<DefaultText>Finalize Approval</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="2fb55cc4-57da-11e4-ec6e-8c773c95d7c9"
+		/>
+	</Translations>
+</TextIdentifier>

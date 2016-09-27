@@ -1,0 +1,62 @@
+
+<Schedule
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.scheduler.Schedule"
+	typeVersion="002346V0-0008-71DF-DFF5-1F210914E83B"
+	RuntimeDocumentID="03a5e0a8-977f-11e4-f514-c518c41599d5">
+	<DocumentID>bb5a7c50-13ec-11e4-f514-c518c40cd9d4</DocumentID>
+	<Name>StartWeeklyStatusReports</Name>
+	<Description>StartWeeklyStatusReports</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T20:03:00.334</CreationDate>
+	<Notes/>
+	<Count>-1</Count>
+	<ScheduleType>Weekly</ScheduleType>
+	<ScheduleXML>
+		<schedule
+			xmlns="http://schemas.cordys.com/scheduler/1.0"
+			name="StartWeeklyStatusReports"
+			count="-1"
+			autodeploy="true"
+			targetLastModified="undefined"
+			msgHolderLastModified="2014-11-03T02:51:37.673">
+			<datetime>
+				<weekly>
+					<weekday>4 12:0</weekday>
+				</weekly>
+			</datetime>
+			<parameters
+				xmlns="http://schemas.cordys.com/scheduler/1.0">
+				<ExecuteProcess
+					xmlns="http://schemas.cordys.com/bpm/execution/1.0">
+					<type>definition</type>
+					<receiver>true</receiver>
+					<source>Scheduler Engine</source>
+					<modelSpace/>
+					<message>
+						<Message>No Message</Message>
+					</message>
+				</ExecuteProcess>
+			</parameters>
+		</schedule>
+	</ScheduleXML>
+	<TargetType>bpm</TargetType>
+	<ExternalAction>
+		<BPMExternalAction
+			type="com.cordys.bpm.BPMExternalAction"
+			RuntimeDocumentID="3b0d3109-75af-11e4-f514-c518c3d219ce">
+			<DocumentID>0ff553cd-c4b6-11e4-f514-c518c3c819cd</DocumentID>
+			<Name>0ff553cd-c4b6-11e4-f514-c518c3c819cd</Name>
+			<Description>0ff553cd-c4b6-11e4-f514-c518c3c819cd</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2015-01-30T20:03:00.335</CreationDate>
+			<Notes/>
+			<ContainedProcess>
+				<uri
+					id="53eddd0b-fe13-11e4-ec60-7ffc701d540f"
+				/>
+			</ContainedProcess>
+		</BPMExternalAction>
+	</ExternalAction>
+	<WebserviceBindingOperation/>
+</Schedule>

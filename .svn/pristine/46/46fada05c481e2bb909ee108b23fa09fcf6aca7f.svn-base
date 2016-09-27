@@ -1,0 +1,136 @@
+window.c20g.ws.recruiting = {
+	// GetAllKudoCategories : function(callback) {
+	// 	var paramNS = "http://c20g.com/apps/db/kudos/kudocategory";
+	// 	var soapBody = window.c20g.Soap.constructSimpleSOAPBody(
+	// 		"GetAllKudoCategories",
+	// 		"http://c20g.com/apps/db/kudos/kudocategory",
+	// 		[],
+	// 		paramNS
+	// 	);
+	// 	var sr = new SOAPRequest("GetAllKudoCategories", soapBody);
+	// 	SOAPClient.Proxy = window.c20g.config.url.getGatewayUrl();
+	// 	SOAPClient.SendRequest(sr, function(response) {
+	// 		var categories = [];
+	//
+	// 		var categoryTuples = response.Body[0].GetAllKudoCategoriesResponse[0].tuple;
+	// 		if(!_.isUndefined(categoryTuples)) {
+	// 			for(var i = 0; i < categoryTuples.length; i++) {
+	// 				var category = {};
+	// 				category.id = categoryTuples[i].old[0].ck_lu_kudo_category[0].id[0].Text;
+	// 				category.description = categoryTuples[i].old[0].ck_lu_kudo_category[0].description[0].Text;
+	// 				categories.push(category);
+	// 			}
+	// 		}
+	// 		callback && callback(categories);
+	// 	});
+	// },
+
+	GetCandidates : function(callback) {
+		var paramNS = "http://c20g.com/apps/bpm/at_recruiting";
+		var soapBody = window.c20g.Soap.constructSimpleSOAPBody(
+			"GetAllCandidates",
+			"http://c20g.com/apps/bpm/at_recruiting",
+			[],
+			paramNS
+		);
+		var sr = new SOAPRequest("GetAllCandidates", soapBody);
+		SOAPClient.Proxy = window.c20g.config.url.getGatewayUrl();
+		SOAPClient.SendRequest(sr, function(response) {
+			var candidates = [];
+			var candidateTuples = response.Body[0].GetAllCandidatesResponse[0].Response[0].tuple;
+			if(!_.isUndefined(candidateTuples)) {
+				for(var i = 0; i < candidateTuples.length; i++) {
+					var candidate = {};
+					candidate.id = candidateTuples[i].old[0].at_recruiting[0].id[0].Text;
+					candidate.submission_date = candidateTuples[i].old[0].at_recruiting[0].submission_date[0].Text;
+					candidate.status = candidateTuples[i].old[0].at_recruiting[0].status[0].Text;
+					candidate.first_name = candidateTuples[i].old[0].at_recruiting[0].first_name[0].Text;
+					candidate.last_name = candidateTuples[i].old[0].at_recruiting[0].last_name[0].Text;
+					candidate.full_name = candidate.first_name + " " + candidate.last_name;
+					candidate.email = candidateTuples[i].old[0].at_recruiting[0].email[0].Text;
+					candidate.phone_number = candidateTuples[i].old[0].at_recruiting[0].phone_number[0].Text;
+					candidate.street_address = candidateTuples[i].old[0].at_recruiting[0].street_address[0].Text;
+					candidate.city = candidateTuples[i].old[0].at_recruiting[0].city[0].Text;
+					candidate.state = candidateTuples[i].old[0].at_recruiting[0].state[0].Text;
+					candidate.college_name = candidateTuples[i].old[0].at_recruiting[0].college_name[0].Text;
+					candidate.college_city = candidateTuples[i].old[0].at_recruiting[0].college_city[0].Text;
+					candidate.college_state = candidateTuples[i].old[0].at_recruiting[0].college_state[0].Text;
+					candidate.major1 = candidateTuples[i].old[0].at_recruiting[0].major1[0].Text;
+					candidate.major2 = candidateTuples[i].old[0].at_recruiting[0].major2[0].Text;
+					candidate.minor1 = candidateTuples[i].old[0].at_recruiting[0].minor1[0].Text;
+					candidate.minor2 = candidateTuples[i].old[0].at_recruiting[0].minor2[0].Text;
+					candidate.gpa_overall = candidateTuples[i].old[0].at_recruiting[0].gpa_overall[0].Text;
+					candidate.gpa_major = candidateTuples[i].old[0].at_recruiting[0].gpa_major[0].Text;
+					candidate.awards = candidateTuples[i].old[0].at_recruiting[0].awards[0].Text;
+					candidate.grad_date = candidateTuples[i].old[0].at_recruiting[0].grad_date[0].Text;
+					candidate.work_auth = candidateTuples[i].old[0].at_recruiting[0].work_auth[0].Text;
+					candidate.source = candidateTuples[i].old[0].at_recruiting[0].source[0].Text;
+					candidate.referral = candidateTuples[i].old[0].at_recruiting[0].referral[0].Text;
+					candidate.referrer = candidateTuples[i].old[0].at_recruiting[0].referrer[0].Text;
+					candidate.accommodation = candidateTuples[i].old[0].at_recruiting[0].accommodation[0].Text;
+					candidate.law = candidateTuples[i].old[0].at_recruiting[0].law[0].Text;
+					candidate.start_date = candidateTuples[i].old[0].at_recruiting[0].start_date[0].Text;
+					candidate.java = candidateTuples[i].old[0].at_recruiting[0].java[0].Text;
+					candidate.html = candidateTuples[i].old[0].at_recruiting[0].html[0].Text;
+					candidate.css = candidateTuples[i].old[0].at_recruiting[0].css[0].Text;
+					candidate.sql_lang = candidateTuples[i].old[0].at_recruiting[0].sql_lang[0].Text;
+					candidate.other_langs = candidateTuples[i].old[0].at_recruiting[0].other_langs[0].Text;
+
+					candidates.push(candidate);
+				}
+			}
+			callback && callback(candidates);
+		});
+	}
+
+	// GetEmployeeKudos : function(recipientCN, callback) {
+	// 	var paramNS = "http://c20g.com/apps/db/kudos/kudo";
+	// 	var soapParams = {
+	// 		'recipientCN' : recipientCN
+	// 	};
+	// 	var methodName = 'GetUserKudos';
+	// 	var soapBody = window.c20g.Soap.jsonToSoap(soapParams, methodName);
+	// 	soapBody.attr("xmlns", paramNS);
+	//
+	// 	var sr = new SOAPRequest("GetUserKudos", soapBody);
+	// 	SOAPClient.Proxy = window.c20g.config.url.getGatewayUrl();
+	// 	SOAPClient.SendRequest(sr, function(response) {
+	// 		var kudos = [];
+	// 		var kudoTuples = response.Body[0].GetUserKudosResponse[0].tuple;
+	// 		if(!_.isUndefined(kudoTuples)) {
+	// 			for(var i = 0; i < kudoTuples.length; i++) {
+	// 				var kudo = {};
+	// 				kudo.id = kudoTuples[i].old[0].ck_kudo[0].id[0].Text;
+	// 				kudo.categoryId = kudoTuples[i].old[0].ck_kudo[0].kudo_category_id[0].Text;
+	// 				kudo.categoryDescription = kudoTuples[i].old[0].ck_kudo[0].ck_lu_kudo_category[0].category[0].Text;
+	// 				kudo.creatorCN = kudoTuples[i].old[0].ck_kudo[0].creator_cn[0].Text;
+	// 				kudo.createdDate = kudoTuples[i].old[0].ck_kudo[0].created_date[0].Text;
+	// 				kudo.description = kudoTuples[i].old[0].ck_kudo[0].description[0].Text;
+	// 				kudo.recipientCN = kudoTuples[i].old[0].ck_kudo[0].recipient_cn[0].Text;
+	// 				kudos.push(kudo);
+	// 			}
+	// 		}
+	// 		callback && callback(kudos);
+	// 	});
+	// },
+	//
+	// CreateEmployeeKudo : function(categoryID, submitterCN, recipientCN, description, callback) {
+	// 	var paramNS = "http://c20g.com/apps/bpm/kudos";
+	// 	var soapParams = {
+	// 		'categoryID' : categoryID,
+	// 		'submitterCN' : submitterCN,
+	// 		'recipientCN' : recipientCN,
+	// 		'description' : description
+	// 	};
+	// 	var methodName = 'SubmitKudo';
+	// 	var soapBody = window.c20g.Soap.jsonToSoap(soapParams, methodName);
+	// 	soapBody.attr("xmlns", paramNS);
+	//
+	// 	var sr = new SOAPRequest("SubmitKudo", soapBody);
+	// 	SOAPClient.Proxy = window.c20g.config.url.getGatewayUrl();
+	// 	SOAPClient.SendRequest(sr, function(response) {
+	// 		callback && callback();
+	// 	});
+	// }
+
+};

@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBA5-CCFFB37E70F8">
+	<DocumentID>525400E2-1DC8-11E4-EBA5-CCFFB37E50F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBA5-CCFFB37E50F8</Name>
+	<Description>Organization DN</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-26T17:40:59.674</CreationDate>
+	<Notes/>
+	<Text>Organization DN</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBA5-CCFFB37E10F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

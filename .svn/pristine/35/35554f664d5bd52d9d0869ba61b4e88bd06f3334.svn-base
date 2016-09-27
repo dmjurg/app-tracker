@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="bbe77c07-a1d6-11e4-f513-593217a51742">
+	<DocumentID>67ac104e-7fa5-11e4-f513-5932179b1741</DocumentID>
+	<Name>67ac104e-7fa5-11e4-f513-5932179b1741</Name>
+	<Description>Prepare Mail Recipients</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-30T16:13:28.934</CreationDate>
+	<Notes/>
+	<Text>Prepare Mail Recipients</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="9383b7d9-84e3-11e4-f513-59321788573f"
+		/>
+	</TextIdentifier>
+</TranslatedText>

@@ -1,0 +1,106 @@
+
+<URLBasedForm
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.uiapplication.URLBasedForm"
+	RuntimeDocumentID="1fcb6291-e26b-11e4-ec46-b0b516011530">
+	<DocumentID>6751eba1-b184-11e4-ec46-b0b515f7152f</DocumentID>
+	<Name>Revise Expense Report</Name>
+	<Description>Revise Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-02T02:14:28.418</CreationDate>
+	<Notes/>
+	<URL>expenses_revise</URL>
+	<WSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters>
+		<Properties
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</parameters>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Revise Expense Report</taskDescription>
+	<taskName>Revise Expense Report</taskName>
+	<title>true</title>
+	<top></top>
+	<type>URLBasedForm</type>
+	<width></width>
+	<TranslatableName/>
+	<aclFragments/>
+	<deliveryModels>
+		<WorkFlowDeliveryModel
+			type="com.cordys.workflow.modeler.WorkFlowDeliveryModel"
+			typeVersion="00215A63-1E4E-11E1-E0AC-59F75AE29B35"
+			RuntimeDocumentID="bf27f8cb-8216-11e4-ec6e-941976429d5b">
+			<DocumentID>7fa41ea7-6831-11e4-ec6e-9419763c5d5a</DocumentID>
+			<Name>Revise Expense ReportDefaultDeliveryModel</Name>
+			<Description>DefaultDeliveryModel</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2014-11-03T16:15:38.125</CreationDate>
+			<Notes/>
+			<IsLegacy>false</IsLegacy>
+			<OperationName></OperationName>
+			<Task_Identifiers/>
+			<messagePartDetails>
+				<MessagePartDetails
+					type="com.cordys.task.MessagePartDetails"
+					RuntimeDocumentID="73a9f737-cc7a-11e4-ec6e-9419762fdd58">
+					<DocumentID>33952690-4339-11e4-ec6e-941976299d57</DocumentID>
+					<Name>33952690-4339-11e4-ec6e-941976299d57</Name>
+					<Description>Revise Expense ReportDefaultDeliveryModel</Description>
+					<CreatedBy>bill</CreatedBy>
+					<CreationDate>2014-11-03T16:15:38.124</CreationDate>
+					<Notes/>
+					<byRef>false</byRef>
+					<messagePart/>
+				</MessagePartDetails>
+			</messagePartDetails>
+			<notfBackwardCompatibility/>
+			<taskAbstract/>
+			<uiTask>
+				<uri
+					id="6751eba1-b184-11e4-ec46-b0b515f7152f"
+				/>
+			</uiTask>
+		</WorkFlowDeliveryModel>
+	</deliveryModels>
+	<image/>
+	<input>
+		<uri
+			id="ef56fc2f-dcef-11e4-ec46-50b5d5a75fc7"
+		/>
+	</input>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="ff0ab7f1-ddc3-11e4-ec72-065e21045f08">
+			<DocumentID>a773e3fc-c381-11e4-ec72-065e20fa5f07</DocumentID>
+			<Name>a773e3fc-c381-11e4-ec72-065e20fa5f07</Name>
+			<Description>a773e3fc-c381-11e4-ec72-065e20fa5f07</Description>
+			<CreatedBy>bill</CreatedBy>
+			<CreationDate>2014-11-03T19:41:07.866</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://c20g.com/apps/schema/expense</namespace>
+			<operationName>ExpenseReport</operationName>
+		</MessagePart>
+	</messageParts>
+	<output>
+		<uri
+			id="ef56fc2f-dcef-11e4-ec46-50b5d5a75fc7"
+		/>
+	</output>
+	<tagsContainer/>
+	<taskParts/>
+</URLBasedForm>

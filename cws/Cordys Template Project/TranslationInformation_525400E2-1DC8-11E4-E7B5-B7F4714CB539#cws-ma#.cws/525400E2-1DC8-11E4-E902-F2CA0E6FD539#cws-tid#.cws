@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E902-F2CA0E6FF539">
+	<DocumentID>525400E2-1DC8-11E4-E902-F2CA0E6FD539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E902-F2CA0E6FD539</Name>
+	<Description>Delete Document</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-29T20:42:02.908</CreationDate>
+	<Notes/>
+	<DefaultText>Delete Document</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714C7539"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="525400E2-1DC8-11E4-E902-F2CA0E701539"
+		/>
+	</Translations>
+</TextIdentifier>

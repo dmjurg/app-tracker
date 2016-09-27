@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="e775611e-d59c-11e4-f2c1-7bdad1e35577">
+	<DocumentID>0f7b81be-bda5-11e4-f2c1-7bdad1d95576</DocumentID>
+	<Name>0f7b81be-bda5-11e4-f2c1-7bdad1d95576</Name>
+	<Description>Get Expense Report Detail</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-07T01:31:17.97</CreationDate>
+	<Notes/>
+	<DefaultText>Get Expense Report Detail</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="9f4a0c32-8987-11e4-f2c1-7bdad1ec1578"
+		/>
+	</Translations>
+</TextIdentifier>

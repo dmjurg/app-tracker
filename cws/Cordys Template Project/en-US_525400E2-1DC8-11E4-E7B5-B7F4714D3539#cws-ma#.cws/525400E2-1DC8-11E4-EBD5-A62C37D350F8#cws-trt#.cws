@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D370F8">
+	<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D350F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBD5-A62C37D350F8</Name>
+	<Description>Prefix</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-28T14:39:58.416</CreationDate>
+	<Notes/>
+	<Text>Prefix</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBD5-A62C37D310F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

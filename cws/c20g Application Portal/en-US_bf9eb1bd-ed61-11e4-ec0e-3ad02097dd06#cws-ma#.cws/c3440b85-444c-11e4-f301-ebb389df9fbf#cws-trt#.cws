@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="8b6fade6-7f03-11e4-f301-ebb389e85fc0">
+	<DocumentID>c3440b85-444c-11e4-f301-ebb389df9fbf</DocumentID>
+	<Name>c3440b85-444c-11e4-f301-ebb389df9fbf</Name>
+	<Description>Update Expense Report</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2015-01-09T15:59:54.682</CreationDate>
+	<Notes/>
+	<Text>Update Expense Report</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="bff778c6-ca3f-11e4-f301-ebb389ca5fbd"
+		/>
+	</TextIdentifier>
+</TranslatedText>

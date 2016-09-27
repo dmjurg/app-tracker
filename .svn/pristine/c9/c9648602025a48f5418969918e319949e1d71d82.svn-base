@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="c321f461-6ac3-11e4-ec6e-7916ca691730">
+	<DocumentID>fb18bfa7-7a32-11e4-ec6e-7916ca5f172f</DocumentID>
+	<Name>fb18bfa7-7a32-11e4-ec6e-7916ca5f172f</Name>
+	<Description>For Each Prepare Item Line</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.606</CreationDate>
+	<Notes/>
+	<DefaultText>For Each Prepare Item Line</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="d7393207-ed6f-11e4-ec0e-3acfe6e99d00"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="ff120589-cddf-11e4-ec6e-7916ca731731"
+		/>
+	</Translations>
+</TextIdentifier>

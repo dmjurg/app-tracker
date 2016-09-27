@@ -1,0 +1,44 @@
+
+<ApplicationConnectorDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.applicationconnector.ApplicationConnectorDesigntime"
+	typeVersion="0014C25C-F38B-71DF-A966-2D0AC4143A56"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBBD-E9F2AF0370F8">
+	<DocumentID>525400E2-1DC8-11E4-EBBD-E9F2AF0350F8</DocumentID>
+	<Name>c20g Jackrabbit Connector</Name>
+	<Description>c20g Jackrabbit Connector</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-27T15:42:45.007</CreationDate>
+	<Notes/>
+	<ClassPath></ClassPath>
+	<ImplementationClass>com.c20g.cordys.ac.jackrabbit.connector.JackrabbitConnector</ImplementationClass>
+	<LoggerCategoryGroups>
+		<loggercategory
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns="">
+			<categorygroup
+				displayname="c20g Jackrabbit">
+				<category
+					inserted="true">com.c20g.cordys.ac.jackrabbit</category>
+			</categorygroup>
+		</loggercategory>
+	</LoggerCategoryGroups>
+	<StartupDependencies>
+		<startupDependency
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</StartupDependencies>
+	<SupportsJVMSharing>true</SupportsJVMSharing>
+	<ConfigurationPage>
+		<uri
+			id="525400E2-1DC8-11E4-EBD5-A62C37DB90F8"
+		/>
+	</ConfigurationPage>
+	<Image/>
+	<MetadataPage/>
+	<PropertyPage/>
+	<TypeImplementationMappings/>
+</ApplicationConnectorDesigntime>

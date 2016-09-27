@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns:eibus="xmlns:eibus" onapplicationready="initialize()">
+	<head>
+		<script src="/cordys/wcp/application.js"></script>
+		<style>
+			input{font-size:12; font-family:verdana;}
+			label{font-size:12; font-family:verdana; }
+			eibus:\select{font-size:11; font-family:verdana;}		
+			.PASSWORD { behavior:url('/cordys/wcp/admin/behavior/base64Encoder.htc') }
+		</style>	
+		<style>
+			body{
+				margin-top: 20px !important;
+				margin-left: 20px !important;
+				/*border-bottom:'0.1mm solid darkgray'; */
+			}
+		</style>
+	</head>	
+	<script src="/cordys/wcp/admin/behavior/applicationconnector.js">
+	</script>
+	
+	<script language="JScript">
+		/**
+		 * Holds the namespace for the configuration XML.
+		 */
+		var NS_JACKRABBIT_CONFIG = "http://feinsuch.com/connector/jackrabbit/1.0";
+	
+		/**
+		 * This method creates the configuration XML based on the given inputs.
+		 *
+		 * @param configurationNode The parent configuration node.
+		 */
+		function createConnectorConfiguration(configurationNode)
+		{
+                        alert(cordys.getXML(configurationNode));
+			configXmlDocument = configurationNode.ownerDocument;
+			configurationNode.setAttribute("implementation", "com.feinsuch.jackrabbit.connector.JackrabbitConnector");
+	
+			//We need to create the XML using a namespace so that the XML is read properly.
+			//Also we need to take browser independence into account.
+			var connectionNode = cordys.createElementNS(configXmlDocument, NS_JACKRABBIT_CONFIG, "connection");
+			cordys.appendXMLNode(connectionNode, configurationNode);
+	
+			createElementWithParentNS(connectionNode, "rmi_url", input_rmiurl.value);
+			createElementWithParentNS(connectionNode, "username", input_username.value);
+			createElementWithParentNS(connectionNode, "password", input_password.value);
+			createElementWithParentNS(connectionNode, "rootfolder", input_rootfolder.value);
+			createElementWithParentNS(connectionNode, "nsprefix", input_prefix.value);
+			createElementWithParentNS(connectionNode, "nsqualified", input_namespace.value);
+			createElementWithParentNS(connectionNode, "foldercustomnodetype", folder_nodetype.value);
+			createElementWithParentNS(connectionNode, "filecustomnodetype", file_nodetype.value);
+			return true;
+		}
+		
+		/**
+		 * This method reads the XML configuration and fills the UI with the proper data.
+		 */
+		function fillInPropertyScreen(configurationNode)
+		{
+                        alert(cordys.getXML(configurationNode));
+			//Initialize the namespace mapping		
+			var namespaces = new Array();
+			namespaces["ns"] = NS_JACKRABBIT_CONFIG;
+	
+			var connectionNode = cordys.selectXMLNode(configurationNode, "//ns:connection", namespaces);
+			if (connectionNode == null)
+			{
+				return;
+			}
+			var rmiUrlNode = cordys.getNodeText(connectionNode, "ns:rmi_url", "", namespaces); 
+			if (rmiUrlNode)
+					input_rmiurl.value = rmiUrlNode;
+        
+			var usernameNode = cordys.getNodeText(connectionNode, "ns:username", "", namespaces);
+			if (usernameNode)
+					input_username.value = usernameNode;
+	
+			var passwordNode = cordys.getNodeText(connectionNode, "ns:password", "", namespaces);
+			if (passwordNode)
+					input_password.value = passwordNode;
+					
+			var rootFolderNode = cordys.getNodeText(connectionNode, "ns:rootfolder", "", namespaces);
+			if (rootFolderNode)
+					input_rootfolder.value = rootFolderNode;
+			
+			var nsprefixNode = cordys.getNodeText(connectionNode, "ns:nsprefix", "", namespaces);
+			if (nsprefixNode)
+					input_prefix.value = nsprefixNode;
+					
+			var nsqualifiedNode = cordys.getNodeText(connectionNode, "ns:nsqualified", "", namespaces);
+			if (nsqualifiedNode)
+					input_namespace.value = nsqualifiedNode;
+			
+			var folderCustomNodeTypeNode = cordys.getNodeText(connectionNode, "ns:foldercustomnodetype", "", namespaces);
+			if (folderCustomNodeTypeNode)
+					folder_nodetype.value = folderCustomNodeTypeNode;
+					
+			var fileCustomNodeTypeNode = cordys.getNodeText(connectionNode, "ns:filecustomnodetype", "", namespaces);
+			if (fileCustomNodeTypeNode)
+					file_nodetype.value = fileCustomNodeTypeNode;
+		}
+		
+		/**
+		 * This method creates a new XML element using the namespace of the parent node.
+		 *
+		 * @param parent The parent XML node.
+		 * @param name   The name of the new element.
+		 * @param value  The value for the text element.
+		 *
+		 * @return The created element.
+		 */
+		function createElementWithParentNS(parent, name, value)
+		{
+	
+			var returnValue = null;
+			
+			if (!(parent == null || typeof(parent.ownerDocument) == "undefined"))
+			{
+				var doc = parent.ownerDocument;
+				var namespace = parent.namespaceURI;
+	
+				returnValue = cordys.createElementNS(doc, namespace, name);
+				cordys.appendXMLNode(returnValue, parent);
+	
+				if (value != null)
+				{
+					cordys.setTextContent(returnValue, value);
+				}
+			}
+	
+			return returnValue;
+		}  
+	</script>
+	<body>
+		<table class="mainbody" width="100%" border="0" cellspacing="0" cellpadding="5">
+			<tr>
+				<td  align="left" colspan="2">
+					<fieldset style="width:40%">
+						<legend style="color:black">Jackrabbit Connectivity&nbsp;</legend>
+						<br>
+						<table border="0" width="100%">
+							<tr>
+								<td width="20%" align="left">
+									RMI URL
+								</td>
+								<td  align="left">
+									<input type="text" style="width:400px" id="input_rmiurl" class="input"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" align="left">
+									User Name
+								</td>
+								<td  align="left">
+									<input type="text" style="width:400px" id="input_username" class="input"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" align="left">
+									Password
+								</td>
+								<td  align="left">
+									<input type="password" style="width:400px" id="input_password" class="input"/>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" align="left">
+									Root Folder
+								</td>
+								<td  align="left">
+									<input type="text" style="width:400px" id="input_rootfolder" class="input"/>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td  align="left" colspan="2">
+					<fieldset style="width:40%">
+						<legend style="color:black">Repository Namespace&nbsp;</legend>
+						<br>
+						<table border="0" width="100%">
+							<tr>
+									<td width="20%" >Prefix</td>
+									<td><input type="text" style="width:400px" id="input_prefix" class="input"/></td>
+							</tr>
+							<tr>
+									<td width="20%" >URI</td>
+									<td><input type="text" style="width:400px" id="input_namespace" class="input"/></td>
+							</tr>
+							<tr>
+									<td width="20%" >Folder Custom Nodetype</td>
+									<td><input type="text" style="width:400px" id="folder_nodetype" class="input"/></td>
+							</tr>
+							<tr>
+									<td width="20%" >File Custom Nodetype</td>
+									<td><input type="text" style="width:400px" id="file_nodetype" class="input"/></td>
+							</tr>
+						</table>
+					</fieldset>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

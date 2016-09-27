@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0f77714f-6f0f-11e4-ec6e-99d022731da8">
+	<DocumentID>1336e197-3c65-11e4-ec6e-99d022691da7</DocumentID>
+	<Name>1336e197-3c65-11e4-ec6e-99d022691da7</Name>
+	<Description>Cancel?</Description>
+	<CreatedBy>bill</CreatedBy>
+	<CreationDate>2014-11-03T16:22:18.589</CreationDate>
+	<Notes/>
+	<Text>Cancel?</Text>
+	<Language>
+		<uri
+			id="07219600-960d-11e4-ec0e-3ad00fec5d04"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="2b42a48c-1700-11e4-ec6e-99d02253dda5"
+		/>
+	</TextIdentifier>
+</TranslatedText>

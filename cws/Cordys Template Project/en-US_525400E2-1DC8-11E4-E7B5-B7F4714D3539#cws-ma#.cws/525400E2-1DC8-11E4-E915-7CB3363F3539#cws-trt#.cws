@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E915-7CB3363F5539">
+	<DocumentID>525400E2-1DC8-11E4-E915-7CB3363F3539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E915-7CB3363F3539</Name>
+	<Description>Upload to Jackrabbit Repository?</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-30T14:23:09.476</CreationDate>
+	<Notes/>
+	<Text>Upload to Jackrabbit Repository?</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-E915-7CB3363EF539"
+		/>
+	</TextIdentifier>
+</TranslatedText>

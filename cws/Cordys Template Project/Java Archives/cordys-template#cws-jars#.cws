@@ -1,0 +1,47 @@
+
+<JavaArchiveSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveSource"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E7B6-40CE51249539">
+	<DocumentID>525400E2-1DC8-11E4-E7B6-40CE51247539</DocumentID>
+	<Name>cordys-template</Name>
+	<Description>cordys-template</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-09-16T16:17:41.039</CreationDate>
+	<Notes/>
+	<JarFileName>cordys-template</JarFileName>
+	<NamespacePrefix></NamespacePrefix>
+	<Dependencies>
+		<JavaArchiveReferenceDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveReferenceDependency"
+			RuntimeDocumentID="525400E2-1DC8-11E4-E7B9-4C545D7E9539">
+			<DocumentID>525400E2-1DC8-11E4-E7B9-4C545D7E7539</DocumentID>
+			<Name>Notification.jar</Name>
+			<Description>Notification.jar</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-09-16T18:26:50.005</CreationDate>
+			<Notes/>
+			<DependsOnJAR>?CORDYS_INSTALL_DIR?/components/notification/notification.jar</DependsOnJAR>
+			<ISVPName></ISVPName>
+		</JavaArchiveReferenceDependency>
+		<JavaArchiveReferenceDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveReferenceDependency"
+			RuntimeDocumentID="525400E2-1DC8-11E4-E7B9-4C545D7D9539">
+			<DocumentID>525400E2-1DC8-11E4-E7B9-4C545D7D7539</DocumentID>
+			<Name>jackrabbit-standalone-2.6.5.jar</Name>
+			<Description>jackrabbit-standalone-2.6.5.jar</Description>
+			<CreatedBy>bmarkmann</CreatedBy>
+			<CreationDate>2014-09-16T18:30:24.447</CreationDate>
+			<Notes/>
+			<DependsOnJAR>?CORDYS_INSTALL_DIR?/ext/jackrabbit-standalone-2.6.5.jar</DependsOnJAR>
+			<ISVPName></ISVPName>
+		</JavaArchiveReferenceDependency>
+	</Dependencies>
+	<SourceFolder>
+		<uri
+			id="87aea6c5-acd8-11e4-ec0e-44fbe678d63c"
+			path="Cordys Template Project/Java Source"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</JavaArchiveSource>

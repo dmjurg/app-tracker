@@ -1,0 +1,17 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EA8F-2881BF35D78A">
+	<DocumentID>525400E2-1DC8-11E4-EA8F-2881BF35B78A</DocumentID>
+	<Name>BasicUser</Name>
+	<Description>BasicUser</Description>
+	<CreatedBy>tshah</CreatedBy>
+	<CreationDate>2014-10-15T14:42:14.392</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<isFunctionalRole>true</isFunctionalRole>
+	<type>Functional</type>
+	<Subroles/>
+	<configuredTasks/>
+</RoleDesignTime>

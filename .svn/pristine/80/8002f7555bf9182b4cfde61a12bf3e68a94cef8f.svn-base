@@ -1,0 +1,131 @@
+window.c20g.view.recruiting_applicationform={
+	init: function(viewInfo,formContainer){
+
+		var context=this;
+
+		formContainer.find("#cancelJobApplicationButton").click(function(e) {
+			window.c20g.ui.unloadUI();
+		});
+
+		window.c20g.validation.util.activate(this.validation);
+
+		formContainer.find("#submitJobApplicationButton").click(function(e) {
+			var candidate = {};
+			var id = $("legend").attr("id");
+
+			candidate.submission_date = $.datepicker.formatDate('yy-mm-dd', new Date());
+			candidate.status = parseInt(formContainer.find("#status").val());
+			candidate.first_name = formContainer.find("#first_name").val();
+			candidate.last_name = formContainer.find("#last_name").val();
+			candidate.email = formContainer.find("#email").val();
+			candidate.phone_number = formContainer.find("#phone_number").val();
+			candidate.street_address = formContainer.find("#street_address").val();
+			candidate.city = formContainer.find("#city").val();
+			candidate.state = formContainer.find("#state").val();
+			candidate.zipcode = formContainer.find("#zipcode").val();
+
+			candidate.college_name = formContainer.find("#college_name").val();
+			candidate.college_city = formContainer.find("#college_city").val();
+			candidate.college_state = formContainer.find("#college_state").val();
+			candidate.major1 = formContainer.find("#major1").val();
+			candidate.major2 = formContainer.find("#major2").val();
+			candidate.minor1 = formContainer.find("#minor1").val();
+			candidate.minor2 = formContainer.find("#minor2").val();
+			candidate.gpa_overall = formContainer.find("#gpa_overall").val()
+			candidate.gpa_major = formContainer.find("#gpa_major").val();
+			candidate.awards = formContainer.find("#awards").val();
+
+			candidate.grad_date = moment(formContainer.find("#grad_date").val(), "MM/DD/YYYY").format("YYYY-MM-DD");
+
+			candidate.work_auth = parseInt(formContainer.find("#work_auth").val());
+			candidate.source = parseInt(formContainer.find("#source").val());
+			candidate.referral = parseInt(formContainer.find("#referral").val());
+			candidate.referrer = formContainer.find("#referrer").val();
+			candidate.start_date = moment(formContainer.find("#start_date").val(), "MM/DD/YYYY").format("YYYY-MM-DD");
+			
+			if(formContainer.find("#start_date").val() == ""){
+				candidate.start_date = null;
+			};
+			if(formContainer.find("#grad_date").val() == ""){
+				candidate.grad_date = null;
+			};
+
+			// currently not included:
+			// does candidate require special accommodation
+			// has candidate broken the law
+
+			candidate.java = parseInt($('input[name="java"]:checked').val());
+			candidate.html = parseInt($('input[name="html"]:checked').val());
+			candidate.css = parseInt($('input[name="css"]:checked').val());
+			candidate.sql_lang = parseInt($('input[name="sql"]:checked').val());
+
+
+			candidate.other_langs = formContainer.find("#other_langs").val();
+
+
+
+			if(id){
+				candidate.id = id;
+				window.c20g.ws.recruiting.UpdateCandidateApplication(id, candidate, function(){
+					window.c20g.ui.unloadUI();
+				})
+			}
+			else{
+				window.c20g.ws.recruiting.CreateCandidateApplication(candidate, function(){
+					window.c20g.ui.unloadUI();
+				});
+			}
+		});//closes click handler for submit button
+
+	window.c20g.ui.loading.hide();
+
+	}, //closes out init
+
+	populateForm: function(candidate){
+		$('legend').attr("id", candidate.id)
+		$('legend').text(candidate.full_name + " (Submitted on: "+ candidate.submission_date + ")");
+		$('#status').val(candidate.status);
+		$('#first_name').val(candidate.first_name);
+		$('#last_name').val(candidate.last_name);
+		$('#email').val(candidate.email);
+		$('#phone_number').val(candidate.phone_number);
+		$('#street_address').val(candidate.street_address);
+		$('#city').val(candidate.city);
+		$('#state').val(candidate.state);
+		$('#zipcode').val(candidate.zipcode);
+		$('#college_name').val(candidate.college_name);
+		$('#college_city').val(candidate.college_city);
+		$('#college_state').val(candidate.college_state);
+		$('#major1').val(candidate.major1);
+		$('#major2').val(candidate.major2);
+		$('#minor1').val(candidate.minor1);
+		$('#minor2').val(candidate.minor2);
+		$('#gpa_overall').val(candidate.gpa_overall);
+		$('#gpa_major').val(candidate.gpa_major);
+		$('#awards').val(candidate.awards);
+		$('#grad_date').val(moment(candidate.grad_date, "YYYY-MM-DD").format("MM/DD/YYYY"));
+		$('#work_auth').val(candidate.work_auth);
+		$('#source').val(candidate.source);
+		$('#referral').val(candidate.referral);
+		$('#referrer').val(candidate.referrer);
+		$('#accommodation').val(candidate.accommodation);
+		$('#law').val(candidate.law);
+		$('#start_date').val(moment(candidate.start_date, "YYYY-MM-DD").format("MM/DD/YYYY"));
+		$('input[name=java][value=' + candidate.java +']').attr("checked", true);
+		$('input[name=html][value=' + candidate.html +']').attr("checked", true);
+		$('input[name=css][value=' + candidate.css +']').attr("checked", true);
+		$('input[name=sql][value=' + candidate.sql_lang +']').attr("checked", true);
+		$('#other_langs').val(candidate.other_langs);
+
+		if(candidate.grad_date == null) {
+			$('#grad_date').val("");
+		};
+		if(candidate.start_date == null) {
+			$('#start_date').val("");
+		};
+
+	}, // closes populateForm
+
+	validation: null
+
+} // closes recruiting_applicationform

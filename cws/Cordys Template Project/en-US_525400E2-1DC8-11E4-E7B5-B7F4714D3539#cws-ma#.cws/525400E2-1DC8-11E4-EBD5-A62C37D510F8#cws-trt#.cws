@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="525400E2-1DC8-11E4-EBD5-A62C37D530F8">
+	<DocumentID>525400E2-1DC8-11E4-EBD5-A62C37D510F8</DocumentID>
+	<Name>525400E2-1DC8-11E4-EBD5-A62C37D510F8</Name>
+	<Description>Root Folder</Description>
+	<CreatedBy>bmarkmann</CreatedBy>
+	<CreationDate>2014-10-28T14:39:58.425</CreationDate>
+	<Notes/>
+	<Text>Root Folder</Text>
+	<Language>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714CF539"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="525400E2-1DC8-11E4-EBD5-A62C37D4D0F8"
+		/>
+	</TextIdentifier>
+</TranslatedText>

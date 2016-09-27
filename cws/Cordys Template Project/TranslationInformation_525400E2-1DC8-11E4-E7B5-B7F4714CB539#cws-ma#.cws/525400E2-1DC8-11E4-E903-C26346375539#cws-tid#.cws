@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="525400E2-1DC8-11E4-E903-C26346377539">
+	<DocumentID>525400E2-1DC8-11E4-E903-C26346375539</DocumentID>
+	<Name>525400E2-1DC8-11E4-E903-C26346375539</Name>
+	<Description>Get Folder By Path</Description>
+	<CreatedBy>dcollier</CreatedBy>
+	<CreationDate>2014-09-29T21:21:52.451</CreationDate>
+	<Notes/>
+	<DefaultText>Get Folder By Path</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="525400E2-1DC8-11E4-E7B5-B7F4714C7539"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="525400E2-1DC8-11E4-E903-C26346379539"
+		/>
+	</Translations>
+</TextIdentifier>
